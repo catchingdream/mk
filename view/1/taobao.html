@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>淘宝分会场</title>
+	<style>
+	html,body,div,p,h1,h2,h3,a,img,ul,li,span,em,i{padding:0;margin:0;}
+	html,body{overflow-x:hidden;}
+    .lm-wrap{width:100%;height:auto;font-size:14px;font-family:Helvetica PingFang Hiragino Sans Microsoft YaHei;background:#ff6537;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;overflow:hidden;}
+    a{text-decoration:none;background:url(about:blank);}
+    img{border:0;vertical-align:middle;}
+    ul,li{list-style:none;}
+    em,i{font-style:normal;}
+    .clearfix:after{content:'';display:block;visibility:hidden;height:0;clear:both;}
+    .clearfix{*zoom:1;}
+    .f-left{float:left;}
+    .f-right{float:right;}
+    /*public*/
+	.wsb-main{font-family:Helvetica  PingFang  Hiragino Sans   Microsoft YaHei;overflow:hidden;background-color:#ff6537;min-width:990px;}
+	.wsh-header{width:100%;background: #fff;border-bottom: 2px solid #00a3a3;position: fixed;left:0;top:0;z-index:100;}
+	.wsh-ct{width:990px;margin:0 auto;position: relative;}
+	.wsh-logo{width:254px;height:78px;margin-left:0;}
+	.wsh-tt{position: absolute;left:386px;top:0;display: none;}
+	.wsb-guanz{display: block;font-size: 17px;height:24px;line-height:24px;color:#00c2c2;font-weight: 700;padding-left: 31px;background: url("https://img.alicdn.com/tps/TB1vGDPKpXXXXX.XpXXXXXXXXXX-24-24.png") no-repeat left top;position: absolute;right:0;top:31px;cursor: pointer;
+	    font-family:Microsoft YaHei;}
+	.wsb-guanz:hover{
+	    color:#666;background: url("https://img.alicdn.com/tps/TB1n_70KpXXXXcXXVXXXXXXXXXX-24-24.png") no-repeat left top;
+	}
+	.wsh-count{width:167px;height:98px;background: url("https://img.alicdn.com/tps/TB1GQ4iKFXXXXXyXXXXXXXXXXXX-167-98.png") no-repeat center top;position: fixed;left:50%;top:80px;z-index:100;margin-left:337px;}
+	.counttxt{
+	    display: block;
+	    width:167px;
+	    font-size: 17px;
+	    color:#fff;
+	    text-align: center;
+	    line-height: 20px;
+	    margin-top:8px;
+	    font-family:Microsoft YaHei;
+	}
+	.wsh-erwei{
+	    width:150px;
+	    height:185px;
+	    background: url("https://img.alicdn.com/tps/TB16PDAKpXXXXapXVXXXXXXXXXX-150-185.png") no-repeat center top;
+	    position: fixed;
+	    right:30px;
+	    top:280px;
+	    z-index:100;
+	}
+	.wsh-ttop{
+	    width:150px;
+	    height:41px;
+	    position: absolute;
+	    left:0;
+	    top:177px;
+	    display: none;
+	}
+	.wsh-party{
+	    width:336px;
+	    height:94px;
+	    background: url("https://img.alicdn.com/tps/TB1JAHVKpXXXXcQXpXXXXXXXXXX-336-94.png") no-repeat center top;
+	    position: absolute;
+	    left:50%;
+	    top:0;
+	    margin-left: -168px;
+	    z-index:20;
+	}
+	.wsh-width{
+	    width:990px;
+	    margin: 0 auto;
+	    background: #fff8e3; 
+	    padding-top:12px;
+	}
+	.wsh-top1{
+	    padding-top:51px;
+	    background:url("https://img.alicdn.com/tps/TB14HAdKpXXXXaQXpXXXXXXXXXX-1190-137.jpg") no-repeat center top;
+	}
+	.wsh-gtxt{
+	    display: block;
+	    padding-top: 33px;
+	    width:990px;
+	    height:52px;
+	    background: url("https://img.alicdn.com/tps/TB1.wUSKpXXXXcLaXXXXXXXXXXX-990-52.png") no-repeat center bottom;
+	    font-weight: 700;
+	    font-size: 40px;
+	    text-align: center;
+	    line-height: 52px;
+	    color:#00a3ac;
+	    font-family:Microsoft YaHei;
+	}
+	.wsh-gtxt1{
+	    background-position: center top;
+	    padding: 0 0 23px 0;
+	}
+	.wsh-stxt{
+	    display: block;
+	    width:990px;
+	    height:27px;
+	    font-size: 20px;
+	    text-align: center;
+	    line-height: 27px;
+	    color:#666;  
+	    padding-bottom: 24px; 
+	    font-family:Microsoft YaHei; 
+	}
+	.wsh-stxt em{
+    	font-weight: 700;
+	}
+	.wsh-part1{
+	    width:1000px;
+	    padding:0 0 63px 0;
+	}
+	.wsh-part2{
+	    padding:0;
+	}
+	.wsh-part1 li{
+	    width:490px;
+	    height:240px;
+	    float:left;
+	    margin:0 10px 10px 0;
+	    position: relative;
+	}
+	.wsh-huic{
+	    display: block;
+	    font-size: 38px;
+	    font-weight: 700;
+	    color:#fff;
+	    position: absolute;
+	    left:40px;
+	    top:30px;
+	    height:60px;
+	    line-height: 60px;
+	    cursor: pointer;
+	    font-family:Microsoft YaHei; 
+	}
+	.wsh-dai{
+	    display: block;
+	    font-size: 28px;
+	    height: 50px;
+	    line-height: 50px;
+	    font-weight: normal;
+	}
+	.wsh-count .cd-large .clock{
+	    padding-left:10px;  
+	    display: block;
+	    width:163px;
+	    margin-top:4px;
+	}
+	.wsh-count .cd-large .hand{
+	    background: url(about:_blank);
+	    width:41px;
+	    padding: 0;
+	    margin:4px 13px 0 0;
+	    height: 30px;
+	    line-height: 30px;
+	}
+	.wsh-count .cd-large .digital{
+	    color:#333;
+	    font-size: 16px;
+	    font-weight: 700;
+	    width:20px;
+	    text-align: center;
+	}
+	.mybank-foot-content a{
+	    display:inline;
+	}
+	.wsh-see{
+	    display: block;
+	    width: 157px;
+	    height:42px;
+	    position: absolute;
+	    left:41px;
+	    bottom: 30px;
+	    background: url("https://img.alicdn.com/tps/TB1qEj5KpXXXXX1XVXXXXXXXXXX-157-42.png") no-repeat center top;
+	}
+	.wsh-widjoin .wsh-see1{
+	    background: url("https://img.alicdn.com/tps/TB1fToMKpXXXXX.aFXXXXXXXXXX-157-42.png") no-repeat center top;
+	}
+	.wsh-widjoin .wsh-see2{
+	    background: url("https://img.alicdn.com/tps/TB1m0kVKpXXXXa2aXXXXXXXXXXX-157-42.png") no-repeat center top;
+	}
+	.wsh-widjoin .wsh-see3{
+	    background: url("https://img.alicdn.com/tps/TB1U6gSKpXXXXaaapXXXXXXXXXX-157-42.png") no-repeat center top;
+	}
+	.wsh-widjoin .wsh-see4{
+	    background: url("https://img.alicdn.com/tps/TB1fToMKpXXXXX.aFXXXXXXXXXX-157-42.png") no-repeat center top;
+	}
+	.wsh-widjoin .wsh-see5{
+	    background: url("https://img.alicdn.com/tps/TB1JsBmKFXXXXXeXXXXXXXXXXXX-157-42.png") no-repeat center top;
+	}
+	.wsh-widjoin .wsh-see6{
+	    background: url("https://img.alicdn.com/tps/TB1CaXfKFXXXXXTXpXXXXXXXXXX-157-42.png") no-repeat center top;
+	}
+	.wsh-widjoin .wsh-see7{
+	    background: url("https://img.alicdn.com/tps/TB1D3o8KpXXXXaPXFXXXXXXXXXX-157-42.png") no-repeat center top;
+	}
+	.wsh-widjoin .wsh-see8{
+	    background: url("https://img.alicdn.com/tps/TB1mWc_KpXXXXaAXFXXXXXXXXXX-157-42.png") no-repeat center top;
+	}
+	.intro{
+	    background-color: #fff;
+	    position: fixed;
+	    left:0;
+	    top:0;
+	    width: 100%;
+	    height: 100%;
+	    min-height: 1190px;
+	    min-width: 1190px;
+	    z-index: 150;
+	}
+	.intro .slogan_logo {
+	    position: relative;
+	    top: 20%;
+	    left: 50%;
+	    width: 212px;
+	    height: 270px;
+	    margin-left: -106px;
+	}
+	.intro .slogan_logo .logo{
+	    opacity: 0;
+	    margin-left:54px;
+	}
+	.intro .slogan_logo .slogan {
+	    margin-top: 65px;
+	}
+	.intro .slogan_logo .slogan .item-wu {
+	    margin-top: 6px;
+	    padding-left: 5px;
+	}
+	.intro .slogan_logo .slogan .slogan-list-item {
+	    opacity: 0;
+	    float: left;
+	    width: 60px;
+	}
+	.intro .slogan_logo .slogan .item-bu {
+	    margin-top: 8px;
+	    width: 50px;
+	}
+	.intro .slogan_logo .slogan .item-zhi {
+	    text-align: right;
+	    margin-top: 5px;
+	    width: 32px;
+	}
+	/*tb*/
+    .wb-banner{width:100%;margin-top:80px;background:url("https://img.alicdn.com/tps/TB16sljKFXXXXc2XVXXXXXXXXXX-1920-774.jpg") no-repeat top center;}
+    .wb-con{width:100%;background:url("https://img.alicdn.com/tps/TB1PVw_KpXXXXcYXpXXXXXXXXXX-1920-2850.png") no-repeat top center;}  
+    .wb-main{position:relative;width:990px;margin:0 auto;}
+    .wb-con .wb-main{background:#fff9e6 url("https://img.alicdn.com/tps/TB1VgJkKFXXXXaoXXXXXXXXXXXX-990-200.jpg") no-repeat top center;}
+    .tb-list{width:1006px;padding:21px 0 57px;}
+    .tb-list2{display:none;}
+    .tb-li{float:left;position:relative;margin:0 17px 17px 0;}
+    .tb-btn{position:absolute;display:block;}
+    .tb-btn1{top:191px;left:39px;}
+    .tb-btn2{top:191px;left:39px;}
+    .tb-btn3{top:228px;left:39px;}
+    .tb-btn4{top:228px;left:542px;}
+    .tb-actrules{width:990px;height:52px;background:url("https://img.alicdn.com/tps/TB1dNVmKFXXXXXZXXXXXXXXXXXX-990-52.png") no-repeat
+    top center;line-height:46px;font-size:40px;color:#00a3ac;text-align:center;font-family:'Microsoft YaHei';font-weight:700;}
+    .tb-ar-box{width:930px;height:340px;padding:30px;margin:21px 0 29px;background-color:#ffb321;}
+    .wnd-Rules .r-items,.wnd-Rules .t-txt,.wnd-Rules .t-txt3,.r-items2,.t-txt2{float:left;line-height:22px;font-size:16px;color:#fff;font-weight:normal;font-family:'Microsoft YaHei';}
+    .wnd-Rules .r-items{display:inline-block;width:2%;}
+    .wnd-Rules .t-txt{width:98%;padding-bottom:20px;}
+    .wnd-Rules .t-txt3{width:98%;padding-bottom:6px;}
+    .fen-list li{width:920px;padding-left:10px;}
+    .r-items2{width:2%;}
+    .t-txt2{width:97%;padding:0 0 6px 1%;}
+    .ws-logo{position:absolute;top:21px;left:1px;}
+    .ws-h2{position:absolute;top:204px;left:237px;}
+    .ws-h3{display:none;position:absolute;top:204px;left:279px;}
+    .m-btn{position:absolute;top:500px;left:354px;display:block;width:283px;height:70px;line-height:70px;text-align:center;background:url("https://img.alicdn.com/tps/TB1KAXkKFXXXXXHXpXXXXXXXXXX-283-141.png") no-repeat;background-position:0 -71px;font-size:40px;color:#fff;font-family:'Microsoft YaHei';}
+    .m-btn:hover{background-position:0 0;}
+    .m-btn2{display:none;}
+    /*弹窗*/
+    .wb-modbg{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.4);}
+    .tb-pop{display:none;position:fixed;top:50%;left:50%;margin:-165px 0 0 -246px;width:492px;height:330px;background:url("https://img.alicdn.com/tps/TB1nvBkKFXXXXagXFXXXXXXXXXX-492-330.png") no-repeat top center;}
+    .pop-close{position:absolute;top:0;right:0;width:50px;height:50px;cursor:pointer;}
+    .pop-img{position:absolute;top:19px;left:168px;}
+    .pop-txt{position:absolute;top:196px;left:0;width:100%;text-align:center;}
+    .pop-txt p{font-family:'Microsoft YaHei';font-size:20px;color:#333;line-height:26px;}
+    .pop-btn{position:absolute;top:259px;left:147px;width:187px;height:42px;background:url('https://img.alicdn.com/tps/TB1_IM8KpXXXXbJaXXXXXXXXXXX-187-42.png') no-repeat top center;line-height:42px;text-align:center;font-size:22px;color:#fff;font-family:'Microsoft YaHei';cursor:pointer;}
+   	.pop2 .pop-img{top:55px;left:131px;}
+   	.pop2 .pop-txt{top:200px;}
+    .pop3 .pop-img{top:35px;left:168px;}
+    .pop4 .pop-img{top:64px;left:159px;}
+    .pop4 .pop-txt{top:233px;}
+    .tb-blod{font-weight:700;}
+    /*animate*/
+    .tb-airplane{
+    	position:absolute;
+    	top:339px;
+    	left:-324px;
+    	animation:fly1 10s infinite ease-in-out;
+    	-webkit-animation:fly1 10s infinite ease-in-out;
+    	-moz-animation:fly1 10s infinite ease-in-out;
+    	-ms-animation:fly1 10s infinite ease-in-out;
+    	-o-animation:fly1 10s infinite ease-in-out;
+    }
+    @keyframes fly1{
+		0%{
+			opacity:1;
+			transform:translate(-500px,200px);
+		}
+		80%{
+			opacity:0;
+			transform:translate(300px,-380px) scale(.6);
+		}
+		100%{
+			opacity:0;
+			transform:translate(300px,-380px);
+		}
+    }
+    @-webkit-keyframes fly1{
+		0%{
+			opacity:1;
+			-webkit-transform:translate(-500px,200px);
+		}
+		80%{
+			opacity:0;
+			-webkit-transform:translate(300px,-380px) scale(.6);
+		}
+		100%{
+			opacity:0;
+			-webkit-transform:translate(300px,-380px);
+		}
+    }
+    @-moz-keyframes fly1{
+		0%{
+			opacity:1;
+			-moz-transform:translate(-500px,200px);
+		}
+		80%{
+			opacity:0;
+			-moz-transform:translate(300px,-380px) scale(.6);
+		}
+		100%{
+			opacity:0;
+			-moz-transform:translate(300px,-380px);
+		}
+    }
+    @-ms-keyframes fly1{
+		0%{
+			opacity:1;
+			-ms-transform:translate(-500px,200px);
+		}
+		80%{
+			opacity:0;
+			-ms-transform:translate(300px,-380px) scale(.6);
+		}
+		100%{
+			opacity:0;
+			-ms-transform:translate(300px,-380px);
+		}
+    }
+    @-o-keyframes fly1{
+		0%{
+			opacity:1;
+			-o-transform:translate(-500px,200px);
+		}
+		80%{
+			opacity:0;
+			-o-transform:translate(300px,-380px) scale(.6);
+		}
+		100%{
+			opacity:0;
+			-o-transform:translate(300px,-380px);
+		}
+    }
+    .tb-balloon{
+    	position:absolute;
+    	top: 349px;
+    	left: -218px;
+    	animation:toptobot 3s infinite alternate ease-in-out;
+    	-webkit-animation:toptobot 3s infinite alternate ease-in-out;
+    	-moz-animation:toptobot 3s infinite alternate ease-in-out;
+    	-ms-animation:toptobot 3s infinite alternate ease-in-out;
+    	-o-animation:toptobot 3s infinite alternate ease-in-out;
+    }
+    @keyframes toptobot{
+        0%{
+            transform:translateY(-5px);
+        }
+        100%{
+            transform:translateY(15px);
+        }
+    }
+    @-webkit-keyframes toptobot{
+        0%{
+            -webkit-transform:translateY(-5px);
+        }
+        100%{
+            -webkit-transform:translateY(15px);
+        }
+    }
+    @-moz-keyframes toptobot{
+        0%{
+            -moz-transform:translateY(-5px);
+        }
+        100%{
+            -moz-transform:translateY(15px);
+        }
+    }
+    @-ms-keyframes toptobot{
+        0%{
+            -ms-transform:translateY(-5px);
+        }
+        100%{
+            -ms-transform:translateY(15px);
+        }
+    }
+    @-o-keyframes toptobot{
+        0%{
+            -o-transform:translateY(-5px);
+        }
+        100%{
+            -o-transform:translateY(15px);
+        }
+    }
+    .tb-cloud{
+    	position:absolute;
+    	top:375px;
+    	left:-317px;
+    	animation:lefttoright 12s infinite alternate ease-in-out;
+    	-webkit-animation:lefttoright 12s infinite alternate ease-in-out;
+    	-moz-animation:lefttoright 12s infinite alternate ease-in-out;
+    	-ms-animation:lefttoright 12s infinite alternate ease-in-out;
+    	-o-animation:lefttoright 12s infinite alternate ease-in-out;
+    }
+    @keyframes lefttoright{
+        0%{
+            transform:translateX(-100px);
+        }
+        100%{
+            transform:translateX(100px);
+        }
+    }
+    @-webkit-keyframes lefttoright{
+        0%{
+            -webkit-transform:translateX(-100px);
+        }
+        100%{
+            -webkit-transform:translateX(100px);
+        }
+    }
+    @-moz-keyframes lefttoright{
+        0%{
+            -moz-transform:translateX(-100px);
+        }
+        100%{
+            -moz-transform:translateX(100px);
+        }
+    }
+    @-ms-keyframes lefttoright{
+        0%{
+            -ms-transform:translateX(-100px);
+        }
+        100%{
+            -ms-transform:translateX(100px);
+        }
+    }
+    @-o-keyframes lefttoright{
+        0%{
+            -o-transform:translateX(-100px);
+        }
+        100%{
+            -o-transform:translateX(100px);
+        }
+    }
+    .tb-balloon2{
+    	position:absolute;
+    	top:201px;
+    	right:-150px;
+    	animation:toptobot 3s infinite alternate ease-in-out;
+    	-webkit-animation:toptobot 3s infinite alternate ease-in-out;
+    	-moz-animation:toptobot 3s infinite alternate ease-in-out;
+    	-ms-animation:toptobot 3s infinite alternate ease-in-out;
+    	-o-animation:toptobot 3s infinite alternate ease-in-out;
+    }
+    @keyframes toptobot{
+        0%{
+            transform:translateY(-5px);
+        }
+        100%{
+            transform:translateY(15px);
+        }
+    }
+    @-webkit-keyframes toptobot{
+        0%{
+            -webkit-transform:translateY(-5px);
+        }
+        100%{
+            -webkit-transform:translateY(15px);
+        }
+    }
+    @-moz-keyframes toptobot{
+        0%{
+            -moz-transform:translateY(-5px);
+        }
+        100%{
+            -moz-transform:translateY(15px);
+        }
+    }
+    @-ms-keyframes toptobot{
+        0%{
+            -ms-transform:translateY(-5px);
+        }
+        100%{
+            -ms-transform:translateY(15px);
+        }
+    }
+    @-o-keyframes toptobot{
+        0%{
+            -o-transform:translateY(-5px);
+        }
+        100%{
+            -o-transform:translateY(15px);
+        }
+    }
+    .tb-cloud2{
+    	position:absolute;
+    	top:201px;
+    	right:-150px;
+    	animation:lefttoright 12s infinite alternate ease-in-out;
+    	-webkit-animation:lefttoright 12s infinite alternate ease-in-out;
+    	-moz-animation:lefttoright 12s infinite alternate ease-in-out;
+    	-ms-animation:lefttoright 12s infinite alternate ease-in-out;
+    	-o-animation:lefttoright 12s infinite alternate ease-in-out;
+    }
+    @keyframes lefttoright{
+        0%{
+            transform:translateX(-100px);
+        }
+        100%{
+            transform:translateX(100px);
+        }
+    }
+    @-webkit-keyframes lefttoright{
+        0%{
+            -webkit-transform:translateX(-100px);
+        }
+        100%{
+            -webkit-transform:translateX(100px);
+        }
+    }
+    @-moz-keyframes lefttoright{
+        0%{
+            -moz-transform:translateX(-100px);
+        }
+        100%{
+            -moz-transform:translateX(100px);
+        }
+    }
+    @-ms-keyframes lefttoright{
+        0%{
+            -ms-transform:translateX(-100px);
+        }
+        100%{
+            -ms-transform:translateX(100px);
+        }
+    }
+    @-o-keyframes lefttoright{
+        0%{
+            -o-transform:translateX(-100px);
+        }
+        100%{
+            -o-transform:translateX(100px);
+        }
+    }
+    .tb-fireworks1{
+    	position:absolute;
+    	top:116px;
+    	left:-116px;
+    }
+    .tb-fireworks1 img{
+    	position:absolute;
+    	top:0;
+    	left:0;
+    }
+    .f1-1{
+    	animation:shine1 2.5s infinite linear;
+    	-webkit-animation:shine1 2.5s infinite linear;
+    	-moz-animation:shine1 2.5s infinite linear;
+    	-ms-animation:shine1 2.5s infinite linear;
+    	-o-animation:shine1 2.5s infinite linear;
+    }
+    .f1-2{
+    	animation:shine2 2.5s infinite linear;
+    	-webkit-animation:shine2 2.5s infinite linear;
+    	-moz-animation:shine2 2.5s infinite linear;
+    	-ms-animation:shine2 2.5s infinite linear;
+    	-o-animation:shine2 2.5s infinite linear;
+    }
+    .f1-3{
+    	animation:shine3 2.5s infinite linear;
+    	-webkit-animation:shine3 2.5s infinite linear;
+    	-moz-animation:shine3 2.5s infinite linear;
+    	-ms-animation:shine3 2.5s infinite linear;
+    	-o-animation:shine3 2.5s infinite linear;
+    }
+    .tb-fireworks2{
+    	position:absolute;
+    	top:248px;
+    	left:-396px;
+    }
+    .tb-fireworks2 img{
+    	position:absolute;
+    	top:0;
+    	left:0;
+    }
+    .f2-1{
+    	animation:shine1 2.2s infinite linear;
+    	-webkit-animation:shine1 2.2s infinite linear;
+    	-moz-animation:shine1 2.2s infinite linear;
+    	-ms-animation:shine1 2.2s infinite linear;
+    	-o-animation:shine1 2.2s infinite linear;
+    }
+    .f2-2{
+    	animation:shine2 2.2s infinite linear;
+    	-webkit-animation:shine2 2.2s infinite linear;
+    	-moz-animation:shine2 2.2s infinite linear;
+    	-ms-animation:shine2 2.2s infinite linear;
+    	-o-animation:shine2 2.2s infinite linear;
+    }
+    .f2-3{
+    	animation:shine3 2.2s infinite linear;
+    	-webkit-animation:shine3 2.2s infinite linear;
+    	-moz-animation:shine3 2.2s infinite linear;
+    	-ms-animation:shine3 2.2s infinite linear;
+    	-o-animation:shine3 2.2s infinite linear;
+    }
+    .tb-fireworks3{
+    	position:absolute;
+    	top:81px;
+    	right:-72px;
+    }
+    .tb-fireworks3 img{
+    	position:absolute;
+    	top:0;
+    	left:0;
+    }
+    .f3-1{
+    	animation:shine1 2s infinite linear;
+    	-webkit-animation:shine1 2s infinite linear;
+    	-moz-animation:shine1 2s infinite linear;
+    	-ms-animation:shine1 2s infinite linear;
+    	-o-animation:shine1 2s infinite linear;
+    }
+    .f3-2{
+    	animation:shine2 2s infinite linear;
+    	-webkit-animation:shine2 2s infinite linear;
+    	-moz-animation:shine2 2s infinite linear;
+    	-ms-animation:shine2 2s infinite linear;
+    	-o-animation:shine2 2s infinite linear;
+    }
+    .f3-3{
+    	animation:shine3 2s infinite linear;
+    	-webkit-animation:shine3 2s infinite linear;
+    	-moz-animation:shine3 2s infinite linear;
+    	-ms-animation:shine3 2s infinite linear;
+    	-o-animation:shine3 2s infinite linear;
+    }
+    @keyframes shine1{
+	    0%{
+	        opacity:0;
+	    }
+	    25%{
+	        opacity:1;
+	    }
+	    75%{
+	        opacity:1;
+	    }
+	    100%{
+	        opacity:0;
+	    }
+	}
+	@keyframes shine2{
+	    0%{
+	        opacity:0;
+	    }
+	    25%{
+	        opacity:0;
+	    }
+	    60%{
+	        opacity:1;
+	    }
+	    80%{
+	        opacity:1;
+	    }
+	    100%{
+	        opacity:0;
+	    }
+	}
+	@keyframes shine3{
+	    0%{
+	        opacity:0;
+	    }
+	    50%{
+	        opacity:0; 
+	    }
+	    80%{
+	        opacity:1;
+	    }
+	    100%{
+	        opacity:0;
+	    }
+	}
+	@-webkit-keyframes shine1{
+	    0%{
+	        opacity:0;
+	    }
+	    25%{
+	        opacity:1;
+	    }
+	    75%{
+	        opacity:1;
+	    }
+	    100%{
+	        opacity:0;
+	    }
+	}
+	@-webkit-keyframes shine2{
+	    0%{
+	        opacity:0;
+	    }
+	    25%{
+	        opacity:0;
+	    }
+	    60%{
+	        opacity:1;
+	    }
+	    80%{
+	        opacity:1;
+	    }
+	    100%{
+	        opacity:0;
+	    }
+	}
+	@-webkit-keyframes shine3{
+	    0%{
+	        opacity:0;
+	    }
+	    50%{
+	        opacity:0; 
+	    }
+	    80%{
+	        opacity:1;
+	    }
+	    100%{
+	        opacity:0;
+	    }
+	}
+	@-moz-keyframes shine1{
+	    0%{
+	        opacity:0;
+	    }
+	    25%{
+	        opacity:1;
+	    }
+	    75%{
+	        opacity:1;
+	    }
+	    100%{
+	        opacity:0;
+	    }
+	}
+	@-moz-keyframes shine2{
+	    0%{
+	        opacity:0;
+	    }
+	    25%{
+	        opacity:0;
+	    }
+	    60%{
+	        opacity:1;
+	    }
+	    80%{
+	        opacity:1;
+	    }
+	    100%{
+	        opacity:0;
+	    }
+	}
+	@-moz-keyframes shine3{
+	    0%{
+	        opacity:0;
+	    }
+	    50%{
+	        opacity:0; 
+	    }
+	    80%{
+	        opacity:1;
+	    }
+	    100%{
+	        opacity:0;
+	    }
+	}
+	@-ms-keyframes shine1{
+	    0%{
+	        opacity:0;
+	    }
+	    25%{
+	        opacity:1;
+	    }
+	    75%{
+	        opacity:1;
+	    }
+	    100%{
+	        opacity:0;
+	    }
+	}
+	@-ms-keyframes shine2{
+	    0%{
+	        opacity:0;
+	    }
+	    25%{
+	        opacity:0;
+	    }
+	    60%{
+	        opacity:1;
+	    }
+	    80%{
+	        opacity:1;
+	    }
+	    100%{
+	        opacity:0;
+	    }
+	}
+	@-ms-keyframes shine3{
+	    0%{
+	        opacity:0;
+	    }
+	    50%{
+	        opacity:0; 
+	    }
+	    80%{
+	        opacity:1;
+	    }
+	    100%{
+	        opacity:0;
+	    }
+	}
+	@-o-keyframes shine1{
+	    0%{
+	        opacity:0;
+	    }
+	    25%{
+	        opacity:1;
+	    }
+	    75%{
+	        opacity:1;
+	    }
+	    100%{
+	        opacity:0;
+	    }
+	}
+	@-o-keyframes shine2{
+	    0%{
+	        opacity:0;
+	    }
+	    25%{
+	        opacity:0;
+	    }
+	    60%{
+	        opacity:1;
+	    }
+	    80%{
+	        opacity:1;
+	    }
+	    100%{
+	        opacity:0;
+	    }
+	}
+	@-o-keyframes shine3{
+	    0%{
+	        opacity:0;
+	    }
+	    50%{
+	        opacity:0; 
+	    }
+	    80%{
+	        opacity:1;
+	    }
+	    100%{
+	        opacity:0;
+	    }
+	}
+	.tb-cutebaby{
+		position:absolute;
+		top:183px;
+		right:-116px;
+		-webkit-animation:fly2 25s infinite linear;
+		-moz-animation:fly2 25s infinite linear;
+		-ms-animation:fly2 25s infinite linear;
+		-o-animation:fly2 25s infinite linear;
+		animation:fly2 25s infinite linear;
+	}
+	@keyframes fly2{
+		0%{
+			opacity:1;
+			transform:translateX(600px);
+		}
+		40%{
+			opacity:1;
+			transform:translateX(-1600px);
+		}
+		45%{
+			opacity:0;
+			transform:translateX(-1600px) rotateY(180deg);
+		}
+		46%{
+			opacity:1;
+			transform:translateX(-1600px) rotateY(180deg);
+		}
+
+		99%{
+			opacity:1;
+			transform:translateX(600px) rotateY(180deg);
+		}
+		100%{
+			opacity:0;
+			transform:translateX(600px) rotateY(180deg);
+		}
+    }
+    @-webkit-keyframes fly2{
+		0%{
+			opacity:1;
+			-webkit-transform:translateX(600px);
+		}
+		40%{
+			opacity:1;
+			-webkit-transform:translateX(-1600px);
+		}
+		45%{
+			opacity:0;
+			-webkit-transform:translateX(-1600px) rotateY(180deg);
+		}
+		46%{
+			opacity:1;
+			-webkit-transform:translateX(-1600px) rotateY(180deg);
+		}
+
+		99%{
+			opacity:1;
+			-webkit-transform:translateX(600px) rotateY(180deg);
+		}
+		100%{
+			opacity:0;
+			-webkit-transform:translateX(600px) rotateY(180deg);
+		}
+    }
+    @-moz-keyframes fly2{
+		0%{
+			opacity:1;
+			-moz-transform:translateX(600px);
+		}
+		40%{
+			opacity:1;
+			-moz-transform:translateX(-1600px);
+		}
+		45%{
+			opacity:0;
+			-moz-transform:translateX(-1600px) rotateY(180deg);
+		}
+		46%{
+			opacity:1;
+			-moz-transform:translateX(-1600px) rotateY(180deg);
+		}
+
+		99%{
+			opacity:1;
+			-moz-transform:translateX(600px) rotateY(180deg);
+		}
+		100%{
+			opacity:0;
+			-moz-transform:translateX(600px) rotateY(180deg);
+		}
+    }
+    @-ms-keyframes fly2{
+		0%{
+			opacity:1;
+			-ms-transform:translateX(600px);
+		}
+		40%{
+			opacity:1;
+			-ms-transform:translateX(-1600px);
+		}
+		45%{
+			opacity:0;
+			-ms-transform:translateX(-1600px) rotateY(180deg);
+		}
+		46%{
+			opacity:1;
+			-ms-transform:translateX(-1600px) rotateY(180deg);
+		}
+
+		99%{
+			opacity:1;
+			-ms-transform:translateX(600px) rotateY(180deg);
+		}
+		100%{
+			opacity:0;
+			-ms-transform:translateX(600px) rotateY(180deg);
+		}
+    }
+    @-o-keyframes fly2{
+		0%{
+			opacity:1;
+			-o-transform:translateX(600px);
+		}
+		40%{
+			opacity:1;
+			-o-transform:translateX(-1600px);
+		}
+		45%{
+			opacity:0;
+			-o-transform:translateX(-1600px) rotateY(180deg);
+		}
+		46%{
+			opacity:1;
+			-o-transform:translateX(-1600px) rotateY(180deg);
+		}
+
+		99%{
+			opacity:1;
+			-o-transform:translateX(600px) rotateY(180deg);
+		}
+		100%{
+			opacity:0;
+			-o-transform:translateX(600px) rotateY(180deg);
+		}
+    }
+    .tb-redbag{
+    	position:absolute;
+    	top:354px;
+    	right:-465px;
+    	animation:fly3 5s infinite linear;
+    	-webkit-animation:fly3 5s infinite linear;
+    	-moz-animation:fly3 5s infinite linear;
+    	-ms-animation:fly3 5s infinite linear;
+    	-o-animation:fly3 5s infinite linear;
+    }
+    @keyframes fly3{
+		0%{
+			opacity:1;
+			transform:translate(380px,200px);
+		}
+		70%{
+			opacity:1;
+			transform:translate(-380px,-500px) scale(.6);
+		}
+		100%{
+			opacity:0;
+			transform:translate(-380px,-500px) scale(.6);
+		}
+    }
+    @-webkit-keyframes fly3{
+		0%{
+			opacity:1;
+			-webkit-transform:translate(380px,200px);
+		}
+		70%{
+			opacity:1;
+			-webkit-transform:translate(-380px,-500px) scale(.6);
+		}
+		100%{
+			opacity:0;
+			-webkit-transform:translate(-380px,-500px) scale(.6);
+		}
+    }
+    @-moz-keyframes fly3{
+		0%{
+			opacity:1;
+			-moz-transform:translate(380px,200px);
+		}
+		70%{
+			opacity:1;
+			-moz-transform:translate(-380px,-500px) scale(.6);
+		}
+		100%{
+			opacity:0;
+			-moz-transform:translate(-380px,-500px) scale(.6);
+		}
+    }
+    @-ms-keyframes fly3{
+		0%{
+			opacity:1;
+			-ms-transform:translate(380px,200px);
+		}
+		70%{
+			opacity:1;
+			-ms-transform:translate(-380px,-500px) scale(.6);
+		}
+		100%{
+			opacity:0;
+			-ms-transform:translate(-380px,-500px) scale(.6);
+		}
+    }
+    @-o-keyframes fly3{
+		0%{
+			opacity:1;
+			-o-transform:translate(380px,200px);
+		}
+		70%{
+			opacity:1;
+			-o-transform:translate(-380px,-500px) scale(.6);
+		}
+		100%{
+			opacity:0;
+			-o-transform:translate(-380px,-500px) scale(.6);
+		}
+    }
+    .tb-coin{
+    	position:absolute;
+    	top:235px;
+    	right:63px;
+    }
+    .tb-coinpeople{
+    	position:absolute;
+    	top:524px;
+    	left:176px;
+    	animation:jump 1s infinite linear;
+    	-webkit-animation:jump 1s infinite linear;
+    	-moz-animation:jump 1s infinite linear;
+    	-ms-animation:jump 1s infinite linear;
+    	-o-animation:jump 1s infinite linear;
+    }
+	@keyframes jump{
+		0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+		40% {transform: translateY(-10px);}
+		60% {transform: translateY(-5px);}
+	}
+	@-webkit-keyframes jump{
+		0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+		40% {-webkit-transform: translateY(-10px);}
+		60% {-webkit-transform: translateY(-5px);}
+	}
+	@-moz-keyframes jump{
+		0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+		40% {-moz-transform: translateY(-10px);}
+		60% {-moz-transform: translateY(-5px);}
+	}
+	@-ms-keyframes jump{
+		0%, 20%, 50%, 80%, 100% {-ms-transform: translateY(0);}
+		40% {-ms-transform: translateY(-10px);}
+		60% {-ms-transform: translateY(-5px);}
+	}
+	@-o-keyframes jump{
+		0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+		40% {-o-transform: translateY(-10px);}
+		60% {-o-transform: translateY(-5px);}
+	}
+	.tb-camera{
+		position:absolute;
+		top:620px;
+		left:-36px;
+	}
+	.tb-camera img{
+		position:absolute;
+		top:0;
+		left:0;
+	}
+	.tb-camera .tb-light1{
+		animation:flash1 1.5s infinite linear;
+		-webkit-animation:flash1 1.5s infinite linear;
+		-moz-animation:flash1 1.5s infinite linear;
+		-ms-animation:flash1 1.5s infinite linear;
+		-o-animation:flash1 1.5s infinite linear;
+	}
+	.tb-camera .tb-light2{
+		opacity:0;
+		filter:alpha(opacity=0);
+		position:absolute;
+		top:-73px;
+		left:-11px;
+		animation:flash2 4s infinite linear;
+		-webkit-animation:flash2 4s infinite linear;
+		-moz-animation:flash2 4s infinite linear;
+		-ms-animation:flash2 4s infinite linear;
+		-o-animation:flash2 4s infinite linear;
+	}
+	@keyframes flash1{
+		0%,50%,100%{
+			opacity: 1;
+		}
+		30%,60%{
+			opacity: 0;
+		}
+	}
+	@-webkit-keyframes flash1{
+		0%,50%,100%{
+			opacity: 1;
+		}
+		30%,60%{
+			opacity: 0;
+		}
+	}
+	@-moz-keyframes flash1{
+		0%,50%,100%{
+			opacity: 1;
+		}
+		30%,60%{
+			opacity: 0;
+		}
+	}
+	@-ms-keyframes flash1{
+		0%,50%,100%{
+			opacity: 1;
+		}
+		30%,60%{
+			opacity: 0;
+		}
+	}
+	@-o-keyframes flash1{
+		0%,50%,100%{
+			opacity: 1;
+		}
+		30%,60%{
+			opacity: 0;
+		}
+	}
+	@keyframes flash2{
+		0%{
+			opacity: 1;
+		}
+		30%{
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+	@-webkit-keyframes flash2{
+		0%{
+			opacity: 1;
+		}
+		30%{
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+	@-moz-keyframes flash2{
+		0%{
+			opacity: 1;
+		}
+		30%{
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+	@-ms-keyframes flash2{
+		0%{
+			opacity: 1;
+		}
+		30%{
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+	@-o-keyframes flash2{
+		0%{
+			opacity: 1;
+		}
+		30%{
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+/*底部*/
+*{
+  margin:0;
+  padding: 0;
+}
+
+.foot-wrap {
+  background-color: #f8f8f8;
+  min-width: 990px;
+  font-family:STHeitiSC-Light;
+}
+
+.foot-content {
+  width: 990px;
+  margin: 0 auto;
+  padding: 30px 5px;
+  font-size: 14px;
+  line-height: 1.5;
+  *zoom: 1;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: #f8f8f8;
+  background: url(https://os.alipayobjects.com/rmsportal/AfFplHSMsIUAFHH.png) right -1px no-repeat;
+}
+.foot-content a{
+  color: #333;
+  margin: 0 10px;
+  font-size: 12px;
+  text-decoration: none;
+  display:inline;
+}
+.foot-content a:hover{
+  color: #00C2C2;
+  line-height: 12px;
+  text-decoration: none;
+}
+.foot-content:before,
+.foot-content:after {
+  display: table;
+  content: "";
+}
+.foot-content:after {
+  clear: both;
+}
+.foot-left {
+  float: left;
+  display: inline;
+}
+.foot-left img{
+  height: 26px;
+}
+.foot-right {
+  float: right;
+  display: inline;
+  text-align: right;
+}
+.foot-logo {
+  width: 209px;
+  height: 26px;
+  display: block;
+}
+.foot-intro {
+  padding-top: 14px;
+  position: relative;
+  right: -10px;
+  color: #D6D6D6;
+}
+.foot-copyright {
+  padding-top: 20px;
+  line-height: 12px;
+  color: #333;
+}
+.foot-link {
+  position: relative;
+  left: -10px;
+  color: #D6D6D6;
+  padding-top: 18px;
+  line-height: 12px;
+}
+.copyright{
+  margin-right: 15px;
+}
+  /*响应设计 小于1200px 显示 990px宽度头 */
+  @media (max-width: 1200px) {
+    .foot-content{
+      width: 990px;
+    }
+  }
+	</style>
+</head>
+<body>
+	<div class="lm-wrap" id="lazywrap">
+		<!--loading-->
+	    <div class="intro">
+	        <div class="slogan_logo">
+	            <div class="logo">
+	                <img src="https://t.alipayobjects.com/images/rmsweb/T1hW4gXhdXXXXXXXXX.png" width="120" />
+	            </div>
+	            <div class="slogan">
+	                <ul class="slogan-list fn-clear">
+	                    <li class="slogan-list-item item-wu">
+	                        <img src="https://t.alipayobjects.com/images/rmsweb/T1GY8gXe0oXXXXXXXX.png" width="48" />
+	                    </li>
+	                    <li class="slogan-list-item item-two">
+	                        <img src="https://t.alipayobjects.com/images/rmsweb/T1ccFgXaVgXXXXXXXX.png" width="51" />
+	                    </li>
+	                    <li class="slogan-list-item item-bu">
+	                        <img src="https://t.alipayobjects.com/images/rmsweb/T1VrNgXhxvXXXXXXXX.png" width="34" />
+	                    </li>
+	                    <li class="slogan-list-item item-zhi">
+	                        <img src="https://t.alipayobjects.com/images/rmsweb/T1fr4gXcpqXXXXXXXX.png" width="25" />
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+	    <!--顶部栏-->
+	    <div class="wsh-header">
+	        <div class="wsh-ct">
+	            <a href="#" class="wsh-logo" title="网商银行" seed="tb_wangshangyinhang"><img src="https://img.alicdn.com/tps/TB1oU7oKpXXXXX_XXXXXXXXXXXX-508-156.png" width="254" height="78" alt="logo" /></a>
+	            <img class="wsh-tt" src="https://img.alicdn.com/tps/TB1e2bPKpXXXXbtXpXXXXXXXXXX-470-78.png" width="470" height="78" alt="时间轴" />
+	            <img class="wsh-tt" src="https://img.alicdn.com/tps/TB1rlzRKpXXXXcRXXXXXXXXXXXX-470-78.png" width="470" height="78" alt="时间轴" />
+	            <a class="wsb-guanz" id="addFavorite" rel="sidebar">抢先关注</a>
+	        </div>
+	    </div>
+	    <!--倒计时-->
+	    <div class="wsh-count">
+	        <span class="counttxt">距狂欢开始</span>
+	        <div id="demo6">
+	            <div class="cd cd-large cd-slide" data-config="{'effect':'slide'}"><span class="clock">${d}${h}${m}</span></div>
+	        </div>
+	    </div>
+	    <!--二维码-->
+	    <div class="wsh-erwei">
+	        <a href="#" target="_self" class="wsh-ttop"><img src="https://img.alicdn.com/tps/TB1m2g1KpXXXXcbXVXXXXXXXXXX-150-41.png" width="150" height="41"/></a>
+	    </div>
+		<div class="wb-banner">
+			<div class="wb-main">
+				<img src="https://img.alicdn.com/tps/TB1BshbKFXXXXcrXpXXXXXXXXXX-990-194.jpg" width="990" height="194">
+				<img src="https://img.alicdn.com/tps/TB15P0bKFXXXXbIXpXXXXXXXXXX-990-193.jpg" width="990" height="193">
+				<img src="https://img.alicdn.com/tps/TB18aXzKFXXXXb0XpXXXXXXXXXX-990-194.jpg" width="990" height="194">
+				<img src="https://img.alicdn.com/tps/TB1PLVHKFXXXXauXXXXXXXXXXXX-990-193.jpg" width="990" height="193">
+				<img class="ws-logo" src="https://img.alicdn.com/tps/TB1zy77KpXXXXXmXVXXXXXXXXXX-126-100.png" width="126" height="100">
+				<img class="ws-h2" src="https://img.alicdn.com/tps/TB1_qFlKFXXXXXXXpXXXXXXXXXX-516-40.png" width="516" height="40">
+				<img class="ws-h3" src="https://gw.alicdn.com/tps/TB140xlKFXXXXXgXpXXXXXXXXXX-435-40.png" width="435" height="40">
+				<a class="m-btn m-btn1" href="javascript:void(0);">领取入场券</a>
+				<a class="m-btn m-btn2" target="_blank" href="#" seed="tb_ljsq">立即申请</a>
+				<div class="tb-airplane">
+					<img src="https://img.alicdn.com/tps/TB1hEtsKFXXXXcuXpXXXXXXXXXX-351-76.png" width="351" height="76">
+				</div>
+				<div class="tb-balloon">
+					<img src="https://img.alicdn.com/tps/TB1xEVwKFXXXXaaXpXXXXXXXXXX-119-135.png" width="119" height="135">
+				</div>
+				<div class="tb-cloud">
+					<img src="https://img.alicdn.com/tps/TB1YPlgKFXXXXa2XVXXXXXXXXXX-119-135.png" width="119" height="135">
+				</div>
+				<div class="tb-balloon2">
+					<img src="https://img.alicdn.com/tps/TB1U2piKFXXXXaAXVXXXXXXXXXX-70-78.png" width="70" height="78">
+				</div>
+				<div class="tb-cloud2">
+					<img src="https://img.alicdn.com/tps/TB1JfRdKFXXXXcRXVXXXXXXXXXX-70-78.png" width="70" height="78">
+				</div>
+				<div class="tb-fireworks1">
+					<img class="f1-1" src="https://img.alicdn.com/tps/TB106JBKFXXXXXVXXXXXXXXXXXX-54-57.png" width="54" height="57">
+					<img class="f1-2" src="https://img.alicdn.com/tps/TB1HitfKFXXXXckXVXXXXXXXXXX-54-57.png" width="54" height="57">
+					<img class="f1-3" src="https://img.alicdn.com/tps/TB12p8wKFXXXXaAXpXXXXXXXXXX-54-57.png" width="54" height="57">
+				</div>
+				<div class="tb-fireworks2">
+					<img class="f2-1" src="https://img.alicdn.com/tps/TB1DsVCKFXXXXXGXXXXXXXXXXXX-60-66.png" width="60" height="66">
+					<img class="f2-2" src="https://img.alicdn.com/tps/TB1SkpfKFXXXXbVXVXXXXXXXXXX-60-66.png" width="60" height="66">
+					<img class="f2-3" src="https://img.alicdn.com/tps/TB1LX4kKFXXXXXMXVXXXXXXXXXX-60-66.png" width="60" height="66">
+				</div>
+				<div class="tb-fireworks3">
+					<img class="f3-1" src="https://img.alicdn.com/tps/TB1bRg7KpXXXXaoapXXXXXXXXXX-42-45.png" width="42" height="45">
+					<img class="f3-2" src="https://img.alicdn.com/tps/TB1sYxAKFXXXXaJXXXXXXXXXXXX-42-45.png" width="42" height="45">
+					<img class="f3-3" src="https://img.alicdn.com/tps/TB1SLVsKFXXXXc2XpXXXXXXXXXX-42-45.png" width="42" height="45">
+				</div>
+				<div class="tb-redbag">
+					<img src="https://img.alicdn.com/tps/TB1FIxhKFXXXXbBXVXXXXXXXXXX-378-188.png" width="378" height="188">
+				</div>
+				<div class="tb-coin">
+					<img src="https://img.alicdn.com/tps/TB1qKxDKFXXXXXVXXXXXXXXXXXX-90-59.png" width="90" height="59">
+				</div>
+				<div class="tb-cutebaby">
+					<img src="https://img.alicdn.com/tps/TB1zGldKFXXXXaMaXXXXXXXXXXX-188-82.png" width="188" height="82">
+				</div>
+				<div class="tb-coinpeople">
+					<img src="https://img.alicdn.com/tps/TB1hZ8HKFXXXXaQXXXXXXXXXXXX-38-47.png" width="38" height="47">
+				</div>
+				<div class="tb-camera">
+					<img src="https://img.alicdn.com/tps/TB1lnFFKFXXXXcdXpXXXXXXXXXX-94-78.png" width="94" height="78">
+					<img class="tb-light1" src="https://img.alicdn.com/tps/TB1scdQKFXXXXX4XXXXXXXXXXXX-94-78.png" width="94" height="78">
+					<img class="tb-light2" src="https://img.alicdn.com/tps/TB1WMXwKFXXXXa0XVXXXXXXXXXX-172-198.png" width="172" height="198">
+				</div>
+			</div>
+		</div>
+		<div class="wb-con">
+			<div class="wb-main">
+				<ul class="tb-list tb-list1 clearfix">
+					<li class="tb-li tb-li1">
+						<img src="https://img.alicdn.com/tps/TB1.AU4KpXXXXaZXVXXXXXXXXXX-486-278.png" alt="">
+						<a class="tb-btn tb-btn1" target="_blank" href="#" seed="tb_zhd"><img src="https://img.alicdn.com/tps/TB1GIo4KpXXXXc_XVXXXXXXXXXX-187-42.png" width="187" height="42"></a>
+					</li>
+					<li class="tb-li tb-li2">
+						<img src="https://img.alicdn.com/tps/TB1_so9KpXXXXb6XFXXXXXXXXXX-486-278.png" width="486" height="278">
+						<a class="tb-btn tb-btn2 showpop4" href="javascript:void(0);"><img src="https://img.alicdn.com/tps/TB1.hFhKFXXXXXNXpXXXXXXXXXX-157-42.png" width="157" height="42"></a>
+					</li>
+					<li class="tb-li tb-li3">
+						<img src="https://img.alicdn.com/tps/TB13aReKFXXXXawXpXXXXXXXXXX-989-315.png" width="989" height="315">
+						<a class="tb-btn tb-btn3" target="_blank" href="#" seed="tb_tqsk"><img src="https://img.alicdn.com/tps/TB1GIo4KpXXXXc_XVXXXXXXXXXX-187-42.png" width="187" height="42"></a>
+						<a class="tb-btn tb-btn4 showpop4" href="javascript:void(0);"><img src="https://img.alicdn.com/tps/TB1.hFhKFXXXXXNXpXXXXXXXXXX-157-42.png" width="157" height="42"></a>
+					</li>
+				</ul>
+				<ul class="tb-list tb-list2 clearfix">
+					<li class="tb-li tb-li1">
+						<img src="https://img.alicdn.com/tps/TB1.AU4KpXXXXaZXVXXXXXXXXXX-486-278.png" alt="">
+						<a class="tb-btn tb-btn1" target="_blank" href="#" seed="tb_zhd"><img src="https://img.alicdn.com/tps/TB1WqxfKFXXXXarXpXXXXXXXXXX-157-42.png" width="157" height="42"></a>
+					</li>
+					<li class="tb-li tb-li2">
+						<img src="https://img.alicdn.com/tps/TB1_so9KpXXXXb6XFXXXXXXXXXX-486-278.png" width="486" height="278">
+						<a class="tb-btn tb-btn2 showpop4" href="javascript:void(0);"><img src="https://img.alicdn.com/tps/TB18LhhKFXXXXcgXXXXXXXXXXXX-195-42.png" width="195" height="42"></a>
+					</li>
+					<li class="tb-li tb-li3">
+						<img src="https://img.alicdn.com/tps/TB13aReKFXXXXawXpXXXXXXXXXX-989-315.png" width="989" height="315">
+						<a class="tb-btn tb-btn3" target="_blank" href="#" seed="tb_tqsk"><img src="https://img.alicdn.com/tps/TB1C7c8KpXXXXb4XFXXXXXXXXXX-157-42.png" width="157" height="42"></a>
+						<a class="tb-btn tb-btn4 showpop4" href="javascript:void(0);"><img src="https://img.alicdn.com/tps/TB1GhAUKpXXXXXeapXXXXXXXXXX-195-42.png" width="195" height="42"></a>
+					</li>
+				</ul>
+				<div class="tb-actrules"><span>活动规则</span></div>
+				<div class="tb-ar-box">
+					<ul class="wnd-Rules">
+		                <li class="clearfix">
+		                	<span class="r-items">1.</span>
+		                	<p class="t-txt">活动时间：2016年7月15日00:00:00－7月15日23:59:59；</p>
+		                </li>
+		                <li class="clearfix">
+		                	<span class="r-items">2.</span>
+		                	<p class="t-txt">活动对象：具有淘宝贷款信用类贷款产品（随借随还（6个月）、等额本金（12个月）或组合贷）申请资格的淘宝卖家；</p>
+		                </li>
+		                <li class="clearfix">
+		                	<span class="r-items">3.</span>
+		                	<p class="t-txt">活动参与方式：活动当天，卖家通过淘宝贷款首页申贷或在活动页面点击“立即申请”按钮进行信用类贷款申请时，在贷款申请表“我的优惠”中选择本活动对应的优惠，签署合同并获贷成功，即可获得相应优惠；</p>
+		                </li>
+		                <li class="clearfix">
+		                	<span class="r-items">4.</span>
+		                	<p class="t-txt">优惠类型：活动当天，按照本规则规定的活动参与方式参与活动，淘宝信用贷款（12个等额本金、6个月随借随还贷款）仅限网商银行app申请才可享受整笔贷款的利息95折优惠，淘宝组合贷在pc端享受整笔贷款的利息95折优惠。具体优惠以实际享受为准。</p>
+		                </li>
+		                <li class="clearfix">
+		                	<span class="r-items">5.</span>
+		                	<p class="t-txt3">其他规则：</p>
+		                	<ul class="fen-list">
+		                		<li class="clearfix">
+		                			<span class="r-items2">1）</span>
+		                			<p class="t-txt2">淘宝卖家成功获贷的金额以贷款实际发放的金额为准；</p>
+		                		</li>
+		                		<li class="clearfix">
+		                			<span class="r-items2">2）</span>
+		                			<p class="t-txt2">本活动优惠与除利息红包以外的任何形式优惠不可同时使用；</p>
+		                		</li>
+		                		<li class="clearfix">
+		                			<span class="r-items2">3）</span>
+		                			<p class="t-txt2">活动过程中如发现有碍于其他卖家公平参与本活动或违反本活动目的之行为，网商银行&蚂蚁小贷有权取消有此行为的卖家参加本活动的资格或因参加活动所获的优惠。网商银行&蚂蚁小贷具有此次活动的最终解释权。</p>
+		                		</li>
+		                	</ul>
+		                </li>
+		            </ul>
+				</div>
+				<div class="wsh-width1">
+			        <div class="wsh-width">
+			            <span class="wsh-gtxt wsh-gtxt0">网商贷优惠 提前领</span>
+			            <span class="wsh-stxt">网商贷年息9.5折贷款冰点价，仅限<em>715</em>当天</span>
+			            <ul class="wsh-part1 clearfix">
+			                <li>
+			                    <a href="#" target="_blank" seed="tb_taobaofenhuichangyr">
+			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB1dSQhKpXXXXcHXXXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+			                        <span class="wsh-huic">淘宝用户专享<br><em class="wsh-dai">贷款年息9.5折</em></span>
+			                        <span class="wsh-see wsh-see1"></span>
+			                    </a>
+			                </li>
+			                <li>
+			                    <a href="#" target="_blank" seed="tb_tianmaofenhuichangyr">
+			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB1D_zVKpXXXXX_aXXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+			                        <span class="wsh-huic">天猫用户专享<br><em class="wsh-dai">贷款年息9.5折</em></span>
+			                        <span class="wsh-see wsh-see2"></span>
+			                    </a>
+			                </li>
+			                <li>
+			                    <a href="#" target="_blank" seed="tb_1688fenhuichangyr">
+			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB19BvQKpXXXXXxapXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+			                        <span class="wsh-huic">1688用户专享<br><em class="wsh-dai">贷款年息9.5折</em></span>
+			                        <span class="wsh-see wsh-see3"></span>
+			                    </a>
+			                </li>
+			                <li>
+			                    <a href="#" target="_blank" seed="tb_gongyingsfenhuichangyr">
+			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB1jjrUKpXXXXbnaXXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+			                        <span class="wsh-huic">中国供应商用户专享<br><em class="wsh-dai">贷款年息9.5折</em></span>
+			                        <span class="wsh-see wsh-see3"></span>
+			                    </a>
+			                </li>
+			            </ul>
+			            <span class="wsh-gtxt wsh-gtxt1">红包折扣马上享</span>
+			            <ul class="wsh-part1 wsh-part2 clearfix">
+			                <li>
+			                    <a href="#" target="_blank" seed="tb_xinrenfuyr">
+			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB1Mgv7KpXXXXb8XFXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+			                        <span class="wsh-huic">信任付体验红包疯狂送<br><em class="wsh-dai">赊账不求人，想赊就赊</em></span>
+			                        <span class="wsh-see wsh-see5"></span>
+			                    </a>
+			                </li>
+			                <li>
+			                    <a href="#" target="_blank" seed="tb_wangnongdaiyr">
+			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB1Ehn_KpXXXXa3XFXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+			                        <span class="wsh-huic">旺农贷年息9.5折<br><em class="wsh-dai">为农民量身定制的贷款</em></span>
+			                        <span class="wsh-see wsh-see6"></span>
+			                    </a>
+			                </li>
+			                <li>
+			                    <a href="#" target="_blank" seed="tb_wangshangappyr">
+			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB1KIojKpXXXXcHXXXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+			                        <span class="wsh-huic">网商银行APP<br><em class="wsh-dai">多重好礼乐翻天</em></span>
+			                        <span class="wsh-see wsh-see7"></span>
+			                    </a>
+			                </li>
+			                <li>
+			                    <a href="#" target="_blank" seed="tb_yulibaoyr">
+			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB1OrEgKpXXXXaXXpXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+			                        <span class="wsh-huic">余利宝<br><em class="wsh-dai">商家的大额灵活理财产品</em></span>
+			                        <span class="wsh-see wsh-see8"></span>
+			                    </a>
+			                </li>
+			            </ul>
+			        </div>
+			    </div>
+			    <img src="https://img.alicdn.com/tps/TB14Cg1KpXXXXX5aXXXXXXXXXXX-990-237.jpg" width="990" height="237">
+			</div>
+		</div>
+		<!--弹窗-->
+		<div class="wb-modbg"></div>
+		<div class="tb-pop pop1">
+			<div class="pop-close"></div>
+			<div class="pop-img">
+				<img src="https://img.alicdn.com/tps/TB109teKFXXXXaSXVXXXXXXXXXX-162-161.jpg" width="162" height="161">
+			</div>
+			<div class="pop-txt">
+				<p>领取入场券,715活动当天</p>
+				<p>可以通过旺旺提醒你，通通免费哦。</p>
+			</div>
+			<div class="pop-btn pop-lq">立即领取</div>
+		</div>
+		<div class="tb-pop pop2">
+			<div class="pop-close"></div>
+			<div class="pop-img">
+				<img src="https://img.alicdn.com/tps/TB1eyVfKFXXXXXEXVXXXXXXXXXX-288-157.jpg" width="288" height="157">
+			</div>
+			<div class="pop-txt">
+				<p><span class="tb-blod">领取成功</span></p>
+				<p>我会通过旺旺叫你抢红包的</p>
+			</div>
+			<div class="pop-btn pop-hidebtn">知道了</div>
+		</div>
+		<div class="tb-pop pop3">
+			<div class="pop-close"></div>
+			<div class="pop-img">
+				<img src="https://img.alicdn.com/tps/TB1NIJuKFXXXXX8XpXXXXXXXXXX-144-144.jpg" width="144" height="144">
+			</div>
+			<div class="pop-txt">
+				<p><span class="tb-blod">你已领取过入场券了</span></p>
+				<p>我会通过旺旺提醒你参加网商节的</p>
+			</div>
+			<div class="pop-btn pop-hidebtn">知道了</div>
+		</div>
+		<div class="tb-pop pop4">
+			<div class="pop-close"></div>
+			<div class="pop-img">
+				<img src="https://img.alicdn.com/tps/TB1.4I8KpXXXXckaXXXXXXXXXXX-162-163.png" width="162" height="163">
+			</div>
+			<div class="pop-txt">
+				<p>支付宝扫一扫</p>
+				<p>立即参与</p>
+			</div>
+		</div>
+	    <div class="foot-wrap">
+	      <div class="foot-content">
+	        <div class="foot-left">
+	          <img src="https://os.alipayobjects.com/rmsportal/rsIfqqRrbmvgxyw.png" class="mybank-foot-logo">
+	          <div class="foot-link">
+	            <a href="http://www.antgroup.com/page/alipay.htm" target="_blank" title="支付宝">支付宝</a> |
+	            <a href="http://www.antgroup.com/page/zmxy.htm" target="_blank" title="芝麻信用">芝麻信用</a> |
+	            <a href="http://www.antgroup.com/page/xiaodai.htm" target="_blank" title="蚂蚁小贷">蚂蚁小贷</a> |
+	            <a href="http://www.antgroup.com/page/jinrongyun.htm" target="_blank" title="蚂蚁金融云">蚂蚁金融云</a> |
+	            <a href="http://www.antgroup.com/page/yuebao.htm" target="_blank" title="余额宝">余额宝</a> |
+	            <a href="http://www.antgroup.com/page/zhaocaibao.htm" target="_blank" title="招财宝">招财宝</a> |
+	            <a href="https://www.antsdaq.com/" target="_blank" title="蚂蚁达客">蚂蚁达客</a>
+	          </div>
+	        </div>
+	        <div class="foot-right">
+	          <div class="foot-intro">
+	            <a href="https://www.mybank.cn/about.htm" target="_blank" title="关于我们">关于我们</a> |
+	            <a href="https://job.alibaba.com/zhaopin/index.htm" target="_blank" title="诚招英才">诚招英才</a>
+	          </div>
+	          <p class="foot-copyright"><span class="copyright">浙ICP备15020822号</span>Copyright © 2015-2016 浙江网商银行</p>
+	        </div>
+	      </div>
+	    </div>
+	</div>
+	<script>
+    window._to = {
+      st: Date.now(),
+      role_id: '',
+    };
+	</script>
+	<script src="https://as.alipayobjects.com/g/animajs/mtracker/2.1.2/??seed.js,mtracker.js"></script>
+	<script src="https://g.alicdn.com/??kissy/k/1.4.2/seed-min.js,tb/global/3.3.14/global-min.js" data-config="{combine:true}"></script>
+	<script>
+	    KISSY.use('node,kg/countdown/2.0.1/,io,datalazyload',function( S, Node, Countdown,IO,Lazyload) {
+	        var $ =S.all;
+	        var top = $(window).height();
+	        (function(){
+	            $(window).on("scroll", function(){
+	                if ($(window).scrollTop() > top) {
+	                    $(".wsh-ttop").show(.1);
+	                } else {
+	                    $(".wsh-ttop").hide(.1);
+
+	                }
+	            });
+	        })();
+	        (function(){
+	            var url=location.href;
+	            $("#addFavorite").attr("href",url);
+	             document.getElementById("addFavorite").onclick=function(){
+	                 bookmark();return false;
+	             };
+	         })();
+	        function bookmark(){
+	            var title=document.title;
+	            var url=location.href;
+	            if(window.sidebar){
+	                window.sidebar.addPanel(title,url,"");
+	            }
+	            else if(KISSY.UA.shell=="ie"){
+	                window.external.AddFavorite(url,title);
+	            }else {
+	                alert("您的浏览器不支持此功能，windows系统请按ctrl+D，Mac系统请按Cmd+D来加入收藏夹！");
+	            }
+	        } 
+	        function showf(n){
+	            $(".wsh-tt").hide();
+	            $(".wsh-tt").item(n).show();
+	            new Lazyload();
+	        }
+	        (function(){
+	            new IO({
+	                url:"https://loan.mybank.cn/act/time.htm?callback=callbackFunction",
+	                dataType: 'jsonp',
+	                success: function (d) {
+	                    var date = d.time;
+	                    // var daa = new Date("2016/07/11 00:00:00").getTime();
+	                    // console.log(daa);
+	                    var date1=1468166400000;//2016/07/11 00:00:00
+	                    var date2=1468511999000;//2016/07/14 23:59:59
+	                    var date3=1468512000000;//2016/07/15 00:00:00
+	                    var date4=1468598399000;//2016/07/15 23:59:59
+	                    var aa=(date2-date)/1000;
+	                    var aa1=(date4-date)/1000;
+	                    if(date<date2){
+	                    	//未开场
+	                        showf(0);
+	                        aaa(date2,aa);
+	                        $(".ws-h2").show();
+	                        $(".ws-h3").hide();
+	                        $(".m-btn1").show();
+	                        $(".m-btn2").hide();
+	                        $(".tb-list2").hide();
+	                        $(".tb-list1").show();
+	                    }else if(date>date2){
+	                    	//开场
+	                        showf(1);
+	                        $(".wsh-banner").show();
+	                        $(".counttxt").text("距狂欢结束");
+	                        $(".wsh-gtxt0").text("网商贷优惠 仅限今日");
+	                        $(".wsh-stxt").text("冰点折扣仅限715当天");
+	                        $(".wsh-gtxt1").text("红包折扣最后一天");
+	                        $(".wsh-width").addClass("wsh-widjoin");
+	                        aaa(date4,aa1);
+	                        $(".ws-h2").hide();
+	                        $(".ws-h3").show();
+	                        $(".m-btn1").hide();
+	                        $(".m-btn2").show();
+	                        $(".tb-list2").show();
+	                        $(".tb-list1").hide();
+	                    }
+	                }
+	            })
+	        })(); 
+	        function aaa(time,el){
+	            $('#demo6 .cd').each(function(node) { 
+	            var cd = Countdown({
+	                el: node,
+	                stopPoint: time
+	            });
+	            cd.notify(0, function() {
+	                this.left = el;
+	                $(".counttxt").text("距狂欢结束");
+	            });
+	           
+	            });
+	        }
+		    new Lazyload({
+		        container: '#lazywrap',
+		        diff: 200,
+		        placeholder: '//gtd.alicdn.com/tps/i2/T1RyBdFndXXXbogjYy-500-300.png'
+		    });
+		    var time = setTimeout(function(){
+		        $(".logo").animate({"opacity":"1"},0);
+		        $(".item-wu").animate({"opacity":"1"},.5);
+		    },200);
+		    var time1 = setTimeout(function(){
+		        $(".item-two").animate({"opacity":"1"},.5);
+		    },400);
+		    var time2 = setTimeout(function(){
+		        $(".item-bu").animate({"opacity":"1"},.5);
+		    },600);
+		    var time3 = setTimeout(function(){
+		        $(".item-zhi").animate({"opacity":"1"},.5);
+		    },800);
+		    var time4 = setTimeout(function(){
+		        $(".intro").animate({"opacity":"0"},0);
+		        $(".intro").animate({"display":"none"},0.2);
+		    },1500);
+		    //弹窗
+		    var viewheight = $(window).height();
+		    $(".wb-modbg").height(viewheight);
+		    $(".m-btn1").on('click',function(){
+		    	$('.pop1').show();
+		    	$('.wb-modbg').show();
+		    });
+		    $('.showpop4').on('click',function(){
+		    	$('.pop4').show();
+		    	$('.wb-modbg').show();
+		    });
+		    $(".pop-lq").on('click',function(){
+		    	$('.pop1').hide();
+		    	$('.pop2').show();
+		    	$('.pop3').show();
+		    });
+		    $(".pop-hidebtn").each(function(e,i){
+		    	$(this).on('click',function(){
+		    		$(this).parent('.tb-pop').hide();
+		    		$('.wb-modbg').hide();
+		    	});
+		    });
+		    $(".pop-close").each(function(k,i){
+		    	$(this).on('click',function(){
+		    		$(this).parent('.tb-pop').hide();
+		    		$('.wb-modbg').hide();
+		    	});
+		    });
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,997 @@
+<!doctype html>
+<html>
+<head>    
+<style>
+/*公共部分*/
+body,div,h1,h2,h3,h4,h5,ul,ol,li,p,img,dl,dt,dd,input,textarea,a,span,i,em,b,form,table{margin:0px; padding:0px;}
+img{border:0 none; vertical-align:top;}
+a{text-decoration:none;display: block;background: url(about:_blank);}
+i,b,em,h1,h2,h3,h4,h5{font-style:normal;}
+ul,ol{list-style:none;}
+.clearfix{*zoom:1;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+html,body{overflow-x:hidden;}
+.wsb-main{font-family:Helvetica  PingFang  Hiragino Sans   Microsoft YaHei;overflow:hidden;background-color:#ff6537;min-width:990px;}
+.wsh-header{width:100%;background: #fff;border-bottom: 2px solid #00a3a3;position: fixed;left:0;top:0;z-index:100;}
+.wsh-ct{width:990px;margin:0 auto;position: relative;}
+.wsh-logo{width:254px;height:78px;margin-left:0;}
+.wsh-tt{position: absolute;left:386px;top:0;display: none;}
+.wsb-guanz{display: block;font-size: 17px;height:24px;line-height:24px;color:#00c2c2;font-weight: 700;padding-left: 31px;background: url("https://img.alicdn.com/tps/TB1vGDPKpXXXXX.XpXXXXXXXXXX-24-24.png") no-repeat left top;position: absolute;right:0;top:31px;cursor: pointer;
+    font-family:Microsoft YaHei;}
+.wsb-guanz:hover{
+    color:#666;background: url("https://img.alicdn.com/tps/TB1n_70KpXXXXcXXVXXXXXXXXXX-24-24.png") no-repeat left top;
+}
+.wsh-count{width:167px;height:98px;background: url("https://img.alicdn.com/tps/TB1GQ4iKFXXXXXyXXXXXXXXXXXX-167-98.png") no-repeat center top;position: fixed;left:50%;top:80px;z-index:100;margin-left:337px;}
+.counttxt{
+    display: block;
+    width:167px;
+    font-size: 17px;
+    color:#fff;
+    text-align: center;
+    line-height: 20px;
+    margin-top:8px;
+    font-family:Microsoft YaHei;
+}
+.wsh-erwei{
+    width:150px;
+    height:185px;
+    background: url("https://img.alicdn.com/tps/TB16PDAKpXXXXapXVXXXXXXXXXX-150-185.png") no-repeat center top;
+    position: fixed;
+    right:30px;
+    top:280px;
+    z-index:100;
+}
+.wsh-ttop{
+    width:150px;
+    height:41px;
+    position: absolute;
+    left:0;
+    top:177px;
+    display: none;
+}
+.wsh-party{
+    width:336px;
+    height:94px;
+    background: url("https://img.alicdn.com/tps/TB1JAHVKpXXXXcQXpXXXXXXXXXX-336-94.png") no-repeat center top;
+    position: absolute;
+    left:50%;
+    top:0;
+    margin-left: -168px;
+    z-index:20;
+}
+.wsh-width{
+    width:990px;
+    margin: 0 auto; 
+    padding-top:12px;
+}
+.wsh-top1{
+    padding-top:51px;
+    background:url("https://img.alicdn.com/tps/TB14HAdKpXXXXaQXpXXXXXXXXXX-1190-137.jpg") no-repeat center top;
+}
+.wsh-gtxt{
+    display: block;
+    padding-top: 33px;
+    width:990px;
+    height:52px;
+    background: url("https://img.alicdn.com/tps/TB1.wUSKpXXXXcLaXXXXXXXXXXX-990-52.png") no-repeat center bottom;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    line-height: 52px;
+    color:#00a3ac;
+    font-family:Microsoft YaHei;
+}
+.wsh-gtxt1{
+    background-position: center top;
+    padding: 0 0 23px 0;
+}
+.wsh-stxt{
+    display: block;
+    width:990px;
+    height:27px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 27px;
+    color:#666;  
+    padding-bottom: 24px; 
+    font-family:Microsoft YaHei; 
+}
+.wsh-stxt em{
+    font-weight: 700;
+}
+.wsh-part1{
+    width:1000px;
+    padding:0 0 63px 0;
+}
+.wsh-part2{
+    padding:0;
+}
+.wsh-part1 li{
+    width:490px;
+    height:240px;
+    float:left;
+    margin:0 10px 10px 0;
+    position: relative;
+}
+.wsh-huic{
+    display: block;
+    font-size: 38px;
+    font-weight: 700;
+    color:#fff;
+    position: absolute;
+    left:40px;
+    top:30px;
+    height:60px;
+    line-height: 60px;
+    cursor: pointer;
+    font-family:Microsoft YaHei; 
+}
+.wsh-dai{
+    display: block;
+    font-size: 28px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: normal;
+}
+.wsh-count .cd-large .clock{
+    padding-left:10px;  
+    display: block;
+    width:163px;
+    margin-top:4px;
+}
+.wsh-count .cd-large .hand{
+    background: url(about:_blank);
+    width:41px;
+    padding: 0;
+    margin:4px 13px 0 0;
+    height: 30px;
+    line-height: 30px;
+}
+.wsh-count .cd-large .digital{
+    color:#333;
+    font-size: 16px;
+    font-weight: 700;
+    width:20px;
+    text-align: center;
+}
+.mybank-foot-content a{
+    display:inline;
+}
+.wsh-see{
+    display: block;
+    width: 157px;
+    height:42px;
+    position: absolute;
+    left:41px;
+    bottom: 30px;
+    background: url("https://img.alicdn.com/tps/TB1qEj5KpXXXXX1XVXXXXXXXXXX-157-42.png") no-repeat center top;
+}
+.wsh-widjoin .wsh-see1{
+    background: url("https://img.alicdn.com/tps/TB1fToMKpXXXXX.aFXXXXXXXXXX-157-42.png") no-repeat center top;
+}
+.wsh-widjoin .wsh-see2{
+    background: url("https://img.alicdn.com/tps/TB1m0kVKpXXXXa2aXXXXXXXXXXX-157-42.png") no-repeat center top;
+}
+.wsh-widjoin .wsh-see3{
+    background: url("https://img.alicdn.com/tps/TB1U6gSKpXXXXaaapXXXXXXXXXX-157-42.png") no-repeat center top;
+}
+.wsh-widjoin .wsh-see4{
+    background: url("https://img.alicdn.com/tps/TB1fToMKpXXXXX.aFXXXXXXXXXX-157-42.png") no-repeat center top;
+}
+.wsh-widjoin .wsh-see5{
+    background: url("https://img.alicdn.com/tps/TB1JsBmKFXXXXXeXXXXXXXXXXXX-157-42.png") no-repeat center top;
+}
+.wsh-widjoin .wsh-see6{
+    background: url("https://img.alicdn.com/tps/TB1CaXfKFXXXXXTXpXXXXXXXXXX-157-42.png") no-repeat center top;
+}
+.wsh-widjoin .wsh-see7{
+    background: url("https://img.alicdn.com/tps/TB1D3o8KpXXXXaPXFXXXXXXXXXX-157-42.png") no-repeat center top;
+}
+.wsh-widjoin .wsh-see8{
+    background: url("https://img.alicdn.com/tps/TB1mWc_KpXXXXaAXFXXXXXXXXXX-157-42.png") no-repeat center top;
+}
+.intro{
+    background-color: #fff;
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    min-height: 1190px;
+    min-width: 1190px;
+    z-index: 150;
+}
+.intro .slogan_logo {
+    position: relative;
+    top: 20%;
+    left: 50%;
+    width: 212px;
+    height: 270px;
+    margin-left: -106px;
+}
+.intro .slogan_logo .logo{
+    opacity: 0;
+    margin-left:54px;
+}
+.intro .slogan_logo .slogan {
+    margin-top: 65px;
+}
+.intro .slogan_logo .slogan .item-wu {
+    margin-top: 6px;
+    padding-left: 5px;
+}
+.intro .slogan_logo .slogan .slogan-list-item {
+    opacity: 0;
+    float: left;
+    width: 60px;
+}
+.intro .slogan_logo .slogan .item-bu {
+    margin-top: 8px;
+    width: 50px;
+}
+.intro .slogan_logo .slogan .item-zhi {
+    text-align: right;
+    margin-top: 5px;
+    width: 32px;
+}
+/*单独*/
+    .wsh-rel{
+        position: relative;
+    }
+    .wnd-banner{
+        width:100%;
+        background: url("https://img.alicdn.com/tps/TB13IhaKFXXXXXrXFXXXXXXXXXX-1920-774.jpg") no-repeat center top;
+        margin-top:80px;
+    }
+    .bn-wen{
+        position: absolute;
+        left:157px;
+        top:187px;
+        display: none;
+    }
+    .bn-wen1{
+        left:197px;
+    }
+    .wnd-main{
+        width:100%;
+        background: url("https://img.alicdn.com/tps/TB1PcATKpXXXXXzapXXXXXXXXXX-1920-1825.png") no-repeat center top;
+        padding-bottom:158px;
+    }
+    .wnd-main .wnd-gz{
+        padding-top: 23px;
+        line-height: 48px;
+        background: url("https://img.alicdn.com/tps/TB1ATQUKpXXXXcsaXXXXXXXXXXX-990-52.png") no-repeat center bottom;
+    }
+    .wnd-Rules{
+        width:930px;
+        height:248px;
+        padding: 30px 30px 0 30px;
+        background: #ffb321;
+        margin-top: 24px;
+    }
+    .wnd-Rules li p,.wnd-Rules li span{
+        font-size: 16px;
+        color:#fff;
+        line-height: 22px;
+        float:left;
+        font-family: Microsoft YaHei;
+    }
+    .wnd-Rules li span{
+        display: block;
+        width:2%;
+    }
+    .wnd-Rules li p{
+        width:98%;
+        padding-bottom: 30px;
+    }
+    /*风车*/
+    .wnd-windmill{
+        display: block;
+        width:55px;
+        height:51px;
+        position: absolute;
+        left:52px;
+        top:301px;
+        z-index:1;
+        background: url("https://img.alicdn.com/tps/TB1ZMdbKFXXXXc1XpXXXXXXXXXX-55-51.png") no-repeat center top;
+        transform-origin:59.1% 44.1%;
+        -webkit-transform-origin:59.1% 44.1%;
+        -moz-transform-origin:59.1% 44.1%;
+        -ms-transform-origin:59.1% 44.1%;
+        -o-transform-origin:59.1% 44.1%;
+        -webkit-animation:round 3s infinite 0s linear;
+        -moz-animation:round 3s infinite 0s linear;
+        -ms-animation:round 3s infinite 0s linear;
+        -o-animation:round 3s infinite 0s linear;
+        animation:round 3s infinite 0s linear;
+    }
+    .wnd-windmill1{
+        width:87px;
+        height:82px;
+        background: url("https://img.alicdn.com/tps/TB1r6s4KpXXXXbcXVXXXXXXXXXX-87-82.png") no-repeat center top;
+        left:108px;
+        top:227px;
+        transform-origin:51px 36px;
+        -webkit-transform-origin:51px 36px;
+        -moz-transform-origin:51px 36px;
+        -ms-transform-origin:51px 36px;
+        -o-transform-origin:51px 36px;
+        -webkit-animation:round 3s infinite 0s linear;
+        -moz-animation:round 3s infinite 0s linear;
+        -ms-animation:round 3s infinite 0s linear;
+        -o-animation:round 3s infinite 0s linear;
+        animation:round 3s infinite 0s linear;
+    }
+    .wnd-windmill2{
+        left:767px;
+        top:264px;
+    }
+    @keyframes round{
+        0%{
+            transform:rotate(0);
+        }
+        100%{
+            transform:rotate(360deg);
+        }
+    }
+    @-webkit-keyframes round{
+        0%{
+            -webkit-transform:rotate(0);
+        }
+        100%{
+            -webkit-transform:rotate(360deg);
+        }
+    }
+    @-moz-keyframes round{
+        0%{
+            -moz-transform:rotate(0);
+        }
+        100%{
+            -moz-transform:rotate(360deg);
+        }
+    }
+    @-ms-keyframes round{
+        0%{
+            -ms-transform:rotate(0);
+        }
+        100%{
+            -ms-transform:rotate(360deg);
+        }
+    }
+    @-o-keyframes round{
+        0%{
+            -o-transform:rotate(0);
+        }
+        100%{
+            -o-transform:rotate(360deg);
+        }
+    }
+    .wnd-cloud{
+        display: block;
+        width:116px;
+        height:61px;
+        position: absolute;
+        left:-87px;
+        top:263px;
+        z-index: 2;
+        background: url("https://img.alicdn.com/tps/TB19RE8KpXXXXcFXFXXXXXXXXXX-116-61.png") no-repeat center top;
+        -webkit-animation:lefttoright 3s infinite 0s linear alternate;
+        -moz-animation:lefttoright 3s infinite 0s linear alternate;
+        -ms-animation:lefttoright 3s infinite 0s linear alternate;
+        -o-animation:lefttoright 3s infinite 0s linear alternate;
+        animation:lefttoright 3s infinite 0s linear alternate;
+    }
+    .wnd-cloud1{
+        width:51px;
+        height:26px;
+        background: url("https://img.alicdn.com/tps/TB1mateKFXXXXccXpXXXXXXXXXX-51-26.png") no-repeat center top; 
+        left:923px;
+        top:254px; 
+        -webkit-animation:lefttoright 3s infinite 2s linear alternate;
+        -moz-animation:lefttoright 3s infinite 2s linear alternate;
+        -ms-animation:lefttoright 3s infinite 2s linear alternate;
+        -o-animation:lefttoright 3s infinite 2s linear alternate;
+        animation:lefttoright 3s infinite 2s linear alternate;
+    }
+    .wnd-cloud2{
+        left:1066px;
+        top:180px; 
+    }
+    @keyframes lefttoright{
+        0%{
+            transform:translateX(-20px);
+        }
+        100%{
+            transform:translateX(20px);
+        }
+    }
+    @-webkit-keyframes lefttoright{
+        0%{
+            -webkit-transform:translateX(-20px);
+        }
+        100%{
+            -webkit-transform:translateX(20px);
+        }
+    }
+    @-moz-keyframes lefttoright{
+        0%{
+            -moz-transform:translateX(-20px);
+        }
+        100%{
+            -moz-transform:translateX(20px);
+        }
+    }
+    @-ms-keyframes lefttoright{
+        0%{
+            -ms-transform:translateX(-20px);
+        }
+        100%{
+            -ms-transform:translateX(20px);
+        }
+    }
+    @-o-keyframes lefttoright{
+        0%{
+            -o-transform:translateX(-20px);
+        }
+        100%{
+            -o-transform:translateX(20px);
+        }
+    }
+    .wnd-balloon{
+        display: block;
+        width:56px;
+        height:76px;
+        position: absolute;
+        left:-58px;
+        top:137px;
+        background: url("https://img.alicdn.com/tps/TB1Hiw3KpXXXXcsXVXXXXXXXXXX-56-76.png") no-repeat center top;
+        -webkit-animation:toptobot 2.5s infinite 0s linear alternate;
+        -moz-animation:toptobot 2.5s infinite 0s linear alternate;
+        -ms-animation:toptobot 2.5s infinite 0s linear alternate;
+        -o-animation:toptobot 2.5s infinite 0s linear alternate;
+        animation:toptobot 2.5s infinite 0s linear alternate;
+    }
+    .wnd-balloon1{
+        width:41px;
+        height:56px;
+        left:1242px;
+        top:270px;
+        background: url("https://img.alicdn.com/tps/TB1iYISKpXXXXa3apXXXXXXXXXX-41-56.png") no-repeat center top;
+        -webkit-animation:toptobot 2.5s infinite 1s linear alternate;
+        -moz-animation:toptobot 2.5s infinite 1s linear alternate;
+        -ms-animation:toptobot 2.5s infinite 1s linear alternate;
+        -o-animation:toptobot 2.5s infinite 1s linear alternate;
+        animation:toptobot 2.5s infinite 1s linear alternate;
+    }
+    @keyframes toptobot{
+        0%{
+            transform:translateY(-20px);
+        }
+        100%{
+            transform:translateY(20px);
+        }
+    }
+    @-webkit-keyframes toptobot{
+        0%{
+            -webkit-transform:translateY(-20px);
+        }
+        100%{
+            -webkit-transform:translateY(20px);
+        }
+    }
+    @-moz-keyframes toptobot{
+        0%{
+            -moz-transform:translateY(-20px);
+        }
+        100%{
+            -moz-transform:translateY(20px);
+        }
+    }
+    @-ms-keyframes toptobot{
+        0%{
+            -ms-transform:translateY(-20px);
+        }
+        100%{
+            -ms-transform:translateY(20px);
+        }
+    }
+    @-o-keyframes toptobot{
+        0%{
+            -o-transform:translateY(-20px);
+        }
+        100%{
+            -o-transform:translateY(20px);
+        }
+    }
+    .wnd-airplane{
+        display: block;
+        width:236px;
+        height:136px;
+        position: absolute;
+        left:131px;
+        top:368px;
+        background: url("https://img.alicdn.com/tps/TB1O5VpKFXXXXXOXXXXXXXXXXXX-236-136.png") no-repeat center top;
+    }
+    .wnd-airplane1{
+        width:233px;
+        height:108px;
+        left:1091px;
+        top:368px;
+        background: url("https://img.alicdn.com/tps/TB1Tjw.KpXXXXX_apXXXXXXXXXX-233-108.png") no-repeat center top;
+        -webkit-animation:fly 10s infinite 0s linear forwards;
+        -moz-animation:fly 10s infinite 0s linear forwards;
+        -ms-animation:fly 10s infinite 0s linear forwards;
+        -o-animation:fly 10s infinite 0s linear forwards;
+        animation:fly 10s infinite 0s linear forwards;
+    }
+    @keyframes fly{
+        0%{
+            transform:translate(-1400px,200px);
+        }
+        80%{
+            opacity: 1;
+        }
+        85%{
+            opacity: 0.5;
+        }
+        90%{
+            transform:translate(0,0);
+            transform:scale(.5);
+            opacity: 0;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    @-webkit-keyframes fly{
+        0%{
+            -webkit-transform:translate(-1400px,200px);
+        }
+        80%{
+            opacity: 1;
+        }
+        85%{
+            opacity: 0.5;
+        }
+        100%{
+            -webkit-transform:translate(0,0);
+            -webkit-transform:scale(.5);
+            opacity: 0;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    @-moz-keyframes fly{
+        0%{
+            -moz-transform:translate(-1400px,200px);
+        }
+        80%{
+            opacity: 1;
+        }
+        85%{
+            opacity: 0.5;
+        }
+        100%{
+            -moz-transform:translate(0,0);
+            -moz-transform:scale(.5);
+            opacity: 0;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    @-ms-keyframes fly{
+        0%{
+            -ms-transform:translate(-1400px,200px);
+        }
+        80%{
+            opacity: 1;
+        }
+        85%{
+            opacity: 0.5;
+        }
+        100%{
+            -ms-transform:translate(0,0);
+            -ms-transform:scale(.5);
+            opacity: 0;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    @-o-keyframes fly{
+        0%{
+            -o-transform:translate(-1400px,200px);
+        }
+        80%{
+            opacity: 1;
+        }
+        85%{
+            opacity: 0.5;
+        }
+        100%{
+            -o-transform:translate(0,0);
+            -o-transform:scale(.5);
+            opacity: 0;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+/*底部*/
+*{
+  margin:0;
+  padding: 0;
+}
+
+.foot-wrap {
+  background-color: #f8f8f8;
+  min-width: 990px;
+  font-family:STHeitiSC-Light;
+}
+
+.foot-content {
+  width: 990px;
+  margin: 0 auto;
+  padding: 30px 5px;
+  font-size: 14px;
+  line-height: 1.5;
+  *zoom: 1;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: #f8f8f8;
+  background: url(https://os.alipayobjects.com/rmsportal/AfFplHSMsIUAFHH.png) right -1px no-repeat;
+}
+.foot-content a{
+  color: #333;
+  margin: 0 10px;
+  font-size: 12px;
+  text-decoration: none;
+  display:inline;
+}
+.foot-content a:hover{
+  color: #00C2C2;
+  line-height: 12px;
+  text-decoration: none;
+}
+.foot-content:before,
+.foot-content:after {
+  display: table;
+  content: "";
+}
+.foot-content:after {
+  clear: both;
+}
+.foot-left {
+  float: left;
+  display: inline;
+}
+.foot-left img{
+  height: 26px;
+}
+.foot-right {
+  float: right;
+  display: inline;
+  text-align: right;
+}
+.foot-logo {
+  width: 209px;
+  height: 26px;
+  display: block;
+}
+.foot-intro {
+  padding-top: 14px;
+  position: relative;
+  right: -10px;
+  color: #D6D6D6;
+}
+.foot-copyright {
+  padding-top: 20px;
+  line-height: 12px;
+  color: #333;
+}
+.foot-link {
+  position: relative;
+  left: -10px;
+  color: #D6D6D6;
+  padding-top: 18px;
+  line-height: 12px;
+}
+.copyright{
+  margin-right: 15px;
+}
+  /*响应设计 小于1200px 显示 990px宽度头 */
+  @media (max-width: 1200px) {
+    .foot-content{
+      width: 990px;
+    }
+  }
+</style>
+<meta charset="utf-8">
+<title>网商节</title>
+</head>
+<body>
+<div class="wsb-main" id="lazywrap">
+    <div class="intro">
+        <div class="slogan_logo">
+            <div class="logo">
+                <img src="https://t.alipayobjects.com/images/rmsweb/T1hW4gXhdXXXXXXXXX.png" width="120" />
+            </div>
+            <div class="slogan">
+                <ul class="slogan-list fn-clear">
+                    <li class="slogan-list-item item-wu">
+                        <img src="https://t.alipayobjects.com/images/rmsweb/T1GY8gXe0oXXXXXXXX.png" width="48" />
+                    </li>
+                    <li class="slogan-list-item item-two">
+                        <img src="https://t.alipayobjects.com/images/rmsweb/T1ccFgXaVgXXXXXXXX.png" width="51" />
+                    </li>
+                    <li class="slogan-list-item item-bu">
+                        <img src="https://t.alipayobjects.com/images/rmsweb/T1VrNgXhxvXXXXXXXX.png" width="34" />
+                    </li>
+                    <li class="slogan-list-item item-zhi">
+                        <img src="https://t.alipayobjects.com/images/rmsweb/T1fr4gXcpqXXXXXXXX.png" width="25" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="wsh-header">
+        <div class="wsh-ct">
+            <a href="#" class="wsh-logo" title="网商银行" seed="wangshangyinhang"><img src="https://img.alicdn.com/tps/TB1oU7oKpXXXXX_XXXXXXXXXXXX-508-156.png" width="254" height="78" alt="logo" /></a>
+            <img class="wsh-tt" src="https://img.alicdn.com/tps/TB1e2bPKpXXXXbtXpXXXXXXXXXX-470-78.png" width="470" height="78" alt="时间轴" />
+            <img class="wsh-tt" src="https://img.alicdn.com/tps/TB1rlzRKpXXXXcRXXXXXXXXXXXX-470-78.png" width="470" height="78" alt="时间轴" />
+            <a class="wsb-guanz" id="addFavorite" rel="sidebar">抢先关注</a>
+        </div>
+    </div>
+    <div class="wsh-count">
+        <span class="counttxt">距狂欢开始</span>
+        <div id="demo6">
+            <div class="cd cd-large cd-slide" data-config="{'effect':'slide'}"><span class="clock">${d}${h}${m}</span></div>
+        </div>
+    </div>
+    <div class="wsh-erwei">
+        <a href="#" target="_self" class="wsh-ttop"><img src="https://img.alicdn.com/tps/TB1m2g1KpXXXXcbXVXXXXXXXXXX-150-41.png" width="150" height="41" alt="" /></a>
+    </div>
+    <div class="wnd-banner">
+        <div class="wsh-ct wsh-rel">
+            <img src="https://img.alicdn.com/tps/TB1j.oZKpXXXXXVaXXXXXXXXXXX-990-258.jpg" width="990" height="258" alt="" />
+            <img src="https://img.alicdn.com/tps/TB1iqdfKFXXXXbwXpXXXXXXXXXX-990-258.jpg" width="990" height="258" alt="" />
+            <img src="https://img.alicdn.com/tps/TB10GcZKpXXXXX6aXXXXXXXXXXX-990-258.jpg" width="990" height="258" alt="" />
+            <img class="bn-wen" src="https://img.alicdn.com/tps/TB18nxaKFXXXXcQXpXXXXXXXXXX-673-34.png" width="673" height="34" alt="" />
+            <img class="bn-wen" src="https://img.alicdn.com/tps/TB1STQ4KpXXXXaEXVXXXXXXXXXX-589-34.png" width="589" height="34" alt="" />
+            <span class="wnd-windmill"></span>
+            <span class="wnd-windmill wnd-windmill1"></span>
+            <span class="wnd-windmill wnd-windmill2"></span>
+            <span class="wnd-cloud"></span>
+            <span class="wnd-cloud wnd-cloud1"></span>
+            <span class="wnd-cloud wnd-cloud2"></span>
+            <span class="wnd-balloon"></span>
+            <span class="wnd-balloon wnd-balloon1"></span>
+            <span class="wnd-airplane"></span>
+            <span class="wnd-airplane wnd-airplane1"></span>
+        </div>
+    </div>
+    <div class="wnd-main">
+        <div class="wsh-ct">
+            <span class="wsh-gtxt wnd-gz">活动规则</span>
+            <ul class="wnd-Rules">
+                <li class="clearfix"><span>1.</span><p>活动时间：2016年7月15日00:00:00 - 7月15日23:59:59。</p></li>
+                <li class="clearfix"><span>2.</span><p>活动对象：旺农贷准入客户。</p></li>
+                <li class="clearfix"><span>3.</span><p>活动内容：活动期间，在网商银行app-贷款-我要借钱页面，申请旺农贷的用户，在申请页面选择本活动优惠，签署合同并获贷成功，可以享受整笔贷款利率9.5折的优惠；（本活动优惠不可与其他优惠同享）。</p></li>
+                <li class="clearfix"><span>4.</span><p>其他规则：本次活动中如有发现有碍其它用户公平参与活动或其它有违活动目的的行为，网商银行有权取消用户参与本活动的资格，
+  或因参加活动获得的优惠。</p></li>
+            </ul>
+            <div class="wsh-width1">
+                <div class="wsh-width">
+                    <span class="wsh-gtxt wsh-gtxt0">网商贷优惠 提前领</span>
+                    <span class="wsh-stxt">网商贷年息9.5折贷款冰点价，仅限<em>715</em>当天</span>
+                    <ul class="wsh-part1 clearfix">
+                        <li>
+                            <a href="#" target="_blank" seed="taobaofenhuichangwnd">
+                                <img data-ks-lazyload="https://img.alicdn.com/tps/TB1dSQhKpXXXXcHXXXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+                                <span class="wsh-huic">淘宝用户专享<br><em class="wsh-dai">贷款年息9.5折</em></span>
+                                <span class="wsh-see wsh-see1"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" seed="tianmaofenhuichangwnd">
+                                <img data-ks-lazyload="https://img.alicdn.com/tps/TB1D_zVKpXXXXX_aXXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+                                <span class="wsh-huic">天猫用户专享<br><em class="wsh-dai">贷款年息9.5折</em></span>
+                                <span class="wsh-see wsh-see2"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" seed="1688fenhuichangwnd">
+                                <img data-ks-lazyload="https://img.alicdn.com/tps/TB19BvQKpXXXXXxapXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+                                <span class="wsh-huic">1688用户专享<br><em class="wsh-dai">贷款年息9.5折</em></span>
+                                <span class="wsh-see wsh-see3"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" seed="gongyingsfenhuichangwnd">
+                                <img data-ks-lazyload="https://img.alicdn.com/tps/TB1jjrUKpXXXXbnaXXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+                                <span class="wsh-huic">中国供应商用户专享<br><em class="wsh-dai">贷款年息9.5折</em></span>
+                                <span class="wsh-see wsh-see3"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="wsh-gtxt wsh-gtxt1">红包折扣马上享</span>
+                    <ul class="wsh-part1 wsh-part2 clearfix">
+                        <li>
+                            <a href="#" target="_blank" seed="xinrenfuwnd">
+                                <img data-ks-lazyload="https://img.alicdn.com/tps/TB1Mgv7KpXXXXb8XFXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+                                <span class="wsh-huic">信任付体验红包疯狂送<br><em class="wsh-dai">赊账不求人，想赊就赊</em></span>
+                                <span class="wsh-see wsh-see5"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" seed="wangnongdaiwnd">
+                                <img data-ks-lazyload="https://img.alicdn.com/tps/TB1Ehn_KpXXXXa3XFXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+                                <span class="wsh-huic">旺农贷年息9.5折<br><em class="wsh-dai">为农民量身定制的贷款</em></span>
+                                <span class="wsh-see wsh-see6"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" seed="wangshangappwnd">
+                                <img data-ks-lazyload="https://img.alicdn.com/tps/TB1KIojKpXXXXcHXXXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+                                <span class="wsh-huic">网商银行APP<br><em class="wsh-dai">多重好礼乐翻天</em></span>
+                                <span class="wsh-see wsh-see7"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" seed="yulibaownd">
+                                <img data-ks-lazyload="https://img.alicdn.com/tps/TB1OrEgKpXXXXaXXpXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
+                                <span class="wsh-huic">余利宝<br><em class="wsh-dai">商家的大额灵活理财产品</em></span>
+                                <span class="wsh-see wsh-see8"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot-wrap">
+      <div class="foot-content">
+        <div class="foot-left">
+          <img src="https://os.alipayobjects.com/rmsportal/rsIfqqRrbmvgxyw.png" class="mybank-foot-logo">
+          <div class="foot-link">
+            <a href="http://www.antgroup.com/page/alipay.htm" target="_blank" title="支付宝">支付宝</a> |
+            <a href="http://www.antgroup.com/page/zmxy.htm" target="_blank" title="芝麻信用">芝麻信用</a> |
+            <a href="http://www.antgroup.com/page/xiaodai.htm" target="_blank" title="蚂蚁小贷">蚂蚁小贷</a> |
+            <a href="http://www.antgroup.com/page/jinrongyun.htm" target="_blank" title="蚂蚁金融云">蚂蚁金融云</a> |
+            <a href="http://www.antgroup.com/page/yuebao.htm" target="_blank" title="余额宝">余额宝</a> |
+            <a href="http://www.antgroup.com/page/zhaocaibao.htm" target="_blank" title="招财宝">招财宝</a> |
+            <a href="https://www.antsdaq.com/" target="_blank" title="蚂蚁达客">蚂蚁达客</a>
+          </div>
+        </div>
+        <div class="foot-right">
+          <div class="foot-intro">
+            <a href="https://www.mybank.cn/about.htm" target="_blank" title="关于我们">关于我们</a> |
+            <a href="https://job.alibaba.com/zhaopin/index.htm" target="_blank" title="诚招英才">诚招英才</a>
+          </div>
+          <p class="foot-copyright"><span class="copyright">浙ICP备15020822号</span>Copyright © 2015-2016 浙江网商银行</p>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    window._to = {
+      st: Date.now(),
+      role_id: '',
+    };
+</script>
+<script src="https://as.alipayobjects.com/g/animajs/mtracker/2.1.2/??seed.js,mtracker.js"></script>
+<script src="https://g.alicdn.com/??kissy/k/1.4.2/seed-min.js,tb/global/3.3.14/global-min.js" data-config="{combine:true}"></script>
+<script>
+    KISSY.use('node,kg/countdown/2.0.1/,io,datalazyload',function( S, Node, Countdown,IO,Lazyload) {
+        var $ =S.all;
+        var top = $(window).height();
+        (function(){
+            $(window).on("scroll", function(){
+                if ($(window).scrollTop() > top) {
+                    $(".wsh-ttop").show(.1);
+                } else {
+                    $(".wsh-ttop").hide(.1);
+
+                }
+            });
+        })();
+        (function(){
+            var url=location.href;
+            $("#addFavorite").attr("href",url);
+             document.getElementById("addFavorite").onclick=function(){
+                 bookmark();return false;
+             };
+         })();
+        function bookmark(){
+            var title=document.title;
+            var url=location.href;
+            if(window.sidebar){
+                window.sidebar.addPanel(title,url,"");
+            }
+            else if(KISSY.UA.shell=="ie"){
+                window.external.AddFavorite(url,title);
+            }else {
+                alert("您的浏览器不支持此功能，windows系统请按ctrl+D，Mac系统请按Cmd+D来加入收藏夹！");
+            }
+        } 
+        function showf(n){
+            $(".wsh-tt").hide();
+            $(".wsh-tt").item(n).show();
+            $(".bn-wen").hide();
+            $(".bn-wen").item(n).show();
+            new Lazyload();
+        }
+        (function(){
+            new IO({
+                url:"https://loan.mybank.cn/act/time.htm?callback=callbackFunction",
+                dataType: 'jsonp',
+                timeout:1000,
+                error:function(){
+                    showf(0);
+                    aaa(date2,aa);
+                },
+                success: function (d) {
+                    var date = d.time;
+                    var date1=1468166400000;
+                    var date2=1468511999000;
+                    var date3=1468512000000;
+                    var date4=1468598399000;
+                    var aa=(date2-date)/1000;
+                    var aa1=(date4-date)/1000;
+                    if(date<date2){
+                        showf(0);
+                        aaa(date2,aa);
+                    }else if(date>date2){
+                        showf(1);
+                        $(".wsh-banner").show();
+                        $(".counttxt").text("距狂欢结束");
+                        $(".wsh-gtxt0").text("网商贷优惠 仅限今日");
+                        $(".wsh-stxt").text("冰点折扣仅限715当天");
+                        $(".wsh-gtxt1").text("红包折扣最后一天");
+                        $(".wsh-width").addClass("wsh-widjoin");
+                        aaa(date4,aa1);
+                    }
+                }
+            })
+        })(); 
+        function aaa(time,el){
+            $('#demo6 .cd').each(function(node) { 
+            var cd = Countdown({
+                el: node,
+                stopPoint: time
+            });
+            cd.notify(0, function() {
+                this.left = el;
+                $(".counttxt").text("距狂欢结束");
+            });
+           
+            });
+        }
+    new Lazyload({
+        container: '#lazywrap',
+        diff: 200,
+        placeholder: '//gtd.alicdn.com/tps/i2/T1RyBdFndXXXbogjYy-500-300.png'
+    });
+    var time = setTimeout(function(){
+        $(".logo").animate({"opacity":"1"},0);
+        $(".item-wu").animate({"opacity":"1"},.4);
+    },200);
+    var time1 = setTimeout(function(){
+        $(".item-two").animate({"opacity":"1"},.4);
+    },400);
+    var time2 = setTimeout(function(){
+        $(".item-bu").animate({"opacity":"1"},.4);
+    },600);
+    var time3 = setTimeout(function(){
+        $(".item-zhi").animate({"opacity":"1"},.4);
+    },800);
+    var time4 = setTimeout(function(){
+        $(".intro").animate({"opacity":"0"},0);
+        $(".intro").animate({"display":"none"},0.2);
+    },1500);
+});
+</script>
