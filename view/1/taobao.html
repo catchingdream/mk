@@ -103,7 +103,8 @@
 	    font-family:Microsoft YaHei; 
 	}
 	.wsh-stxt em{
-    	font-weight: 700;
+	    font-weight: 700;
+	    font-style:normal;
 	}
 	.wsh-part1{
 	    width:1000px;
@@ -282,6 +283,8 @@
     .pop3 .pop-img{top:35px;left:168px;}
     .pop4 .pop-img{top:64px;left:159px;}
     .pop4 .pop-txt{top:233px;}
+    .pop5 .pop-img{top:64px;left:159px;}
+    .pop5 .pop-txt{top:233px;}
     .tb-blod{font-weight:700;}
     /*animate*/
     .tb-airplane{
@@ -1271,94 +1274,129 @@
 			opacity: 0;
 		}
 	}
-/*底部*/
-*{
-  margin:0;
-  padding: 0;
-}
-
-.foot-wrap {
-  background-color: #f8f8f8;
-  min-width: 990px;
-  font-family:STHeitiSC-Light;
-}
-
-.foot-content {
-  width: 990px;
-  margin: 0 auto;
-  padding: 30px 5px;
-  font-size: 14px;
-  line-height: 1.5;
-  *zoom: 1;
-  font-size: 12px;
-  line-height: 12px;
-  background-color: #f8f8f8;
-  background: url(https://os.alipayobjects.com/rmsportal/AfFplHSMsIUAFHH.png) right -1px no-repeat;
-}
-.foot-content a{
-  color: #333;
-  margin: 0 10px;
-  font-size: 12px;
-  text-decoration: none;
-  display:inline;
-}
-.foot-content a:hover{
-  color: #00C2C2;
-  line-height: 12px;
-  text-decoration: none;
-}
-.foot-content:before,
-.foot-content:after {
-  display: table;
-  content: "";
-}
-.foot-content:after {
-  clear: both;
-}
-.foot-left {
-  float: left;
-  display: inline;
-}
-.foot-left img{
-  height: 26px;
-}
-.foot-right {
-  float: right;
-  display: inline;
-  text-align: right;
-}
-.foot-logo {
-  width: 209px;
-  height: 26px;
-  display: block;
-}
-.foot-intro {
-  padding-top: 14px;
-  position: relative;
-  right: -10px;
-  color: #D6D6D6;
-}
-.foot-copyright {
-  padding-top: 20px;
-  line-height: 12px;
-  color: #333;
-}
-.foot-link {
-  position: relative;
-  left: -10px;
-  color: #D6D6D6;
-  padding-top: 18px;
-  line-height: 12px;
-}
-.copyright{
-  margin-right: 15px;
-}
-  /*响应设计 小于1200px 显示 990px宽度头 */
-  @media (max-width: 1200px) {
-    .foot-content{
-      width: 990px;
+	.tb-balloons{
+		position:absolute;
+		top:332px;
+		left:104px;
+		transform-origin: 54px 100%;
+    	animation:balloon 3s infinite alternate ease-in-out;
+    	-webkit-animation:balloon 3s infinite alternate ease-in-out;
+    	-moz-animation:balloon 3s infinite alternate ease-in-out;
+    	-ms-animation:balloon 3s infinite alternate ease-in-out;
+    	-o-animation:balloon 3s infinite alternate ease-in-out;
+	}
+	@keyframes balloon{
+		0%{transform:rotate(3deg);}
+		100%{transform:rotate(-6deg);}
     }
-  }
+    @-webkit-keyframes balloon{
+		0%{-webkit-transform:rotate(3deg);}
+		100%{-webkit-transform:rotate(-6deg);}
+    }
+    @-moz-keyframes balloon{
+		0%{-moz-transform:rotate(3deg);}
+		100%{-moz-transform:rotate(-6deg);}
+    }
+    @-ms-keyframes balloon{
+		0%{-ms-transform:rotate(3deg);}
+		100%{-ms-transform:rotate(-6deg);}
+    }
+    @-o-keyframes balloon{
+		0%{-o-transform:rotate(3deg);}
+		100%{-o-transform:rotate(-6deg);}
+    }
+	.tb-chdr{
+		position:absolute;
+		top:473px;
+		left:246px;	
+	}
+	.tb-diaosu{
+		position:absolute;
+		top:256px;
+		left:140px;
+	}
+	/*底部*/
+		.foot-wrap {
+		  background-color: #f8f8f8;
+		  min-width: 990px;
+		  font-family:STHeitiSC-Light;
+		}
+		.foot-content {
+		  width: 990px;
+		  margin: 0 auto;
+		  padding: 30px 5px;
+		  font-size: 14px;
+		  line-height: 1.5;
+		  *zoom: 1;
+		  font-size: 12px;
+		  line-height: 12px;
+		  background-color: #f8f8f8;
+		  background: url(https://os.alipayobjects.com/rmsportal/AfFplHSMsIUAFHH.png) right -1px no-repeat;
+		}
+		.foot-content a{
+		  color: #333;
+		  margin: 0 10px;
+		  font-size: 12px;
+		  text-decoration: none;
+		  display:inline;
+		}
+		.foot-content a:hover{
+		  color: #00C2C2;
+		  line-height: 12px;
+		  text-decoration: none;
+		}
+		.foot-content:before,
+		.foot-content:after {
+		  display: table;
+		  content: "";
+		}
+		.foot-content:after {
+		  clear: both;
+		}
+		.foot-left {
+		  float: left;
+		  display: inline;
+		}
+		.foot-left img{
+		  height: 26px;
+		}
+		.foot-right {
+		  float: right;
+		  display: inline;
+		  text-align: right;
+		}
+		.foot-logo {
+		  width: 209px;
+		  height: 26px;
+		  display: block;
+		}
+		.foot-intro {
+		  padding-top: 14px;
+		  position: relative;
+		  right: -10px;
+		  color: #D6D6D6;
+		}
+		.foot-copyright {
+		  padding-top: 20px;
+		  line-height: 12px;
+		  color: #333;
+		}
+		.foot-link {
+		  position: relative;
+		  left: -10px;
+		  color: #D6D6D6;
+		  padding-top: 18px;
+		  line-height: 12px;
+		}
+		.copyright{
+		  margin-right: 15px;
+		}
+		  /*响应设计 小于1200px 显示 990px宽度头 */
+		  @media (max-width: 1200px) {
+		    .foot-content{
+		      width: 990px;
+		    }
+		  }
 	</style>
 </head>
 <body>
@@ -1410,14 +1448,14 @@
 		<div class="wb-banner">
 			<div class="wb-main">
 				<img src="https://img.alicdn.com/tps/TB1BshbKFXXXXcrXpXXXXXXXXXX-990-194.jpg" width="990" height="194">
-				<img src="https://img.alicdn.com/tps/TB15P0bKFXXXXbIXpXXXXXXXXXX-990-193.jpg" width="990" height="193">
-				<img src="https://img.alicdn.com/tps/TB18aXzKFXXXXb0XpXXXXXXXXXX-990-194.jpg" width="990" height="194">
+				<img src="https://img.alicdn.com/tps/TB1Tz5ZKFXXXXXxXFXXXXXXXXXX-990-193.jpg" width="990" height="193">
+				<img src="https://img.alicdn.com/tps/TB1WbCEKFXXXXayapXXXXXXXXXX-990-194.jpg" width="990" height="194">
 				<img src="https://img.alicdn.com/tps/TB1PLVHKFXXXXauXXXXXXXXXXXX-990-193.jpg" width="990" height="193">
 				<img class="ws-logo" src="https://img.alicdn.com/tps/TB1zy77KpXXXXXmXVXXXXXXXXXX-126-100.png" width="126" height="100">
 				<img class="ws-h2" src="https://img.alicdn.com/tps/TB1_qFlKFXXXXXXXpXXXXXXXXXX-516-40.png" width="516" height="40">
 				<img class="ws-h3" src="https://gw.alicdn.com/tps/TB140xlKFXXXXXgXpXXXXXXXXXX-435-40.png" width="435" height="40">
 				<a class="m-btn m-btn1" href="javascript:void(0);">领取入场券</a>
-				<a class="m-btn m-btn2" target="_blank" href="#" seed="tb_ljsq">立即申请</a>
+				<a class="m-btn m-btn2" target="_blank" href="https://loan.mybank.cn/taobao/tbloan/index.htm?urlAutoSelect=xyDacu&tracelog=wsjym" seed="tb_ljsq">立即申请</a>
 				<div class="tb-airplane">
 					<img src="https://img.alicdn.com/tps/TB1hEtsKFXXXXcuXpXXXXXXXXXX-351-76.png" width="351" height="76">
 				</div>
@@ -1451,6 +1489,15 @@
 				<div class="tb-redbag">
 					<img src="https://img.alicdn.com/tps/TB1FIxhKFXXXXbBXVXXXXXXXXXX-378-188.png" width="378" height="188">
 				</div>
+				<div class="tb-balloons">
+					<img src="https://img.alicdn.com/tps/TB1GMCHKFXXXXa1aXXXXXXXXXXX-67-179.png" width="67" height="179">
+				</div>
+				<div class="tb-diaosu">
+					<img src="https://img.alicdn.com/tps/TB1hySVKFXXXXbzXFXXXXXXXXXX-137-293.png" width="137" height="293">
+				</div>
+				<div class="tb-chdr">
+					<img src="https://img.alicdn.com/tps/TB15O9DKFXXXXaLapXXXXXXXXXX-58-106.png" width="58" height="106">
+				</div>
 				<div class="tb-coin">
 					<img src="https://img.alicdn.com/tps/TB1qKxDKFXXXXXVXXXXXXXXXXXX-90-59.png" width="90" height="59">
 				</div>
@@ -1472,22 +1519,22 @@
 				<ul class="tb-list tb-list1 clearfix">
 					<li class="tb-li tb-li1">
 						<img src="https://img.alicdn.com/tps/TB1.AU4KpXXXXaZXVXXXXXXXXXX-486-278.png" alt="">
-						<a class="tb-btn tb-btn1" target="_blank" href="#" seed="tb_zhd"><img src="https://img.alicdn.com/tps/TB1GIo4KpXXXXc_XVXXXXXXXXXX-187-42.png" width="187" height="42"></a>
+						<span class="tb-btn tb-btn1"><img src="https://img.alicdn.com/tps/TB1GIo4KpXXXXc_XVXXXXXXXXXX-187-42.png" width="187" height="42"></span>
 					</li>
 					<li class="tb-li tb-li2">
 						<img src="https://img.alicdn.com/tps/TB1_so9KpXXXXb6XFXXXXXXXXXX-486-278.png" width="486" height="278">
-						<a class="tb-btn tb-btn2 showpop4" href="javascript:void(0);"><img src="https://img.alicdn.com/tps/TB1.hFhKFXXXXXNXpXXXXXXXXXX-157-42.png" width="157" height="42"></a>
+						<a class="tb-btn tb-btn2 showpop4" href="javascript:void(0);"><img src="https://img.alicdn.com/tps/TB1BcnXKFXXXXbtXXXXXXXXXXXX-157-42.png" width="157" height="42"></a>
 					</li>
 					<li class="tb-li tb-li3">
 						<img src="https://img.alicdn.com/tps/TB13aReKFXXXXawXpXXXXXXXXXX-989-315.png" width="989" height="315">
-						<a class="tb-btn tb-btn3" target="_blank" href="#" seed="tb_tqsk"><img src="https://img.alicdn.com/tps/TB1GIo4KpXXXXc_XVXXXXXXXXXX-187-42.png" width="187" height="42"></a>
-						<a class="tb-btn tb-btn4 showpop4" href="javascript:void(0);"><img src="https://img.alicdn.com/tps/TB1.hFhKFXXXXXNXpXXXXXXXXXX-157-42.png" width="157" height="42"></a>
+						<a class="tb-btn tb-btn3" target="_blank" href="http://login.taobao.com/member/aliloanAsoGateway.do?target=https://loan.mybank.cn/taobao/sellercenter/index.htm" seed="tb_tqsk"><img src="https://img.alicdn.com/tps/TB1C7c8KpXXXXb4XFXXXXXXXXXX-157-42.png" width="157" height="42"></a>
+						<a class="tb-btn tb-btn4 showpop5" href="javascript:void(0);"><img src="https://img.alicdn.com/tps/TB1kqqGKFXXXXaqapXXXXXXXXXX-157-42.png" width="157" height="42"></a>
 					</li>
 				</ul>
 				<ul class="tb-list tb-list2 clearfix">
 					<li class="tb-li tb-li1">
 						<img src="https://img.alicdn.com/tps/TB1.AU4KpXXXXaZXVXXXXXXXXXX-486-278.png" alt="">
-						<a class="tb-btn tb-btn1" target="_blank" href="#" seed="tb_zhd"><img src="https://img.alicdn.com/tps/TB1WqxfKFXXXXarXpXXXXXXXXXX-157-42.png" width="157" height="42"></a>
+						<a class="tb-btn tb-btn1" target="_blank" href="https://loan.mybank.cn/taobao/tbloan/index.htm?urlAutoSelect=xyDacu&tracelog=wsjym" seed="tb_zhd"><img src="https://img.alicdn.com/tps/TB1WqxfKFXXXXarXpXXXXXXXXXX-157-42.png" width="157" height="42"></a>
 					</li>
 					<li class="tb-li tb-li2">
 						<img src="https://img.alicdn.com/tps/TB1_so9KpXXXXb6XFXXXXXXXXXX-486-278.png" width="486" height="278">
@@ -1495,8 +1542,8 @@
 					</li>
 					<li class="tb-li tb-li3">
 						<img src="https://img.alicdn.com/tps/TB13aReKFXXXXawXpXXXXXXXXXX-989-315.png" width="989" height="315">
-						<a class="tb-btn tb-btn3" target="_blank" href="#" seed="tb_tqsk"><img src="https://img.alicdn.com/tps/TB1C7c8KpXXXXb4XFXXXXXXXXXX-157-42.png" width="157" height="42"></a>
-						<a class="tb-btn tb-btn4 showpop4" href="javascript:void(0);"><img src="https://img.alicdn.com/tps/TB1GhAUKpXXXXXeapXXXXXXXXXX-195-42.png" width="195" height="42"></a>
+						<a class="tb-btn tb-btn3" target="_blank" href="http://login.taobao.com/member/aliloanAsoGateway.do?target=https://loan.mybank.cn/taobao/sellercenter/index.htm" seed="tb_tqsk"><img src="https://img.alicdn.com/tps/TB1C7c8KpXXXXb4XFXXXXXXXXXX-157-42.png" width="157" height="42"></a>
+						<a class="tb-btn tb-btn4 showpop5" href="javascript:void(0);"><img src="https://img.alicdn.com/tps/TB1GhAUKpXXXXXeapXXXXXXXXXX-195-42.png" width="195" height="42"></a>
 					</li>
 				</ul>
 				<div class="tb-actrules"><span>活动规则</span></div>
@@ -1504,15 +1551,15 @@
 					<ul class="wnd-Rules">
 		                <li class="clearfix">
 		                	<span class="r-items">1.</span>
-		                	<p class="t-txt">活动时间：2016年7月15日00:00:00－7月15日23:59:59；</p>
+		                	<p class="t-txt">活动时间：2016年7月15日00:00:00－7月15日23:59:59</p>
 		                </li>
 		                <li class="clearfix">
 		                	<span class="r-items">2.</span>
-		                	<p class="t-txt">活动对象：具有淘宝贷款信用类贷款产品（随借随还（6个月）、等额本金（12个月）或组合贷）申请资格的淘宝卖家；</p>
+		                	<p class="t-txt">活动对象：具有淘宝贷款信用类贷款产品（随借随还（6个月）、等额本金（12个月）或组合贷）申请资格的淘宝卖家。</p>
 		                </li>
 		                <li class="clearfix">
 		                	<span class="r-items">3.</span>
-		                	<p class="t-txt">活动参与方式：活动当天，卖家通过淘宝贷款首页申贷或在活动页面点击“立即申请”按钮进行信用类贷款申请时，在贷款申请表“我的优惠”中选择本活动对应的优惠，签署合同并获贷成功，即可获得相应优惠；</p>
+		                	<p class="t-txt">活动参与方式：活动当天，卖家通过淘宝贷款首页申贷或在活动页面点击“立即申请”按钮进行信用类贷款申请时，在贷款申请表“我的优惠”中选择本活动对应的优惠，签署合同并获贷成功，即可获得相应优惠。</p>
 		                </li>
 		                <li class="clearfix">
 		                	<span class="r-items">4.</span>
@@ -1524,11 +1571,11 @@
 		                	<ul class="fen-list">
 		                		<li class="clearfix">
 		                			<span class="r-items2">1）</span>
-		                			<p class="t-txt2">淘宝卖家成功获贷的金额以贷款实际发放的金额为准；</p>
+		                			<p class="t-txt2">淘宝卖家成功获贷的金额以贷款实际发放的金额为准。</p>
 		                		</li>
 		                		<li class="clearfix">
 		                			<span class="r-items2">2）</span>
-		                			<p class="t-txt2">本活动优惠与除利息红包以外的任何形式优惠不可同时使用；</p>
+		                			<p class="t-txt2">本活动优惠与除利息红包以外的任何形式优惠不可同时使用。</p>
 		                		</li>
 		                		<li class="clearfix">
 		                			<span class="r-items2">3）</span>
@@ -1544,28 +1591,28 @@
 			            <span class="wsh-stxt">网商贷年息9.5折贷款冰点价，仅限<em>715</em>当天</span>
 			            <ul class="wsh-part1 clearfix">
 			                <li>
-			                    <a href="#" target="_blank" seed="tb_taobaofenhuichangyr">
+			                    <a href="https://alimarket.taobao.com/markets/mybank/wsjtbdk-pc" target="_blank" seed="tb_taobaofenhuichangyr">
 			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB1dSQhKpXXXXcHXXXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
 			                        <span class="wsh-huic">淘宝用户专享<br><em class="wsh-dai">贷款年息9.5折</em></span>
 			                        <span class="wsh-see wsh-see1"></span>
 			                    </a>
 			                </li>
 			                <li>
-			                    <a href="#" target="_blank" seed="tb_tianmaofenhuichangyr">
+			                    <a href="https://alimarket.taobao.com/markets/mybank/wsjtmdk-pc" target="_blank" seed="tb_tianmaofenhuichangyr">
 			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB1D_zVKpXXXXX_aXXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
 			                        <span class="wsh-huic">天猫用户专享<br><em class="wsh-dai">贷款年息9.5折</em></span>
 			                        <span class="wsh-see wsh-see2"></span>
 			                    </a>
 			                </li>
 			                <li>
-			                    <a href="#" target="_blank" seed="tb_1688fenhuichangyr">
+			                    <a href="https://render.mybank.cn/p/b/ipz3u64d/index" target="_blank" seed="tb_1688fenhuichangyr">
 			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB19BvQKpXXXXXxapXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
 			                        <span class="wsh-huic">1688用户专享<br><em class="wsh-dai">贷款年息9.5折</em></span>
 			                        <span class="wsh-see wsh-see3"></span>
 			                    </a>
 			                </li>
 			                <li>
-			                    <a href="#" target="_blank" seed="tb_gongyingsfenhuichangyr">
+			                    <a href="https://render.mybank.cn/p/b/ipz3vnh0/index" target="_blank" seed="tb_gongyingsfenhuichangyr">
 			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB1jjrUKpXXXXbnaXXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
 			                        <span class="wsh-huic">中国供应商用户专享<br><em class="wsh-dai">贷款年息9.5折</em></span>
 			                        <span class="wsh-see wsh-see3"></span>
@@ -1575,28 +1622,28 @@
 			            <span class="wsh-gtxt wsh-gtxt1">红包折扣马上享</span>
 			            <ul class="wsh-part1 wsh-part2 clearfix">
 			                <li>
-			                    <a href="#" target="_blank" seed="tb_xinrenfuyr">
+			                    <a href="http://page.1688.com/html/mybank625.html" target="_blank" seed="tb_xinrenfuyr">
 			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB1Mgv7KpXXXXb8XFXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
 			                        <span class="wsh-huic">信任付体验红包疯狂送<br><em class="wsh-dai">赊账不求人，想赊就赊</em></span>
 			                        <span class="wsh-see wsh-see5"></span>
 			                    </a>
 			                </li>
 			                <li>
-			                    <a href="#" target="_blank" seed="tb_wangnongdaiyr">
+			                    <a href="https://render.mybank.cn/p/b/ipz42joo/index" target="_blank" seed="tb_wangnongdaiyr">
 			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB1Ehn_KpXXXXa3XFXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
 			                        <span class="wsh-huic">旺农贷年息9.5折<br><em class="wsh-dai">为农民量身定制的贷款</em></span>
 			                        <span class="wsh-see wsh-see6"></span>
 			                    </a>
 			                </li>
 			                <li>
-			                    <a href="#" target="_blank" seed="tb_wangshangappyr">
+			                    <a href="https://render.mybank.cn/p/b/ipz43poz/index" target="_blank" seed="tb_wangshangappyr">
 			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB1KIojKpXXXXcHXXXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
 			                        <span class="wsh-huic">网商银行APP<br><em class="wsh-dai">多重好礼乐翻天</em></span>
 			                        <span class="wsh-see wsh-see7"></span>
 			                    </a>
 			                </li>
 			                <li>
-			                    <a href="#" target="_blank" seed="tb_yulibaoyr">
+			                    <a href="https://render.mybank.cn/p/b/ipz41ndy/index" target="_blank" seed="tb_yulibaoyr">
 			                        <img data-ks-lazyload="https://img.alicdn.com/tps/TB1OrEgKpXXXXaXXpXXXXXXXXXX-490-240.png" width="490" height="240" alt="" />
 			                        <span class="wsh-huic">余利宝<br><em class="wsh-dai">商家的大额灵活理财产品</em></span>
 			                        <span class="wsh-see wsh-see8"></span>
@@ -1608,7 +1655,30 @@
 			    <img src="https://img.alicdn.com/tps/TB14Cg1KpXXXXX5aXXXXXXXXXXX-990-237.jpg" width="990" height="237">
 			</div>
 		</div>
-		<!--弹窗-->
+		<div class="foot-wrap">
+	      <div class="foot-content">
+	        <div class="foot-left">
+	          <img src="https://os.alipayobjects.com/rmsportal/rsIfqqRrbmvgxyw.png" class="mybank-foot-logo">
+	          <div class="foot-link">
+	            <a href="http://www.antgroup.com/page/alipay.htm" target="_blank" title="支付宝">支付宝</a> |
+	            <a href="http://www.antgroup.com/page/zmxy.htm" target="_blank" title="芝麻信用">芝麻信用</a> |
+	            <a href="http://www.antgroup.com/page/xiaodai.htm" target="_blank" title="蚂蚁小贷">蚂蚁小贷</a> |
+	            <a href="http://www.antgroup.com/page/jinrongyun.htm" target="_blank" title="蚂蚁金融云">蚂蚁金融云</a> |
+	            <a href="http://www.antgroup.com/page/yuebao.htm" target="_blank" title="余额宝">余额宝</a> |
+	            <a href="http://www.antgroup.com/page/zhaocaibao.htm" target="_blank" title="招财宝">招财宝</a> |
+	            <a href="https://www.antsdaq.com/" target="_blank" title="蚂蚁达客">蚂蚁达客</a>
+	          </div>
+	        </div>
+	        <div class="foot-right">
+	          <div class="foot-intro">
+	            <a href="https://www.mybank.cn/about.htm" target="_blank" title="关于我们">关于我们</a> |
+	            <a href="https://job.alibaba.com/zhaopin/index.htm" target="_blank" title="诚招英才">诚招英才</a>
+	          </div>
+	          <p class="foot-copyright"><span class="copyright">浙ICP备15020822号</span>Copyright © 2015-2016 浙江网商银行</p>
+	        </div>
+	      </div>
+	    </div>
+	    <!--弹窗-->
 		<div class="wb-modbg"></div>
 		<div class="tb-pop pop1">
 			<div class="pop-close"></div>
@@ -1646,36 +1716,23 @@
 		<div class="tb-pop pop4">
 			<div class="pop-close"></div>
 			<div class="pop-img">
-				<img src="https://img.alicdn.com/tps/TB1.4I8KpXXXXckaXXXXXXXXXXX-162-163.png" width="162" height="163">
+				<img src="https://img.alicdn.com/tps/TB1ZCOOKFXXXXcEXVXXXXXXXXXX-300-300.png" width="162" height="163">
 			</div>
 			<div class="pop-txt">
 				<p>支付宝扫一扫</p>
 				<p>立即参与</p>
 			</div>
 		</div>
-	    <div class="foot-wrap">
-	      <div class="foot-content">
-	        <div class="foot-left">
-	          <img src="https://os.alipayobjects.com/rmsportal/rsIfqqRrbmvgxyw.png" class="mybank-foot-logo">
-	          <div class="foot-link">
-	            <a href="http://www.antgroup.com/page/alipay.htm" target="_blank" title="支付宝">支付宝</a> |
-	            <a href="http://www.antgroup.com/page/zmxy.htm" target="_blank" title="芝麻信用">芝麻信用</a> |
-	            <a href="http://www.antgroup.com/page/xiaodai.htm" target="_blank" title="蚂蚁小贷">蚂蚁小贷</a> |
-	            <a href="http://www.antgroup.com/page/jinrongyun.htm" target="_blank" title="蚂蚁金融云">蚂蚁金融云</a> |
-	            <a href="http://www.antgroup.com/page/yuebao.htm" target="_blank" title="余额宝">余额宝</a> |
-	            <a href="http://www.antgroup.com/page/zhaocaibao.htm" target="_blank" title="招财宝">招财宝</a> |
-	            <a href="https://www.antsdaq.com/" target="_blank" title="蚂蚁达客">蚂蚁达客</a>
-	          </div>
-	        </div>
-	        <div class="foot-right">
-	          <div class="foot-intro">
-	            <a href="https://www.mybank.cn/about.htm" target="_blank" title="关于我们">关于我们</a> |
-	            <a href="https://job.alibaba.com/zhaopin/index.htm" target="_blank" title="诚招英才">诚招英才</a>
-	          </div>
-	          <p class="foot-copyright"><span class="copyright">浙ICP备15020822号</span>Copyright © 2015-2016 浙江网商银行</p>
-	        </div>
-	      </div>
-	    </div>
+		<div class="tb-pop pop5">
+			<div class="pop-close"></div>
+			<div class="pop-img">
+				<img src="https://img.alicdn.com/tps/TB1Nr5LKFXXXXadaXXXXXXXXXXX-300-300.png" width="162" height="163">
+			</div>
+			<div class="pop-txt">
+				<p>支付宝扫一扫</p>
+				<p>立即参与</p>
+			</div>
+		</div>
 	</div>
 	<script>
     window._to = {
@@ -1685,7 +1742,20 @@
 	</script>
 	<script src="https://as.alipayobjects.com/g/animajs/mtracker/2.1.2/??seed.js,mtracker.js"></script>
 	<script src="https://g.alicdn.com/??kissy/k/1.4.2/seed-min.js,tb/global/3.3.14/global-min.js" data-config="{combine:true}"></script>
+	<script type="text/javascript" src="https://os.alipayobjects.com/rmsportal/BKgUJbAcIgTTpVS.js"></script>
 	<script>
+		function GetRequest() {
+	        var url = location.search; //获取url中"?"符后的字串
+	        var theRequest = new Object();
+	        if (url.indexOf("?") != -1) {
+	            var str = url.substr(1);
+	            strs = str.split("&");
+	            for(var i = 0; i < strs.length; i ++) {
+	                theRequest[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+	            }
+	        }
+	        return theRequest;
+	    }
 	    KISSY.use('node,kg/countdown/2.0.1/,io,datalazyload',function( S, Node, Countdown,IO,Lazyload) {
 	        var $ =S.all;
 	        var top = $(window).height();
@@ -1723,51 +1793,43 @@
 	            $(".wsh-tt").item(n).show();
 	            new Lazyload();
 	        }
+	        var date1=1468166400000;
+            var date2=1468511999000;
+            var date3=1468512000000;
+            var date4=1468598399000;
+            var aa,aa1;
 	        (function(){
 	            new IO({
 	                url:"https://loan.mybank.cn/act/time.htm?callback=callbackFunction",
 	                dataType: 'jsonp',
+	                timeout:1000,
+	                error:function(){
+	                    show14();
+	                },
 	                success: function (d) {
 	                    var date = d.time;
-	                    // var daa = new Date("2016/07/11 00:00:00").getTime();
-	                    // console.log(daa);
-	                    var date1=1468166400000;//2016/07/11 00:00:00
-	                    var date2=1468511999000;//2016/07/14 23:59:59
-	                    var date3=1468512000000;//2016/07/15 00:00:00
-	                    var date4=1468598399000;//2016/07/15 23:59:59
-	                    var aa=(date2-date)/1000;
-	                    var aa1=(date4-date)/1000;
-	                    if(date<date2){
-	                    	//未开场
-	                        showf(0);
-	                        aaa(date2,aa);
-	                        $(".ws-h2").show();
-	                        $(".ws-h3").hide();
-	                        $(".m-btn1").show();
-	                        $(".m-btn2").hide();
-	                        $(".tb-list2").hide();
-	                        $(".tb-list1").show();
-	                    }else if(date>date2){
+	                    aa=(date2-date)/1000;
+	                    aa1=(date4-date)/1000;
+	                    var Request = new Object();
+	                    Request = GetRequest();
+	                    var patientId=Request['day'];
+	                    if(patientId== '14'){
+		                    show14();
+	                    }else if(patientId== '15'){
 	                    	//开场
-	                        showf(1);
-	                        $(".wsh-banner").show();
-	                        $(".counttxt").text("距狂欢结束");
-	                        $(".wsh-gtxt0").text("网商贷优惠 仅限今日");
-	                        $(".wsh-stxt").text("冰点折扣仅限715当天");
-	                        $(".wsh-gtxt1").text("红包折扣最后一天");
-	                        $(".wsh-width").addClass("wsh-widjoin");
-	                        aaa(date4,aa1);
-	                        $(".ws-h2").hide();
-	                        $(".ws-h3").show();
-	                        $(".m-btn1").hide();
-	                        $(".m-btn2").show();
-	                        $(".tb-list2").show();
-	                        $(".tb-list1").hide();
+	                        show15();
+	                    }else{ 
+	                        if(date<date2){
+			                    show14();
+	                        }else if(date>date2){
+		                    	//开场
+		                        show15();
+	                        }
 	                    }
 	                }
 	            })
-	        })(); 
-	        function aaa(time,el){
+	        })();
+	        function countdown(time,el){
 	            $('#demo6 .cd').each(function(node) { 
 	            var cd = Countdown({
 	                el: node,
@@ -1779,6 +1841,34 @@
 	            });
 	           
 	            });
+	        }
+	        function show14(){
+	        	//显示15号之前的内容
+	        	showf(0);
+                countdown(date2,aa);
+                $(".ws-h2").show();
+                $(".ws-h3").hide();
+                $(".m-btn1").show();
+                $(".m-btn2").hide();
+                $(".tb-list2").hide();
+                $(".tb-list1").show();
+	        }
+	        function show15(){
+	        	//显示15号之后的内容
+	        	showf(1);
+                $(".wsh-banner").show();
+                $(".counttxt").text("距狂欢结束");
+                $(".wsh-gtxt0").text("网商贷优惠 仅限今日");
+                $(".wsh-stxt").text("冰点折扣仅限715当天");
+                $(".wsh-gtxt1").text("红包折扣最后一天");
+                $(".wsh-width").addClass("wsh-widjoin");
+                countdown(date4,aa1);
+                $(".ws-h2").hide();
+                $(".ws-h3").show();
+                $(".m-btn1").hide();
+                $(".m-btn2").show();
+                $(".tb-list2").show();
+                $(".tb-list1").hide();
 	        }
 		    new Lazyload({
 		        container: '#lazywrap',
@@ -1811,6 +1901,10 @@
 		    });
 		    $('.showpop4').on('click',function(){
 		    	$('.pop4').show();
+		    	$('.wb-modbg').show();
+		    });
+		    $('.showpop5').on('click',function(){
+		    	$('.pop5').show();
 		    	$('.wb-modbg').show();
 		    });
 		    $(".pop-lq").on('click',function(){
