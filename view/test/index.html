@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>天猫</title>
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1468295143_10337.css">
+<style>
+body,div,h1,h2,h3,h4,h5,ul,ol,li,p,img,dl,dt,dd,input,textarea,a,span,i,em,b,form,table{margin:0px; padding:0px;}
+img{border:0 none; vertical-align:top;}
+a{text-decoration:none;background: url("about:blank");}
+i,b,em{font-style:normal;}
+ul,ol{list-style:none;}
+body{cursor: auto;}
+map{cursor: pointer;}
+area{outline:none;}
+.clearfix{*zoom:1;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+/*头部*/
+.tmm-main{font:12px/1.5 Microsoft YaHei,tahoma,simsun,sans-serif;overflow:hidden;background:#f6f6f6;}
+.tmm-main span{display: block;}
+.tmm-ct{width:1190px;margin:0 auto;}
+.tmm-header{width:100%;height:116px;background-color:#dd2727;border-bottom:10px solid #b90d0d;}
+.tmm-header .tmm-logo{padding:43px 0 0 46px;}
+.tmm-rel{position: relative;}
+.tmm-headnav{position: absolute;right:85px;top:0;}
+.tmm-headnav li{float: left;color:#fff;height:116px;line-height:116px;font-size:20px;margin-left:150px;}
+.tmm-headnav a{
+    display: block;
+    color: #fff;height:116px;line-height:116px;font-size:20px;padding:0 10px;text-align: center;
+    position: relative;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+.tmm-headnav li.active a {
+    background-color: #cc1e1e;
+    border-bottom:10px solid #353536;
+}
+.tmm-headnav li.active a:hover {
+    /*color: #fff;*/
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+.tmm-headnav a:before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    background-color: #353536;
+    bottom: -10px;
+    left:0;
+    opacity: 0;
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
+    transform: translateY(5px);
+    -webkit-transition: opacity .5s, transform .5s;
+    -moz-transition: opacity .5s, transform .5s;
+    -ms-transition: opacity .5s, transform .5s;
+    -o-transition: opacity .5s, transform .5s;
+    transition: opacity .5s, transform .5s;
+}
+
+.tmm-headnav a:hover:before {
+    content: "";
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: opacity .2s, transform .2s ease-out;
+    -moz-transition: opacity .2s, transform .2s ease-out;
+    -ms-transition: opacity .2s, transform .2s ease-out;
+    -o-transition: opacity .2s, transform .2s ease-out;
+    transition: opacity .2s, transform .2s ease-out;
+}
+/*品牌手册*/
+.tmm-imporant{width:100%;background-color: #fff;}
+.tmm-part{display:block;height:462px;overflow: hidden;}
+.tmm-part .imghover{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.tmm-part .imghover:hover{transform: scale(1.05);-webkit-transform:scale(1.05);-moz-transform:scale(1.05);-ms-transform:scale(1.05);-o-transform:scale(1.05);}
+.tmbrand-box{width:370px;height:462px;position: absolute;left:0;top:0;background: rgba(13,13,13,.8);filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F0d0d0d,endcolorstr=#7F0d0d0d);overflow: hidden;;}
+.tmm-tile i{display:block;color:#fff;font-weight: normal;font-size: 20px;line-height: 22px;font-family: "Gotham Pro", sans-serif;margin-bottom: 10px;}
+.tmm-tile em{display: block;color:#fff;font-size: 44px;line-height:46px;font-weight: 700;}
+.tmm-tile{margin:42px 0 200px 46px;}
+.iconfont{-webkit-font-smoothing: antialiased;display: block;-webkit-text-stroke-width: 0.2px;}
+.icon-jiantou{color:#7f162a;font-size: 66px;line-height:66px;position: absolute;left:216px;top:49px;}
+.tmm-bot ul{position: absolute;left:37px;top: 318px;}
+.tmm-bot ul li{float:left;width:80px;height:142px;margin-right:28px;position: relative;}
+.tmm-bot ul li i{display: block;width:62px;height:62px;background: url("img/icon.png") no-repeat 0 0;margin-bottom:14px;position: absolute;left:9px;top:0;z-index:2;cursor:pointer;}
+.tmm-bot ul li .tmm-i1{background-position:-61px 0;}
+.tmm-bot ul li .tmm-i2{background-position:-123px 0;}
+.tmm-bot ul li span{display: block;color:#fff;font-size: 16px;line-height: 18px;text-align: center;padding-top: 72px;}
+.tmm-bot,.tmm-bot1{margin-bottom: 10px;}
+.ripple {
+  background-color: rgba(198, 0, 0, 0.45);
+  border-radius: 100%;
+  height: 100px;
+  width: 100px;
+  /*margin-top: -90px;*/
+  position: absolute;left:-10px;top:-19px;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.tmm-bot ul li:hover .ripple{
+  -webkit-animation: ripple 0.6s linear;
+  animation: ripple 0.6s linear;
+}
+@-webkit-keyframes ripple {
+  100% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    background-color: transparent;
+  }
+}
+@-moz-keyframes ripple {
+  100% {
+    -moz-transform: scale(2);
+    transform: scale(2);
+    background-color: transparent;
+  }
+}
+@-ms-keyframes ripple {
+  100% {
+    -ms-transform: scale(2);
+    transform: scale(2);
+    background-color: transparent;
+  }
+}
+@-o-keyframes ripple {
+  100% {
+    -o-transform: scale(2);
+    transform: scale(2);
+    background-color: transparent;
+  }
+}
+@keyframes ripple {
+  100% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    background-color: transparent;
+  }
+}
+/*猫符号*/
+.icon-jiantou1{color:#272636;left:174px;}
+.tmbrand-box1{background: rgba(214,29,29,1);filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#FFd61d1d,endcolorstr=#FFd61d1d);}
+.tmm-bot ul li .tmm-i3{background-position:-0 bottom;}
+.tmm-bot ul li .tmm-i4{background-position:-61px bottom;}
+.tmm-bot ul li .tmm-i5{background-position:-123px bottom;}
+/*轮播*/
+div.tab-content{width:1190px;height:462px;}
+.tab-pannel{width:100%;}
+.tab-nav li{float:left;}
+.tab-nav a {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 6px 5px 0 0;
+    font-size: 0px;
+    color: #70B2D5;
+    background: url("img/doc.png") 0 0 no-repeat;
+    outline: none;
+    overflow: hidden;
+}
+.tab-nav .selected a{background-position: 0 bottom;}
+.tab-nav{position: absolute;left:50%;margin-left:-24px;bottom:26px;z-index:50;}
+.lunbo-txt{display: block;color:#fff;font-size: 26px;line-height: 30px;position: absolute;left:38px;top:38px;}
+/*底部*/
+.tmm-bottom{width:100%;background-color: #fff;}
+.tmm-cl{background-color: #212121;height:106px;overflow: hidden;margin-bottom: 0;}
+.tmm-cl ul{top:18px;left:182px;width:1500px;}
+.tmm-cl .tmm-i3{background: url("img/ued.png") no-repeat;background-position: center center!important;}
+.tmm-cl .tmm-i4{background: url("img/iconfont.png") no-repeat;background-position: center center!important;}
+.tmm-cl .tmm-i5{background: url("img/tud.png") no-repeat;background-position: center center!important;}
+.tmm-cl ul li{width:128px;margin-right:240px;}
+.tmm-cl ul li i{width:128px;height:53px;left:0;margin-bottom:0;}
+.tmm-cl ul li span{padding-top:61px;font-size: 15px;line-height: 16px;}
+.ripple1 {
+  background-color: rgba(24, 24, 24, 1);
+  border-radius: 100%;
+  height: 100px;
+  width: 100px;
+  /*margin-top: -90px;*/
+  position: absolute;left:-10px;top:-19px;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.tmm-bot ul li:hover .ripple1{
+  -webkit-animation: ripple1 0.6s linear;
+  animation: ripple1 0.6s linear;
+}
+@-webkit-keyframes ripple1 {
+  100% {
+    -webkit-transform: scale(12);
+    transform: scale(12);
+    background-color: transparent;
+  }
+}
+@-moz-keyframes ripple1 {
+  100% {
+    -moz-transform: scale(12);
+    transform: scale(12);
+    background-color: transparent;
+  }
+}
+@-ms-keyframes ripple1 {
+  100% {
+    -ms-transform: scale(12);
+    transform: scale(12);
+    background-color: transparent;
+  }
+}
+@-o-keyframes ripple1 {
+  100% {
+    -o-transform: scale(12);
+    transform: scale(12);
+    background-color: transparent;
+  }
+}
+@keyframes ripple1 {
+  100% {
+    -webkit-transform: scale(12);
+    transform: scale(12);
+    background-color: transparent;
+  }
+}
+</style>
+</head>
+<body>
+<div class="tmm-main">
+    <div class="tmm-header">
+        <div class="tmm-ct tmm-rel">
+            <a href="" target="_blank"><img class="tmm-logo" src="img/logo.png" width="197" height="30" alt="" /></a>
+            <ul class="tmm-headnav clearfix">
+                <li><a href="" target="_blank">品牌手册</a></li>
+                <li><a href="" target="_blank">猫头符号</a></li>
+                <li><a href="" target="_blank">Showcase</a></li>
+            </ul>
+        </div>  
+    </div>
+    <div class="tmm-imporant">
+        <div class="tmm-ct tmm-rel tmm-bot">
+            <a href="" target="_blank" class="tmm-part tmm-rel">
+                <img class="imghover" src="img/tm.jpg" width="1190" height="462" alt="" />
+                <div class="tmbrand-box">
+                    <h1 class="tmm-tile"><i>Brand Guidelines</i><em>品牌手册</em></h1>
+                    <i class="iconfont icon-jiantou"></i>
+                </div>
+            </a>
+            <ul class="clearfix">
+                <li><a href="" target="_blank">
+                    <i></i>
+                    <em class="ripple"></em>
+                    <span>品牌色</span>
+                </a></li>
+                <li><a href="" target="_blank">
+                    <i class="tmm-i1"></i>
+                    <em class="ripple"></em>
+                    <span>字体</span>
+                </a></li>
+                <li><a href="" target="_blank">
+                    <i class="tmm-i2"></i>
+                    <em class="ripple"></em>
+                    <span>标示</span>
+                </a></li>
+            </ul>
+        </div>
+        <div class="tmm-ct tmm-rel tmm-bot">
+            <a href="" target="_blank" class="tmm-part tmm-rel">
+                <img class="imghover" src="img/cat.png" width="1190" height="462" alt="" />
+                <div class="tmbrand-box tmbrand-box1">
+                    <h1 class="tmm-tile"><i>Cat Symbol</i><em>猫符号</em></h1>
+                    <i class="iconfont icon-jiantou icon-jiantou1"></i>
+                </div>
+            </a>
+            <ul class="clearfix">
+                <li><a href="" target="_blank">
+                    <i class="tmm-i3"></i>
+                    <em class="ripple"></em>
+                    <span>应用规范</span>
+                </a></li>
+                <li><a href="" target="_blank">
+                    <i class="tmm-i4"></i>
+                    <em class="ripple"></em>
+                    <span>立体化应用</span>
+                </a></li>
+                <li><a href="" target="_blank">
+                    <i class="tmm-i5"></i>
+                    <em class="ripple"></em>
+                    <span>猫表情</span>
+                </a></li>
+            </ul>
+        </div>
+        <div class="tmm-ct tmm-bot1">
+            <div id="J_tab" class="slide-style tmm-rel">
+                <ul class="tab-nav clearfix"><!--选项卡导航，内容可以是空-->
+                    <!--若内容为空，则Slide会创建<li></li>-->
+                    <li class="selected"><a href="javascript:void(0);">1</a></li>
+                    <li><a href="javascript:void(0);">2</a></li>
+                    <li><a href="javascript:void(0);">3</a></li>
+                    <li><a href="javascript:void(0);">4</a></li>
+                    <li><a href="javascript:void(0);">5</a></li>
+                </ul>
+                <div class="tab-content tmm-rel">
+                    <div class="tab-pannel">
+                        <a href="" target="_blank"><img src="img/lb.jpg" width="1190" height="462" alt="" /></a>
+                        <span class="lunbo-txt">猫头艺术展</span>
+                    </div>
+                    <div class="tab-pannel hidden">
+                        <a href="" target="_blank"><img src="img/cat.png" width="1190" height="462" alt="" /></a>
+                        <span class="lunbo-txt">猫头艺术展</span>
+                    </div>
+                    <div class="tab-pannel hidden">
+                        <a href="" target="_blank"><img src="img/tm.jpg" width="1190" height="462" alt="" /></a>
+                        <span class="lunbo-txt">猫头艺术展</span>
+                    </div>
+                    <div class="tab-pannel hidden">
+                        <a href="" target="_blank"><img src="img/lb.jpg" width="1190" height="462" alt="" /></a>
+                        <span class="lunbo-txt">猫头艺术展</span>
+                    </div>
+                    <div class="tab-pannel hidden">
+                        <a href="" target="_blank"><img src="img/lb.jpg" width="1190" height="462" alt="" /></a>
+                        <span class="lunbo-txt">猫头艺术展</span>
+                    </div>
+                </div>
+            </div>     
+        </div>
+        <div class="tmm-ct tmm-bot tmm-cl tmm-rel">
+            <ul class="clearfix">
+                <li><a href="" target="_blank">
+                    <i class="tmm-i3"></i>
+                    <em class="ripple1"></em>
+                    <span>阿里巴巴素材中心</span>
+                </a></li>
+                <li><a href="" target="_blank">
+                    <i class="tmm-i4"></i>
+                    <em class="ripple1"></em>
+                    <span>iconfont</span>
+                </a></li>
+                <li><a href="" target="_blank">
+                    <i class="tmm-i5"></i>
+                    <em class="ripple1"></em>
+                    <span>天猫UED</span>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="https://g.alicdn.com/??kissy/k/1.4.2/seed-min.js,tb/global/3.3.14/global-min.js" data-config="{combine:true}"></script>
+<!-- <script src="http://l.tbcdn.cn/apps/top/c/util/jquery/jquery-1.8.3.min.js"></script> -->
+<script>
+KISSY.use('kg/slide/2.0.2/',function(S,Slide){
+    new Slide('#J_tab',{
+        eventype:'click',
+        effect:'fade',
+        autoSlide:true,
+        timeout:2000,
+        speed:500,
+        hoverStop:true
+    });
+});
+KISSY.use("node",function(S,Node){
+    var $ =S.all;
+    $(".tmm-headnav li").each(function(e,i){
+        e.on("click",function(){
+            $(".tmm-headnav li").removeClass("active");
+            e.addClass("active");
+        });
+    });
+});
+// $(document).ready(function() {
+//   $(".tmm-ct li").mousedown(function(e) {
+//     var ripple = $(this).find(".ripple");
+//     ripple.removeClass("animate");
+//     var x = parseInt(e.pageX - $(this).offset().left) - (ripple.width() / 2);
+//     var y = parseInt(e.pageY - $(this).offset().top) - (ripple.height() / 2);
+//     ripple.css({
+//       top: y,
+//       left: x
+//     }).addClass("animate");
+//   });
+// });
+  </script>
+</script>
