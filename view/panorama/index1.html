@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>全景demo</title>
+<link rel="stylesheet" type="text/css" href="css/panorama_viewer.css" />
+<style>
+html,body { margin:0; padding:0; width:100%; height:100%}
+html,body,div,p,h1,h2,h3,a,img,ul,li,span,em,i,dl,dt,dd{padding:0;margin:0;}
+.bigger{width:44px;height:34px;position: absolute;left:50%;top:50%;margin-left: -22px;margin-top: -17px;background:url(https://img.alicdn.com/tps/TB14uijMVXXXXbsXFXXXXXXXXXX-44-34.png) no-repeat center top;display: none;
+/*  -webkit-animation: share 2s linear infinite alternate;
+  animation: share 2s linear infinite alternate;*/
+}
+.panorama .click .c1:hover .bigger{display: block;}
+/*@-webkit-keyframes share{
+  0%{
+    -webkit-transform: scale(0);
+  }
+  100%{
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes share{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}*/
+.panorama { width:100%; height:100%; overflow:hidden; cursor:move}
+.panorama .click { width:100%; height:100%; position:relative}
+.panorama .click>div { position:absolute}
+.panorama .click>div>div { position:absolute; left:100%; top:-60%; display:none;z-index: 20;}
+.panorama .click .c1 { left:16.21%; top:41.56%; width:7.38%; height:8.3%; cursor:pointer;}
+.panorama .click .c2 {left:5.89%; top:39.45%; width:5.11%; height:25.93%;}
+.panorama .click .c3 {left:33.84%; top:50.39%; width:1.86%; height:7.812%;}
+.panorama .click .c4 {left:35.7%; top:42.03%; width:1.86%; height:7.812%;}
+.panorama .click .c5 {left:37.9%; top:50.54%; width:1.86%; height:7.812%;}
+.panorama .click .c6 {left:40.12%; top:55.3170%; width:1.3%; height:5.46%;}
+.panorama .click .c7 {left:41.1%; top:48.75%; width:.6%; height:5.46%;}
+.panorama .click .c8 {left:41.66%; top:47.1%; width:.6%; height:5.46%;}
+.panorama .click .c9 {left:42.33%; top:49.68%; width:.9%; height:5.46%;}
+.panorama .click .c10 {left:43.3%; top:54.68%; width:.9%; height:5.46%;}
+.panorama .click .c11 {left:44.6%; top:51%; width:.9%; height:5.46%;}
+.panorama .click .c12 {left:46.01%; top:53.125%; width:1.86%; height:7.812%;}
+.panorama .click .c13 {left:48.78%; top:53.59%; width:1.86%; height:7.812%;}
+.panorama .click .c14 {left:51.65%; top:47.34%; width:4.28%; height:17.97%;}
+.panorama .click .c15 {left:56.09%; top:47.66%; width:2.4%; height:9%;}
+.panorama .click .c16 {left:59%; top:44%; width:5%; height:40%;}
+.panorama .click .c1>div { width:400px; background:rgba(4,4,4,.4); padding:8px; border-radius:10px; text-align:justify}
+.panorama .click .c1>div>img{border-radius: 9px;}
+.panorama .icon { position:absolute; left:50%; top:50%; margin:-43px 0 0 -40px; background:url(https://img.alicdn.com/tps/TB1pUuoMVXXXXcCXFXXXXXXXXXX-80-87.png) no-repeat center top; width:80px; height:87px}
+.panorama:hover .icon { display:none}
+.popup .close{display: block;width:42px;height:42px;background: url("https://img.alicdn.com/tps/TB1HI6kLpXXXXcSapXXXXXXXXXX-42-42.png") no-repeat center top;position: absolute;right:-21px;top:-21px;}
+.open{width:416px;height:141px;position: fixed;right:20px;top:30px;z-index: 100;}
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.panorama_viewer.js"></script>
+<script>
+var fun = {
+	init:function(){
+		var self = this;
+		self.panorama();
+	},
+	panorama:function(){
+		var self = this;
+		$(function(){
+		    $(".panoramaimg").height($(window).height());
+		    $(".panorama").panorama_viewer({repeat:true});
+        $(".panorama .click").delegate(".bigger","click",function(e){
+          var t = $(e.target);
+          $(".cArea").find(".popup").fadeOut();
+          if(t.siblings(".popup").is(":hidden"))
+            t.siblings(".popup").fadeIn();
+          else
+            t.siblings(".popup").fadeOut();     
+        });
+        $(".close").on('click',function(){
+          $(".popup").fadeOut();
+        });
+		    // $(".panorama .click").delegate(".cArea","click",function(e){
+		    // 	var t = $(e.target);
+		    // 	$(".cArea").find(".popup").fadeOut();
+  				// if(t.children(".popup").is(":hidden"))
+  				// 	t.children(".popup").fadeIn();
+  				// else
+  				// 	t.children(".popup").fadeOut();    	
+		    // });
+		});	
+	}
+};
+fun.init();
+</script>
+</head>
+
+<body>
+<img class="open" src="https://img.alicdn.com/tps/TB1.Y9DMVXXXXcvXpXXXXXXXXXX-416-141.png" width="416" height="141" />
+<div class="panorama">
+	<img class="panoramaimg" src="https://img.alicdn.com/tps/TB1xdagMVXXXXawXFXXXXXXXXXX-5377-1280.jpg" />
+  <div class="click">
+  	<div class="c1 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB1YPrmLpXXXXb6XVXXXXXXXXXX-400-300.jpg" width="100%" />
+    	</div>
+    </div>
+  	<div class="c1 c2 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB1SyunMVXXXXcWXFXXXXXXXXXX-400-533.jpg" width="100%" />
+    	</div>
+    </div>
+  	<div class="c1 c3 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB1XjvmLpXXXXaQapXXXXXXXXXX-400-300.jpg" width="100%" />
+    	</div>
+    </div>
+  	<div class="c1 c4 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB157SBMVXXXXcFXpXXXXXXXXXX-400-300.jpg" width="100%" />
+    	</div>
+    </div>
+  	<div class="c1 c5 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB1TfKyMVXXXXaqXFXXXXXXXXXX-400-300.jpg" width="100%" />
+    	</div>
+    </div>
+  	<div class="c1 c6 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB1W4SiMVXXXXaZaXXXXXXXXXXX-400-300.jpg" width="100%" />
+    	</div>
+    </div>
+  	<div class="c1 c7 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB1JVaIMVXXXXcHXXXXXXXXXXXX-400-300.jpg" width="100%" />
+    	</div>
+    </div>
+  	<div class="c1 c8 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB1YZ1nMVXXXXcTXFXXXXXXXXXX-400-300.jpg" width="100%" />
+    	</div>
+    </div>
+  	<div class="c1 c9 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB1dreoMVXXXXcIXFXXXXXXXXXX-400-300.jpg" width="100%" />
+    	</div>
+    </div>
+  	<div class="c1 c10 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB1otiEMVXXXXafXpXXXXXXXXXX-400-300.jpg" width="100%" />
+    	</div>
+    </div>
+  	<div class="c1 c11 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB1FXCIMVXXXXc_XXXXXXXXXXXX-400-300.jpg" width="100%" />
+    	</div>
+    </div>
+  	<div class="c1 c12 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB1UZCnMVXXXXakXFXXXXXXXXXX-400-533.jpg" width="100%" />
+    	</div>
+    </div>
+  	<div class="c1 c13 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB112KuMVXXXXX_XFXXXXXXXXXX-400-300.jpg" width="100%" />
+    	</div>
+    </div>
+  	<div class="c1 c14 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB1haWkMVXXXXXoXVXXXXXXXXXX-400-300.jpg" width="100%" />
+    	</div>
+    </div>
+  	<div class="c1 c15 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB1ryqfMVXXXXcLXFXXXXXXXXXX-400-300.jpg" width="100%" />
+    	</div>
+    </div>
+  	<div class="c1 c16 cArea">
+      <span class="bigger"></span>
+    	<div class="popup">
+        <span class="close"></span>
+    		<img src="https://img.alicdn.com/tps/TB1CBilMVXXXXXMXVXXXXXXXXXX-400-533.jpg" width="100%" />
+    	</div>
+    </div>
+  </div>
+  <div class="icon"></div>
+</div>
+</body>
+</html>

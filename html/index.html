@@ -1,0 +1,923 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>天猫</title>
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1468295143_10337.css">
+<style>
+body,div,h1,h2,h3,h4,h5,ul,ol,li,p,img,dl,dt,dd,input,textarea,a,span,i,em,b,form,table{margin:0px; padding:0px;}
+img{border:0 none; vertical-align:top;}
+a{text-decoration:none;background: url("about:blank");}
+i,b,em{font-style:normal;}
+ul,ol{list-style:none;}
+body{cursor: auto;}
+map{cursor: pointer;}
+area{outline:none;}
+.clearfix{*zoom:1;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+/*头部*/
+.tmm-main{font:12px/1.5 Microsoft YaHei,tahoma,simsun,sans-serif;overflow:hidden;background:#d0d0d0;}
+.tmm-main span{display: block;}
+.tmm-ct{width:1136px;margin:0 auto;}
+.tmm-header{width:100%;height:116px;background-color:#dd2727;border-bottom:10px solid #bd1616;position: fixed;top:0;z-index:100;box-shadow: 0px 6px 30px #535353;
+    -webkit-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    -moz-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    -ms-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    -o-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    transition: .5s all cubic-bezier(.23,1,.32,1),1s transform cubic-bezier(.23,1,.32,1);
+}
+.tmm-header .tmm-logo{display: block;position: absolute;left:86px;top:53px;width:207px;height:24px;
+    -webkit-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    -moz-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    -ms-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    -o-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    transition: .5s all cubic-bezier(.23,1,.32,1),1s transform cubic-bezier(.23,1,.32,1);
+}
+.tmm-rel{position: relative;}
+.tmm-headnav{position: absolute;right:33px;top:0;}
+.tmm-headnav li{float: left;color:#fff;height:116px;line-height:116px;font-size:20px;margin-left:120px;
+    -webkit-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    -moz-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    -ms-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    -o-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    transition: .5s all cubic-bezier(.23,1,.32,1),1s transform cubic-bezier(.23,1,.32,1);
+}
+.tmm-header.tiny{height: 70px;}
+.tmm-header.tiny .tmm-logo{top:26px;}
+.tmm-header.tiny .tmm-headnav li{height:70px;line-height:70px;}
+.tmm-header.tiny .tmm-headnav a{height:80px;line-height:80px;}
+.tmm-headnav li.active a {
+    background-color: #cc1e1e;
+}
+.tmm-headnav li.active a:after {
+    width: 100%;
+    height: 10px;
+    background-color: #4d4d4d;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+  }
+.tmm-headnav a {
+    color: #fff;height:126px;line-height:126px;font-size:16px;padding:0 10px;text-align: center;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    -moz-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    -ms-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    -o-transition: .5s all cubic-bezier(.23,1,.32,1),1s -webkit-transform cubic-bezier(.23,1,.32,1);
+    transition: .5s all cubic-bezier(.23,1,.32,1),1s transform cubic-bezier(.23,1,.32,1);
+  }
+.tmm-headnav a:after {
+    width: 100%;
+    height: 10px;
+    background-color: #4d4d4d;
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    content: "";
+    display: block;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+.tmm-headnav a:hover:after {
+    left: 0;
+  }
+/*品牌手册*/
+.tmm-imporant{width:100%;background: #d0d0d0 url("https://img.alicdn.com/tps/TB1DUOlLXXXXXbOaXXXXXXXXXXX-1920-81.png") no-repeat center top;}
+.tmm-part{display:block;height:462px;overflow: hidden;}
+.tmm-part .imghover{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.tmm-part .imghover:hover{transform: scale(1.05);-webkit-transform:scale(1.05);-moz-transform:scale(1.05);-ms-transform:scale(1.05);-o-transform:scale(1.05);}
+.tmbrand-box{width:370px;height:462px;position: absolute;left:0;top:0;background: rgba(13,13,13,.8);filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F0d0d0d,endcolorstr=#7F0d0d0d);overflow: hidden;;}
+.tmm-tile i{display:block;color:#fff;font-weight: normal;font-size: 20px;line-height: 22px;font-family: "Gotham Pro", sans-serif;margin-bottom: 10px;}
+.tmm-tile em{display: block;color:#fff;font-size: 44px;line-height:46px;font-weight: 700;}
+.tmm-tile{margin:42px 0 200px 46px;}
+.iconfont{-webkit-font-smoothing: antialiased;display: block;-webkit-text-stroke-width: 0.2px;}
+.icon-jiantou{color:#7f162a;font-size: 66px;line-height:66px;position: absolute;left:216px;top:49px;}
+.tmm-bot ul{position: absolute;left:37px;top: 318px;}
+.tmm-bot ul li{float:left;width:80px;height:142px;margin-right:28px;position: relative;}
+.tmm-bot ul li i{display: block;width:62px;height:62px;margin-bottom:14px;position: absolute;left:9px;top:0;z-index:2;cursor:pointer;}
+.tmm-bot ul li .tmm-i1{background-position:-61px 0;}
+.tmm-bot ul li .tmm-i2{background-position:-123px 0;}
+.tmm-bot ul li span{display: block;color:#fff;font-size: 16px;line-height: 18px;text-align: center;padding-top: 72px;}
+.tmm-bot{padding-top:180px;}
+.tmm-bot1{padding-top: 80px;}
+.rip {
+    z-index:3;
+  background-color: rgba(198, 0, 0, 0.45);
+  border-radius: 100%;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  /*margin-top: -90px;*/
+  position: absolute;left:-10px;top:-19px;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.tmm-bot ul li .ripple{
+  -webkit-animation: ripple 0.6s linear;
+  animation: ripple 0.6s linear;
+}
+@-webkit-keyframes ripple {
+  100% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    background-color: transparent;
+  }
+}
+@-moz-keyframes ripple {
+  100% {
+    -moz-transform: scale(2);
+    transform: scale(2);
+    background-color: transparent;
+  }
+}
+@-ms-keyframes ripple {
+  100% {
+    -ms-transform: scale(2);
+    transform: scale(2);
+    background-color: transparent;
+  }
+}
+@-o-keyframes ripple {
+  100% {
+    -o-transform: scale(2);
+    transform: scale(2);
+    background-color: transparent;
+  }
+}
+@keyframes ripple {
+  100% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    background-color: transparent;
+  }
+}
+/*猫符号*/
+.icon-jiantou1{color:#272636;left:174px;}
+.tmbrand-box1{background: rgba(214,29,29,1);filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#FFd61d1d,endcolorstr=#FFd61d1d);}
+.tmm-bot ul li .tmm-i3{background-position:-0 bottom;}
+.tmm-bot ul li .tmm-i4{background-position:-61px bottom;}
+.tmm-bot ul li .tmm-i5{background-position:-123px bottom;}
+/*轮播*/
+div.tab-content{width:1136px;height:462px;}
+#J_tab .slide{width:1136px !important;}
+.bx-wrapper{position: relative;}
+.bx-pager .bx-pager-item{float:left;}
+.bx-pager a.bx-pager-link {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 6px 5px 0 0;
+    font-size: 0px;
+    color: #70B2D5;
+    background: url("https://img.alicdn.com/tps/TB1xYT4KVXXXXXsXFXXXXXXXXXX-12-24.png") 0 0 no-repeat;
+    outline: none;
+    overflow: hidden;
+}
+.bx-pager a.active{background-position: 0 bottom;}
+.bx-controls{position: absolute;left:50%;margin-left:-24px;bottom:26px;z-index:100;}
+.bx-controls-direction,.bx-controls-auto{display: none;}
+.lunbo-txt{display: block;color:#fff;font-size: 26px;line-height: 36px;position: absolute;left:25px;top:0;width:355px;height:212px;background: rgba(66,66,66,.6);filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F424242,endcolorstr=#7F424242);text-align: center;}
+.lunbo-txt em{display: block;margin-top:60px;}
+/*底部*/
+.tmm-footter{background-color: #434242;overflow: hidden;margin-top:80px;}
+.tmm-bottom{width:100%;background-color: #fff;}
+.tmm-cl{background-color: #434242;height:106px;margin-bottom: 0;}
+.tmm-cl ul{top:18px;left:148px;width:1200px;}
+.tmm-cl .tmm-i3{background: url("https://img.alicdn.com/tps/TB1wyn5KVXXXXchXpXXXXXXXXXX-79-31.png") no-repeat;background-position: center center!important;}
+.tmm-cl .tmm-i4{background: url("https://img.alicdn.com/tps/TB19yoXKVXXXXXmXpXXXXXXXXXX-45-53.png") no-repeat;background-position: center center!important;}
+.tmm-cl .tmm-i5{background: url("https://img.alicdn.com/tps/TB1IqY1KVXXXXavXFXXXXXXXXXX-39-40.png") no-repeat;background-position: center center!important;}
+.tmm-cl ul li{width:128px;height:106px;margin-right:240px;}
+.tmm-cl ul li i{width:128px;height:53px;left:0;margin-bottom:0;}
+.tmm-cl ul li span{padding-top:61px;font-size: 15px;line-height: 16px;}
+.tmm-bot2{padding-top:0;}
+.ripple1 {
+  background-color: rgba(24, 24, 24, 1);
+  border-radius: 100%;
+  height: 100px;
+  width: 100px;
+  /*margin-top: -90px;*/
+  position: absolute;left:10pxpx;top:-19px;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.tmm-bot ul li:hover .ripple1{
+  -webkit-animation: ripple1 0.6s linear;
+  animation: ripple1 0.6s linear;
+}
+@-webkit-keyframes ripple1 {
+  100% {
+    -webkit-transform: scale(12);
+    transform: scale(12);
+    background-color: transparent;
+  }
+}
+@-moz-keyframes ripple1 {
+  100% {
+    -moz-transform: scale(12);
+    transform: scale(12);
+    background-color: transparent;
+  }
+}
+@-ms-keyframes ripple1 {
+  100% {
+    -ms-transform: scale(12);
+    transform: scale(12);
+    background-color: transparent;
+  }
+}
+@-o-keyframes ripple1 {
+  100% {
+    -o-transform: scale(12);
+    transform: scale(12);
+    background-color: transparent;
+  }
+}
+@keyframes ripple1 {
+  100% {
+    -webkit-transform: scale(12);
+    transform: scale(12);
+    background-color: transparent;
+  }
+}
+/*立体*/
+.container{position: relative;width:1136px;height:464px;}
+.pre-parallax,.parallax{position: absolute;left:0;top:0;}
+.blick {
+        opacity: 0;
+    }
+.container:hover .blick {
+    opacity: 1;
+}
+.tm3d-a{position: absolute;left:45px;top:327px;}
+.tm3d-a li{width:90px !important;height:100px !important;float:left;margin-right:5px;}
+.tm3d-a a{width:90px;height:100px;display:block;/*background-color: yellow;*/}
+/* 3D HOVER */
+.blick {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*background-image: -webkit-linear-gradient(14.5deg, transparent, rgba(255, 255, 255, 0.2) 55%, transparent 115%);*/
+    /*background-image: linear-gradient(14.5deg, transparent, rgba(255, 255, 255, 0.2) 55%, transparent 115%);*/
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+}
+.portfolio-item .blick {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: 2;
+    background-image: -webkit-linear-gradient(14.5deg, transparent, rgba(255, 255, 255, 0.2) 55%, transparent 115%);
+    background-image: -moz-linear-gradient(14.5deg, transparent, rgba(255, 255, 255, 0.2) 55%, transparent 115%);
+    background-image: -ms-linear-gradient(14.5deg, transparent, rgba(255, 255, 255, 0.2) 55%, transparent 115%);
+    background-image: -o-linear-gradient(14.5deg, transparent, rgba(255, 255, 255, 0.2) 55%, transparent 115%);
+    background-image: linear-gradient(14.5deg, transparent, rgba(255, 255, 255, 0.2) 55%, transparent 115%);
+    transform-origin: 50%;
+    transform: translate3d(0,0,2px);
+    -webkit-transform: translate3d(0,0,2px);
+    -moz-transform: translate3d(0,0,2px);
+    -ms-transform: translate3d(0,0,2px);
+    -o-transform: translate3d(0,0,2px);
+}
+.container:hover .blick {
+    opacity: 1;
+    -webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    -ms-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s;
+}
+.container {
+    display: inline-block;
+    vertical-align: top;
+    /* overflow: hidden; */
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-perspective: 2000px;
+    -moz-perspective: 2000px;
+    -ms-perspective: 2000px;
+    -o-perspective: 2000px;
+    perspective: 2000px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.container a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+    transform-origin: 50%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: transform .3s;
+    -moz-transition: transform .3s;
+    -ms-transition: transform .3s;
+    -o-transition: transform .3s;
+    transition: transform .3s;
+}
+ .container {
+    font-size: 0;
+ }
+.portfolio-label {
+    color: white;
+    display: inline-block;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 64px;
+    margin-left: 35px;
+    position: relative;
+    top: -49px;
+}
+.portfolio-label:before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    bottom: -10px;
+    background: #fff;
+    opacity: 0;
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
+    transform: translateY(5px);
+    -webkit-transition: opacity .3s, transform .3s;
+    -moz-transition: opacity .3s, transform .3s;
+    -ms-transition: opacity .3s, transform .3s;
+    -o-transition: opacity .3s, transform .3s;
+    transition: opacity .3s, transform .3s;
+}
+.portfolio-label:hover:before {
+    content: "";
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: opacity .1s, transform .1s;
+    -moz-transition: opacity .1s, transform .1s;
+    -ms-transition: opacity .1s, transform .1s;
+    -o-transition: opacity .1s, transform .1s;
+    transition: opacity .1s, transform .1s;
+}
+.container {
+    display: inline-block;
+    vertical-align: top;
+    -webkit-transition: all .5s;-moz-transition: all .5s;-ms-transition: all .5s;-o-transition: all .5s;
+    -moz-transition: all .5s;-moz-transition: all .5s;-ms-transition: all .5s;-o-transition: all .5s;
+    -ms-transition: all .5s;-moz-transition: all .5s;-ms-transition: all .5s;-o-transition: all .5s;
+    -o-transition: all .5s;-moz-transition: all .5s;-ms-transition: all .5s;-o-transition: all .5s;
+    transition: all .5s;
+
+    -webkit-perspective: 2000px;
+    -moz-perspective: 2000px;
+    -ms-perspective: 2000px;
+    -o-perspective: 2000px;
+    perspective: 2000px;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.container.animated {
+    pointer-events: none;
+}
+.container:hover {
+
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    -o-transform: scale(1.04);
+    transform: scale(1.04);
+
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+.container .shadow {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 0;
+    height: 100%;
+    width: 98%;
+    -webkit-box-shadow: 0 70px 75px -20px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 70px 75px -20px rgba(0,0,0,.5);
+    -ms-box-shadow: 0 70px 75px -20px rgba(0,0,0,.5);
+    -o-box-shadow: 0 70px 75px -20px rgba(0,0,0,.5);
+    box-shadow: 0 70px 75px -20px rgba(0,0,0,.5);
+    -webkit-transform: translateZ(-100px);
+    -moz-transform: translateZ(-100px);
+    -ms-transform: translateZ(-100px);
+    -o-transform: translateZ(-100px);
+    transform: translateZ(-100px);
+    z-index: 0;
+}
+.container a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+    transform-origin: 50%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: transform .3s;
+    -moz-transition: transform .3s;
+    -ms-transition: transform .3s;
+    -o-transition: transform .3s;
+    transition: transform .3s;
+}
+.container a img {
+    transform: translateZ(0px);
+    -webkit-transform: translateZ(0px);
+    -moz-transform: translateZ(0px);
+    -o-transform: translateZ(0px);
+    -ms-transform: translateZ(0px);
+}
+.container a .pre-parallax,
+.container a .parallax{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateZ(0px);
+    -webkit-transform: translateZ(0px);
+    -moz-transform: translateZ(0px);
+    -ms-transform: translateZ(0px);
+    -o-transform: translateZ(0px);
+    z-index: 2;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -webkit-transition: all .6s;
+    -moz-box-shadow: none;
+    -moz-transition: all .6s;
+    -ms-box-shadow: none;
+    -ms-transition: all .6s;
+    -o-box-shadow: none;
+    -o-transition: all .6s;
+    transition: all .6s;
+}
+
+.container a .parallax,.container .tm3d-a{
+    transform: translateZ(3px);
+    -webkit-transform: translateZ(3px);
+    -moz-transform: translateZ(3px);
+    -ms-transform: translateZ(3px);
+    -o-transform: translateZ(3px);
+    z-index: 3;
+}
+.container:hover .tm3d-a{z-index:50;}
+.container a .pre-parallax {
+    transform: translateZ(2px);
+    -webkit-transform: translateZ(2px);
+    -moz-transform: translateZ(2px);
+    -ms-transform: translateZ(2px);
+    -o-transform: translateZ(2px);
+    z-index: 2;
+}
+.container:hover .parallax,.container:hover .tm3d-a {
+    transform: translateZ(85px);
+    -webkit-transform: translateZ(85px);
+    -moz-transform: translateZ(85px);
+    -ms-transform: translateZ(85px);
+    -o-transform: translateZ(85px);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+.container:hover .pre-parallax {
+    transform: translateZ(45px);
+    -webkit-transform: translateZ(45px);
+    -moz-transform: translateZ(45px);
+    -ms-transform: translateZ(45px);
+    -o-transform: translateZ(45px);
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    z-index: 2;
+}
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+</style>
+</head>
+<body>
+<div class="tmm-main">
+    <div class="tmm-header">
+        <div class="tmm-ct tmm-rel">
+            <a class="tmm-logo" href="javascript:void(0);"><img class="tmm-logoimg" src="https://img.alicdn.com/tps/TB1ERG9LXXXXXaHapXXXXXXXXXX-207-24.png" alt="" /></a>
+            <ul class="tmm-headnav clearfix">
+                <li><a href="brand.html" target="_blank">品牌手册</a></li>
+                <li><a href="cat.html" target="_blank">猫头符号</a></li>
+                <li><a href="showcase.html" target="_blank">天猫艺术展</a></li>
+            </ul>
+        </div>  
+    </div>
+    <div class="tmm-imporant">
+        <div class="tmm-ct tmm-rel tmm-bot">
+            <div class="container">
+                <article class="portfolio-item wow fadeInUp"  style="visibility: hidden; animation-name: none;">
+                    <a href="brand.html" target="_blank" class="addblick">
+                        <img src="https://img.alicdn.com/tps/TB1CbqgLXXXXXX6apXXXXXXXXXX-1136-466.jpg" width="1136" height="464" alt="portfolio">
+                        <img src="https://img.alicdn.com/tps/TB1C2iILXXXXXbpXXXXXXXXXXXX-1136-466.png" width="1136" height="464" class="pre-parallax" alt="article"/>
+                        <img src="https://img.alicdn.com/tps/TB1.wGzLXXXXXaaXFXXXXXXXXXX-1136-466.png" width="1136" height="464" class="parallax" alt="article"/>
+                   </a>
+                </article>
+                <ul class="tm3d-a clearfix">
+                    <li><a href="brand.html?ss=3" target="_blank"></a></li>
+                    <li><a href="brand.html?ss=4" target="_blank"></a></li>
+                    <li><a href="brand.html?ss=1" target="_blank"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tmm-ct tmm-rel tmm-bot tmm-bot1">
+            <div class="container">
+                <article class="portfolio-item wow fadeInUp" style="visibility: hidden; animation-name: none;">
+                    <a href="cat.html" target="_blank" class="addblick">
+                        <img src="https://img.alicdn.com/tps/TB1POOrLXXXXXbsXpXXXXXXXXXX-1136-466.jpg" width="1136" height="464" alt="portfolio">
+                        <img src="https://img.alicdn.com/tps/TB1puemLXXXXXbDaXXXXXXXXXXX-1136-466.png" width="1136" height="464" class="pre-parallax" alt="article"/>
+                        <img src="https://img.alicdn.com/tps/TB102akLXXXXXXzapXXXXXXXXXX-1136-466.png" width="1136" height="464" class="parallax" alt="article"/>
+                   </a>
+                </article>
+                <ul class="tm3d-a clearfix">
+                    <li><a href="cat.html?ss=0" target="_blank"></a></li>
+                    <li><a href="cat.html?ss=1" target="_blank"></a></li>
+                    <li><a href="cat.html?ss=2" target="_blank"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tmm-ct tmm-rel tmm-bot1">
+            <div class="container">
+                <article class="portfolio-item wow fadeInUp" style="visibility: hidden; animation-name: none;">
+                    <a href="showcase.html" target="_blank" class="addblick">
+                        <img src="https://img.alicdn.com/tps/TB1fY6dLXXXXXcbaXXXXXXXXXXX-1136-466.jpg" width="1136" height="464" alt="portfolio">
+                        <img src="https://img.alicdn.com/tps/TB1dADDLXXXXXXpXpXXXXXXXXXX-1136-466.png" width="1136" height="464" class="pre-parallax" alt="article"/>
+                        <img src="https://img.alicdn.com/tps/TB1WFraLXXXXXbKapXXXXXXXXXX-1136-466.png" width="1136" height="464" class="parallax" alt="article"/>
+                   </a>
+                </article>
+                <ul class="tm3d-a clearfix">
+                    <li><a href="showcase.html?ss=0" target="_blank"></a></li>
+                    <li><a href="showcase.html?ss=1" target="_blank"></a></li>
+                    <li><a href="showcase.html?ss=2" target="_blank"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="tmm-footter">  
+        <div class="tmm-ct tmm-bot tmm-bot2 tmm-cl tmm-rel">
+            <ul class="clearfix">
+                <li><a href="" target="_blank">
+                    <i class="tmm-i3"></i>
+                    <em class="ripple1"></em>
+                    <span>阿里巴巴素材中心</span>
+                </a></li>
+                <li><a href="" target="_blank">
+                    <i class="tmm-i4"></i>
+                    <em class="ripple1"></em>
+                    <span>iconfont</span>
+                </a></li>
+                <li><a href="" target="_blank">
+                    <i class="tmm-i5"></i>
+                    <em class="ripple1"></em>
+                    <span>天猫UED</span>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<!-- <script src="https://g.alicdn.com/??kissy/k/1.4.2/seed-min.js,tb/global/3.3.14/global-min.js" data-config="{combine:true}"></script> -->
+<script src="https://g.alicdn.com/thx/brix-release/0.1.8-beta6/jquery/dist/jquery.min.js"></script>
+<script>
+$(window.document).on("scroll touchmove", function () {
+    $('.tmm-header').toggleClass('tiny', $(document).scrollTop() > 0);
+});  
+(function(jQuery){ 
+if(jQuery.browser) return; 
+jQuery.browser = {}; 
+jQuery.browser.mozilla = false; 
+jQuery.browser.webkit = false; 
+jQuery.browser.opera = false; 
+jQuery.browser.msie = false; 
+
+var nAgt = navigator.userAgent; 
+jQuery.browser.name = navigator.appName; 
+jQuery.browser.fullVersion = ''+parseFloat(navigator.appVersion); 
+jQuery.browser.majorVersion = parseInt(navigator.appVersion,10); 
+var nameOffset,verOffset,ix; 
+
+// In Opera, the true version is after "Opera" or after "Version" 
+if ((verOffset=nAgt.indexOf("Opera"))!=-1) { 
+jQuery.browser.opera = true; 
+jQuery.browser.name = "Opera"; 
+jQuery.browser.fullVersion = nAgt.substring(verOffset+6); 
+if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+jQuery.browser.fullVersion = nAgt.substring(verOffset+8); 
+} 
+// In MSIE, the true version is after "MSIE" in userAgent 
+else if ((verOffset=nAgt.indexOf("MSIE"))!=-1) { 
+jQuery.browser.msie = true; 
+jQuery.browser.name = "Microsoft Internet Explorer"; 
+jQuery.browser.fullVersion = nAgt.substring(verOffset+5); 
+} 
+// In Chrome, the true version is after "Chrome" 
+else if ((verOffset=nAgt.indexOf("Chrome"))!=-1) { 
+jQuery.browser.webkit = true; 
+jQuery.browser.name = "Chrome"; 
+jQuery.browser.fullVersion = nAgt.substring(verOffset+7); 
+} 
+// In Safari, the true version is after "Safari" or after "Version" 
+else if ((verOffset=nAgt.indexOf("Safari"))!=-1) { 
+jQuery.browser.webkit = true; 
+jQuery.browser.name = "Safari"; 
+jQuery.browser.fullVersion = nAgt.substring(verOffset+7); 
+if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+jQuery.browser.fullVersion = nAgt.substring(verOffset+8); 
+} 
+// In Firefox, the true version is after "Firefox" 
+else if ((verOffset=nAgt.indexOf("Firefox"))!=-1) { 
+jQuery.browser.mozilla = true; 
+jQuery.browser.name = "Firefox"; 
+jQuery.browser.fullVersion = nAgt.substring(verOffset+8); 
+} 
+// In most other browsers, "name/version" is at the end of userAgent 
+else if ( (nameOffset=nAgt.lastIndexOf(' ')+1) < 
+(verOffset=nAgt.lastIndexOf('/')) ) 
+{ 
+jQuery.browser.name = nAgt.substring(nameOffset,verOffset); 
+jQuery.browser.fullVersion = nAgt.substring(verOffset+1); 
+if (jQuery.browser.name.toLowerCase()==jQuery.browser.name.toUpperCase()) { 
+jQuery.browser.name = navigator.appName; 
+} 
+} 
+// trim the fullVersion string at semicolon/space if present 
+if ((ix=jQuery.browser.fullVersion.indexOf(";"))!=-1) 
+jQuery.browser.fullVersion=jQuery.browser.fullVersion.substring(0,ix); 
+if ((ix=jQuery.browser.fullVersion.indexOf(" "))!=-1) 
+jQuery.browser.fullVersion=jQuery.browser.fullVersion.substring(0,ix); 
+
+jQuery.browser.majorVersion = parseInt(''+jQuery.browser.fullVersion,10); 
+if (isNaN(jQuery.browser.majorVersion)) { 
+jQuery.browser.fullVersion = ''+parseFloat(navigator.appVersion); 
+jQuery.browser.majorVersion = parseInt(navigator.appVersion,10); 
+} 
+jQuery.browser.version = jQuery.browser.majorVersion; 
+})(jQuery); 
+function myBrowser(){
+    var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+    // console.log(userAgent);
+    if (!!window.ActiveXObject || "ActiveXObject" in window) {
+        // alert(1);
+    }else{
+        getanimate();
+    }; //判断是否IE浏览器
+}
+myBrowser();
+function getanimate(){
+    $.fn.perspectiveHover = function (opt) {
+
+        this.each(function (i) {
+
+            var DOM = {},
+                state = {},
+                $self = $(this);
+
+            // options
+            if (!opt) {
+                opt = {};
+            }
+            opt = $.extend({
+                // 'power': 20,
+                'power': 20,
+                'defSpeed': 0,
+                'duration': 2000
+            }, opt);
+
+            // safari V < 9
+            if (parseInt($.browser.version) < 9 && $.browser.safari) {
+                opt.power = 4;
+            }
+
+            // chrome
+            if ($.browser.chrome) {
+                opt.defSpeed = 0.1;
+            }
+
+            // methods
+            var plg = {
+                init: function () {
+                    this.resize();
+                    DOM.$plate = $self.find('.addblick');
+                    $self
+                        .on('mouseenter', this.mouseenter)
+                        .on('mousemove', this.mousemove)
+                        .on('mouseleave', this.mouseleave)
+                        .on('click', this.click);
+                    if (!state.$shadow) {
+                        state.$shadow = $('<div>').addClass('blick');
+                        state.$shadow.appendTo(DOM.$plate);
+                        //$('<div>').addClass('shadow').appendTo(DOM.$plate);
+                    }
+                },
+                resize: function () {
+                    state.elementWidth = $self.innerWidth();
+                    state.elementHeight = $self.innerHeight();
+                },
+                mouseenter: function (e) {
+
+                    // clearInterval( plg.firstAnimation );
+
+                    plg.animationState = {
+                        active: true,
+                        startTime: new Date().getTime(),
+                        startStamp: new Date().getTime(),
+                        startX: 0.5,
+                        startY: 0.5,
+                        speed: 0.6,
+                        endX: (e.pageX - $self.offset().left) / state.elementWidth,
+                        endY: (e.pageY - $self.offset().top) / state.elementWidth,
+                        status: 0
+                    };
+
+                    plg.animationState.startX = plg.animationState.stateX || 0.5;
+                    plg.animationState.startY = plg.animationState.stateY || 0.5;
+
+                },
+                mousemove: function (e) {
+
+                    var xmult = (e.pageX - $self.offset().left) / state.elementWidth;
+                    var ymult = (e.pageY - $self.offset().top) / state.elementWidth;
+                    var currentTime = new Date().getTime();
+
+                    if (!($.browser.chrome || $.browser.msie || $.browser.msedge) && currentTime - plg.animationState.startStamp < 300 ) {
+
+                        plg.animationState.speed = (300 - (currentTime - plg.animationState.startStamp)) / 1000;
+
+                    } else {
+                        plg.animationState.speed = opt.defSpeed;
+                    }
+
+                    plg.renderElement(xmult, ymult);
+
+                },
+                mouseleave: function (e) {
+                    // clearInterval( plg.firstAnimation );
+                    plg.animationState.startTime = new Date().getTime();
+                    plg.animationState.startX = (e.pageX - $self.offset().left) / state.elementWidth;
+                    plg.animationState.startY = (e.pageY - $self.offset().top) / state.elementWidth;
+                    plg.animationState.status = 0;
+                    plg.animationState.speed = 0.6;
+                    plg.animationState.endX = 0.5;
+                    plg.animationState.endY = 0.5;
+                    plg.animationState.last = true;
+
+                    plg.renderElement(plg.animationState.endX, plg.animationState.endY);
+                },
+                click: function () {
+                    $self.parent().parent().find('a').css({
+                        "-webkit-transform": "none",
+                        "transform": "none"
+                    });
+                    $self.parent().parent().find('.blick').css({
+                        'display': 'none'
+                    });
+                },
+                renderElement: function (x, y, z) {
+
+                    if (!z) {
+                        z = 10;
+                    }
+
+                     window.requestAnimationFrame( function () {
+
+                        DOM.$plate.css({
+                            "-webkit-transition": 'transform ' + plg.animationState.speed + 's linear',
+                            "transition": 'transform ' + plg.animationState.speed + 's linear',
+                            "-webkit-transform": "rotateY(" + (-(x - 0.5) * -opt.power) + "deg) rotateX(" + (-(y - 0.25) * opt.power) + "deg) translateZ(" + z + "px)",
+                            "transform": "rotateY(" + (-(x - 0.5) * -opt.power) + "deg) rotateX(" + (-(y - 0.25) * opt.power) + "deg) translateZ(" + z + "px)"
+                        });
+                        state.$shadow.css({
+                            'background-image': 'linear-gradient(' + (x * 25 + 2) + 'deg, transparent, rgba(255, 255, 255, 0.2) ' + (y * 30 + 40) + '%, transparent ' + (y * 30 + 100) + '%)'
+                        });
+
+                     } );
+
+                }
+            };
+
+            plg.init();
+
+            $(window).on( 'resize', plg.resize );
+
+            return plg;
+        });
+
+    };
+    $('.portfolio-item').perspectiveHover();
+    $('.portfolio-item').append( $('<div>').addClass('shadow') );
+}
+// wow.js
+(function(){var a,b,c,d,e,f=function(a,b){return function(){return a.apply(b,arguments)}},g=[].indexOf||function(a){for(var b=0,c=this.length;c>b;b++)if(b in this&&this[b]===a)return b;return-1};b=function(){function a(){}return a.prototype.extend=function(a,b){var c,d;for(c in b)d=b[c],null==a[c]&&(a[c]=d);return a},a.prototype.isMobile=function(a){return/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(a)},a.prototype.createEvent=function(a,b,c,d){var e;return null==b&&(b=!1),null==c&&(c=!1),null==d&&(d=null),null!=document.createEvent?(e=document.createEvent("CustomEvent"),e.initCustomEvent(a,b,c,d)):null!=document.createEventObject?(e=document.createEventObject(),e.eventType=a):e.eventName=a,e},a.prototype.emitEvent=function(a,b){return null!=a.dispatchEvent?a.dispatchEvent(b):b in(null!=a)?a[b]():"on"+b in(null!=a)?a["on"+b]():void 0},a.prototype.addEvent=function(a,b,c){return null!=a.addEventListener?a.addEventListener(b,c,!1):null!=a.attachEvent?a.attachEvent("on"+b,c):a[b]=c},a.prototype.removeEvent=function(a,b,c){return null!=a.removeEventListener?a.removeEventListener(b,c,!1):null!=a.detachEvent?a.detachEvent("on"+b,c):delete a[b]},a.prototype.innerHeight=function(){return"innerHeight"in window?window.innerHeight:document.documentElement.clientHeight},a}(),c=this.WeakMap||this.MozWeakMap||(c=function(){function a(){this.keys=[],this.values=[]}return a.prototype.get=function(a){var b,c,d,e,f;for(f=this.keys,b=d=0,e=f.length;e>d;b=++d)if(c=f[b],c===a)return this.values[b]},a.prototype.set=function(a,b){var c,d,e,f,g;for(g=this.keys,c=e=0,f=g.length;f>e;c=++e)if(d=g[c],d===a)return void(this.values[c]=b);return this.keys.push(a),this.values.push(b)},a}()),a=this.MutationObserver||this.WebkitMutationObserver||this.MozMutationObserver||(a=function(){function a(){"undefined"!=typeof console&&null!==console&&console.warn("MutationObserver is not supported by your browser."),"undefined"!=typeof console&&null!==console&&console.warn("WOW.js cannot detect dom mutations, please call .sync() after loading new content.")}return a.notSupported=!0,a.prototype.observe=function(){},a}()),d=this.getComputedStyle||function(a){return this.getPropertyValue=function(b){var c;return"float"===b&&(b="styleFloat"),e.test(b)&&b.replace(e,function(a,b){return b.toUpperCase()}),(null!=(c=a.currentStyle)?c[b]:void 0)||null},this},e=/(\-([a-z]){1})/g,this.WOW=function(){function e(a){null==a&&(a={}),this.scrollCallback=f(this.scrollCallback,this),this.scrollHandler=f(this.scrollHandler,this),this.resetAnimation=f(this.resetAnimation,this),this.start=f(this.start,this),this.scrolled=!0,this.config=this.util().extend(a,this.defaults),null!=a.scrollContainer&&(this.config.scrollContainer=document.querySelector(a.scrollContainer)),this.animationNameCache=new c,this.wowEvent=this.util().createEvent(this.config.boxClass)}return e.prototype.defaults={boxClass:"wow",animateClass:"animated",offset:0,mobile:!0,live:!0,callback:null,scrollContainer:null},e.prototype.init=function(){var a;return this.element=window.document.documentElement,"interactive"===(a=document.readyState)||"complete"===a?this.start():this.util().addEvent(document,"DOMContentLoaded",this.start),this.finished=[]},e.prototype.start=function(){var b,c,d,e;if(this.stopped=!1,this.boxes=function(){var a,c,d,e;for(d=this.element.querySelectorAll("."+this.config.boxClass),e=[],a=0,c=d.length;c>a;a++)b=d[a],e.push(b);return e}.call(this),this.all=function(){var a,c,d,e;for(d=this.boxes,e=[],a=0,c=d.length;c>a;a++)b=d[a],e.push(b);return e}.call(this),this.boxes.length)if(this.disabled())this.resetStyle();else for(e=this.boxes,c=0,d=e.length;d>c;c++)b=e[c],this.applyStyle(b,!0);return this.disabled()||(this.util().addEvent(this.config.scrollContainer||window,"scroll",this.scrollHandler),this.util().addEvent(window,"resize",this.scrollHandler),this.interval=setInterval(this.scrollCallback,50)),this.config.live?new a(function(a){return function(b){var c,d,e,f,g;for(g=[],c=0,d=b.length;d>c;c++)f=b[c],g.push(function(){var a,b,c,d;for(c=f.addedNodes||[],d=[],a=0,b=c.length;b>a;a++)e=c[a],d.push(this.doSync(e));return d}.call(a));return g}}(this)).observe(document.body,{childList:!0,subtree:!0}):void 0},e.prototype.stop=function(){return this.stopped=!0,this.util().removeEvent(this.config.scrollContainer||window,"scroll",this.scrollHandler),this.util().removeEvent(window,"resize",this.scrollHandler),null!=this.interval?clearInterval(this.interval):void 0},e.prototype.sync=function(){return a.notSupported?this.doSync(this.element):void 0},e.prototype.doSync=function(a){var b,c,d,e,f;if(null==a&&(a=this.element),1===a.nodeType){for(a=a.parentNode||a,e=a.querySelectorAll("."+this.config.boxClass),f=[],c=0,d=e.length;d>c;c++)b=e[c],g.call(this.all,b)<0?(this.boxes.push(b),this.all.push(b),this.stopped||this.disabled()?this.resetStyle():this.applyStyle(b,!0),f.push(this.scrolled=!0)):f.push(void 0);return f}},e.prototype.show=function(a){return this.applyStyle(a),a.className=a.className+" "+this.config.animateClass,null!=this.config.callback&&this.config.callback(a),this.util().emitEvent(a,this.wowEvent),this.util().addEvent(a,"animationend",this.resetAnimation),this.util().addEvent(a,"oanimationend",this.resetAnimation),this.util().addEvent(a,"webkitAnimationEnd",this.resetAnimation),this.util().addEvent(a,"MSAnimationEnd",this.resetAnimation),a},e.prototype.applyStyle=function(a,b){var c,d,e;return d=a.getAttribute("data-wow-duration"),c=a.getAttribute("data-wow-delay"),e=a.getAttribute("data-wow-iteration"),this.animate(function(f){return function(){return f.customStyle(a,b,d,c,e)}}(this))},e.prototype.animate=function(){return"requestAnimationFrame"in window?function(a){return window.requestAnimationFrame(a)}:function(a){return a()}}(),e.prototype.resetStyle=function(){var a,b,c,d,e;for(d=this.boxes,e=[],b=0,c=d.length;c>b;b++)a=d[b],e.push(a.style.visibility="visible");return e},e.prototype.resetAnimation=function(a){var b;return a.type.toLowerCase().indexOf("animationend")>=0?(b=a.target||a.srcElement,b.className=b.className.replace(this.config.animateClass,"").trim()):void 0},e.prototype.customStyle=function(a,b,c,d,e){return b&&this.cacheAnimationName(a),a.style.visibility=b?"hidden":"visible",c&&this.vendorSet(a.style,{animationDuration:c}),d&&this.vendorSet(a.style,{animationDelay:d}),e&&this.vendorSet(a.style,{animationIterationCount:e}),this.vendorSet(a.style,{animationName:b?"none":this.cachedAnimationName(a)}),a},e.prototype.vendors=["moz","webkit"],e.prototype.vendorSet=function(a,b){var c,d,e,f;d=[];for(c in b)e=b[c],a[""+c]=e,d.push(function(){var b,d,g,h;for(g=this.vendors,h=[],b=0,d=g.length;d>b;b++)f=g[b],h.push(a[""+f+c.charAt(0).toUpperCase()+c.substr(1)]=e);return h}.call(this));return d},e.prototype.vendorCSS=function(a,b){var c,e,f,g,h,i;for(h=d(a),g=h.getPropertyCSSValue(b),f=this.vendors,c=0,e=f.length;e>c;c++)i=f[c],g=g||h.getPropertyCSSValue("-"+i+"-"+b);return g},e.prototype.animationName=function(a){var b;try{b=this.vendorCSS(a,"animation-name").cssText}catch(c){b=d(a).getPropertyValue("animation-name")}return"none"===b?"":b},e.prototype.cacheAnimationName=function(a){return this.animationNameCache.set(a,this.animationName(a))},e.prototype.cachedAnimationName=function(a){return this.animationNameCache.get(a)},e.prototype.scrollHandler=function(){return this.scrolled=!0},e.prototype.scrollCallback=function(){var a;return!this.scrolled||(this.scrolled=!1,this.boxes=function(){var b,c,d,e;for(d=this.boxes,e=[],b=0,c=d.length;c>b;b++)a=d[b],a&&(this.isVisible(a)?this.show(a):e.push(a));return e}.call(this),this.boxes.length||this.config.live)?void 0:this.stop()},e.prototype.offsetTop=function(a){for(var b;void 0===a.offsetTop;)a=a.parentNode;for(b=a.offsetTop;a=a.offsetParent;)b+=a.offsetTop;return b},e.prototype.isVisible=function(a){var b,c,d,e,f;return c=a.getAttribute("data-wow-offset")||this.config.offset,f=this.config.scrollContainer&&this.config.scrollContainer.scrollTop||window.pageYOffset,e=f+Math.min(this.element.clientHeight,this.util().innerHeight())-c,d=this.offsetTop(a),b=d+a.clientHeight,e>=d&&b>=f},e.prototype.util=function(){return null!=this._util?this._util:this._util=new b},e.prototype.disabled=function(){return!this.config.mobile&&this.util().isMobile(navigator.userAgent)},e}()}).call(this);
+new WOW().init();
+</script>
