@@ -143,7 +143,7 @@
             <img class="m-img" src="https://gw.alicdn.com/tps/TB14.ZaOpXXXXbjXXXXXXXXXXXX-734-24.png" />
             <div class="m-data">
                 <span class="m-day"><em>存到</em>第60天</span>
-                <span class="m-liyi">年化收益率<em><span>0.03</span><i>%</i></em></span>
+                <span class="m-liyi">年化收益率<em><span>3</span><i>%</i></em></span>
                 <div class="m-kedu" id="m-kedu">
                     <img class="m-keduimg" src="https://gw.alicdn.com/tps/TB1qqD4OpXXXXcNXFXXXXXXXXXX-1924-120.jpg" />
                     <!-- <span class="m-left"></span>
@@ -194,7 +194,10 @@
             console.log(dayinteres.length);
             $('.m-kedu').on('scroll',function(){
                 _left = $('.m-kedu')[0].scrollLeft;
-                console.log(_left)    
+                console.log(_left)
+                if(_left == 0){
+                    alert('0');
+                }
                 for(var i = 0;i<dayinteres.length;i++){
                     if(_left>_widthTrueone*i && _left<_widthTrueone*(i+1)){
                         $('.m-day').html('<em>存到</em>第' + i + '天');
