@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>网商银行</title>
+    <script src="https://a.alipayobjects.com/anima-yocto/1.1.8/index.js"></script>
+    <script type="text/javascript">
+        !function(){
+            function a(){document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+"px"
+            }
+            var b=null;
+            window.addEventListener("resize",function(){clearTimeout(b),b=setTimeout(a,300)},!1),a()}(window);
+    </script>
+    <style>
+        /*reset css*/
+        body,dl,dd,h1,h2,h3,h4,h5,h6,p,span,b,img,ul,li,strong,button{margin:0;padding:0;}
+        body{font-family:"PingFang SC","Helvetica Neue", Helvetica, STHeiTi, "Microsoft YaHei", Arial, sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; height: 100%;}
+        html{ font-size: 20px; line-height: 1.5}
+        body{width: 100%;background:#d6c1a7;}
+        em,i{font-style: normal;}
+        h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal;}
+        ul,li{list-style: none}
+        ul,ol{list-style: none;}
+        .clearfix{*zoom:1;}
+        .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+        .wb-wrap{background:url("https://gw.alicdn.com/tps/TB1OHz9OpXXXXbEXXXXXXXXXXXX-750-120.jpg") repeat-y center top;background-size: 100% 100%;position: relative;}
+        .wb-wrap img{display:block;border: none;vertical-align: bottom;width:100%;height:2.7rem;}
+        .wb-wrap a{text-decoration: none;-webkit-tap-highlight-color:rgba(255,255,255,0);}
+        .wb-wrap .m-img{height:.24rem;}
+        .m-button{width:100%;height:1.2rem;}
+        .m-button a{width:100%;height:1.2rem;display:block;
+            background-color:#00a2ac;
+            font-size: 0.36rem;
+            color: #ffffff;
+            line-height: 1.2rem;
+            font-weight: 900;
+            text-align: center;outline: none;border:none;margin:0 auto;}
+        .m-button a.houbch{background-color: #01ccd9;}
+        .m-part2{width:100%;position: fixed;left:0;bottom:0;}
+        .m-part1{position: relative;}
+        .m-main{position: absolute;left:.15rem;top:.29rem;}
+        .m-data{width:7.2rem;height:4.97rem;background-color: #fff;position: relative;}
+        .m-day{
+            display: block;
+            width:2.7rem;
+            color:#ff6633;
+            font-size: .30rem;
+            height:.5rem;
+            line-height: .5rem;
+            font-weight: 900;
+            margin:0 auto;
+            border-bottom: 1px dashed #999;
+            padding-top: .39rem;
+            text-align: center;
+            margin-bottom: .27rem;
+        }
+        .m-day em{
+            color:#333333;
+            font-size:.3rem;
+            margin-right: .25rem;
+        }
+        .m-liyi{
+            display:block;
+            margin:0 auto;
+            font-size:.28rem;
+            color:#999;
+            text-align: center;
+            line-height: .4rem;
+            width:2.7rem;
+            border-bottom: 1px dashed #999;
+        }
+        .m-liyi em{
+            display: block;
+            color:#ff6633;
+            font-size: .65rem;
+            line-height: .77rem;
+            font-weight: 700;
+        }
+        .m-liyi em i{
+            font-size: .25rem;
+        }
+        .m-kedu{
+            width:7.2rem;
+            height:1.2rem;
+            position: relative;
+            margin-top: .42rem;
+            overflow-y:scroll;
+        }
+        .m-kedu img{
+            width:16.19rem;
+            height:100%;
+        }
+        .m-left{
+            display: block;
+            width:2.66rem;
+            height:1.2rem;
+            background: url("https://gw.alicdn.com/tps/TB1udrOOpXXXXaMaXXXXXXXXXXX-266-120.png") no-repeat center top;
+            background-size: 100% 100%;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        .m-right{
+            display: block;
+            width:2.53rem;
+            height:1.2rem;
+            background: url("https://gw.alicdn.com/tps/TB11m2ZOpXXXXbnXFXXXXXXXXXX-253-120.png") no-repeat center top;
+            background-size: 100% 100%;
+            position: absolute;
+            right:0;
+            top:0;
+        }
+        .wb-wrap .m-zhen{
+            width:.17rem;
+            height:1.63rem;
+            position: absolute;
+            left:3.51rem;
+            top:2.5rem;
+        }
+        .m-txt{
+            display: block;
+            color:#999;
+            font-size: .22rem;
+            text-align: center;
+            line-height: .62rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="wb-wrap">
+        <header>
+            <img src="https://gw.alicdn.com/tps/TB1unDpOpXXXXcoapXXXXXXXXXX-750-270.jpg" />
+            <img src="https://gw.alicdn.com/tps/TB1kG2sOpXXXXbtapXXXXXXXXXX-750-270.jpg" />
+        </header>
+        <section class="m-part1">
+            <img src="https://gw.alicdn.com/tps/TB1JbYOOpXXXXXvaXXXXXXXXXXX-750-270.jpg" />
+            <div class="m-main">
+                <img class="m-img" src="https://gw.alicdn.com/tps/TB14.ZaOpXXXXbjXXXXXXXXXXXX-734-24.png" />
+                <div class="m-data">
+                    <span class="m-day"><em>存到</em>第60天</span>
+                    <span class="m-liyi">年化收益率<em>3.20<i>%</i></em></span>
+                    <div class="m-kedu">
+                        <img src="https://gw.alicdn.com/tps/TB1HegkOpXXXXbSXXXXXXXXXXXX-1619-120.jpg" />
+                        <!-- <span class="m-left"></span>
+                        <span class="m-right"></span> -->
+                    </div>
+                    <img class="m-zhen" src="https://gw.alicdn.com/tps/TB1d_jqOpXXXXXXaVXXXXXXXXXX-17-163.png" />
+                    <span class="m-txt">左右滑动试一试</span>
+                </div>
+            </div>
+        </section>
+        <section class="m-part2">
+            <div class="m-button">
+                <a seed="suiyicunh5" href="https://q.mybank.cn?scheme=mybank%3A%2F%2Flauncher%3Furl%3Dmybank%253A%252F%252Fh5app%252Foffline%253FappId%253D20000261%2526url%253D%25252Fwww%25252Findex.html%25253FbizScenario%25253Dalipay">去存钱</a>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="https://as.alipayobjects.com/g/animajs/mtracker/2.1.2/??seed.js,mtracker.js"></script> 
+<script type="text/javascript" src="https://os.alipayobjects.com/rmsportal/BKgUJbAcIgTTpVS.js"></script>
+<script>
+    window._to = {
+        st: Date.now(),
+        role_id: '',
+    };
+</script>
+<script>
+    $('.m-button a').on('touchstart',function(e){
+        $('.m-button a').css('background-color','#01ccd9')
+    });
+    $('.m-button a').on('touchend',function(e){
+        $('.m-button a').css('background-color','#00a2ac')
+    })
+    var height = window.innerHeight;
+    $('.wb-wrap').height(height);
+</script>
+</html>
