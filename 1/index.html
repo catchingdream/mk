@@ -198,6 +198,12 @@
                     if((_left+_widthTrueone/2)>=_widthTrueone*i && (_left+_widthTrueone/2)<_widthTrueone*(i+1)){
                         $('.m-day').html('<em>存到</em>第' + i + '天');
                         $('.m-liyi span').html((dayinteres[i]*100).toFixed(3));
+                        if(i>0 && i<=14){
+                            $('.m-liyi span').html((dayinteres[i]*100).toFixed(1)); 
+                        }
+                        if(i==0 || i==60){
+                           $('.m-liyi span').html((dayinteres[i]*100).toFixed(0)); 
+                        }
                     }
                 }
             });
