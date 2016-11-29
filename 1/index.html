@@ -88,7 +88,7 @@
             overflow-y:scroll;
         }
         .m-kedu img{
-            width:16.19rem;
+            width:19.24rem;
             height:100%;
         }
         .m-left{
@@ -143,9 +143,9 @@
             <img class="m-img" src="https://gw.alicdn.com/tps/TB14.ZaOpXXXXbjXXXXXXXXXXXX-734-24.png" />
             <div class="m-data">
                 <span class="m-day"><em>存到</em>第60天</span>
-                <span class="m-liyi">年化收益率<em>3.20<i>%</i></em></span>
-                <div class="m-kedu">
-                    <img src="https://gw.alicdn.com/tps/TB1HegkOpXXXXbSXXXXXXXXXXXX-1619-120.jpg" />
+                <span class="m-liyi">年化收益率<em><span>0.03</span><i>%</i></em></span>
+                <div class="m-kedu" id="m-kedu">
+                    <img class="m-keduimg" src="https://gw.alicdn.com/tps/TB1qqD4OpXXXXcNXFXXXXXXXXXX-1924-120.jpg" />
                     <!-- <span class="m-left"></span>
                     <span class="m-right"></span> -->
                 </div>
@@ -164,13 +164,47 @@
     };
 </script>
 <script>
-    $('.m-button a').on('touchstart',function(e){
-        $('.m-button a').css('background-color','#01ccd9')
-    });
-    $('.m-button a').on('touchend',function(e){
-        $('.m-button a').css('background-color','#00a2ac')
-    })
-    var height = window.innerHeight;
-    $('.wb-wrap').height(height);
+    var len = 1206/60;
+    var getfun = {
+        init:function(){
+            var than = this;
+            var height = window.innerHeight;
+            $('.wb-wrap').height(height);
+            than.buttonclor();
+            than.getinteres();
+        },
+        buttonclor:function(){
+            var than = this;
+            $('.m-button a').on('touchstart',function(e){
+                $('.m-button a').css('background-color','#01ccd9')
+            });
+            $('.m-button a').on('touchend',function(e){
+                $('.m-button a').css('background-color','#00a2ac')
+            })
+        },
+        getinteres:function(){
+            var than = this;
+            var _per = (1924-722)/1924;
+            var _width =  $('.m-keduimg').width();
+            var _widthTrue = Math.ceil(_width * _per);
+            var _widthTrueone = _widthTrue/60;
+            var dayinteres = [0,0.024,0.024,0.024,0.024,0.024,0.024,0.024,0.024,0.024,0.024,0.024,0.024,0.024,0.024,0.0265,0.02652,0.02655,0.02657,0.0266,0.02663,0.02666,0.02668,0.02671,0.02674,0.02678,0.02681,0.02684,0.02688,0.02692,0.02695,0.027,0.02704,0.02708,0.02713,0.02718,0.02723,0.02729,0.02735,0.02741,0.02748,0.02755,0.02763,0.02771,0.0278,0.0279,0.0281,0.02821,0.02833,0.02845,0.02858,0.02871,0.02884,0.02898,0.02912,0.02926,0.0294,0.02955,0.0297,0.02985,0.03];
+            var _left;
+            document.getElementById('m-kedu').scrollLeft = _widthTrue;
+            console.log(dayinteres.length);
+            $('.m-kedu').on('scroll',function(){
+                _left = $('.m-kedu')[0].scrollLeft;
+                console.log(_left)    
+                for(var i = 0;i<dayinteres.length;i++){
+                    if(_left>_widthTrueone*i && _left<_widthTrueone*(i+1)){
+                        $('.m-day').html('<em>存到</em>第' + i + '天');
+                        $('.m-liyi span').html(dayinteres[i]);
+                    }
+                }
+            });
+        }
+
+    }
+    getfun.init();
 </script>
 </html>
