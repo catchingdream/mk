@@ -195,7 +195,7 @@
             $('.m-kedu').on('scroll',function(){
                 _left = $('.m-kedu')[0].scrollLeft;
                 for(var i = 0;i<dayinteres.length;i++){
-                    if(_left>=_widthTrueone*i && _left<_widthTrueone*(i+1)){
+                    if((_left+_widthTrueone/2)>=_widthTrueone*i && (_left+_widthTrueone/2)<_widthTrueone*(i+1)){
                         $('.m-day').html('<em>存到</em>第' + i + '天');
                         $('.m-liyi span').html((dayinteres[i]*100).toFixed(3));
                     }
