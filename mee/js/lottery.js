@@ -160,7 +160,10 @@ var getup = {
 	draw1: function(string) {
 		var than = this;
 		var height = $('.lottery-box ul').height();
-		console.log(height);
+		$('.lottery-box ul').height(height);
+		var height1 = $('.lottery-box li').height();
+		$('.lottery-box li').height(height1);
+		console.log(height,height1);
 		// 内
 		var range_1 = -height*10 + 'px';
 		// 外
