@@ -438,8 +438,8 @@ div,select,textarea{
 	float:left;
 	margin-right: .06rem;
 	position: absolute;
-	background: url("https://gw.alicdn.com/tps/TB12wHRQXXXXXceaXXXXXXXXXXX-106-740.png") repeat-y 0 0;
-	background-size: 100%;
+	/*background: url("https://gw.alicdn.com/tps/TB12wHRQXXXXXceaXXXXXXXXXXX-106-740.png") repeat-y 0 0;
+	background-size: 100%;*/
 }
 .pian ul .scroll-1{
 	/*transform:translateY(-7.16rem);*/
