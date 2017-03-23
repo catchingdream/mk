@@ -45,7 +45,7 @@ var getup = {
 			//提交内容
 			if(!(qus=='')){
 				$.ajax({
-					url: '/mock/submit.json',
+					url: '/mee/mock/submit.json',
 					type: 'get',
 					data: {
 						questionType: lei,
@@ -56,7 +56,7 @@ var getup = {
 						if(res.success){
 							//提交成功查询提交次数
 							$.ajax({
-								url:'/mock/count.json',
+								url:'/mee/mock/count.json',
 								type:'get',
 								data:{},
 								success:function(res){
@@ -121,7 +121,7 @@ var getup = {
 			than.draw1('外内');
 			// if (than.flag) {
 			// 	$.ajax({
-			// 		url: '/mock/raffle.json',
+			// 		url: '/mee/mock/raffle.json',
 			// 		type: 'get',
 			// 		data: {
 			// 			_tb_token_:than.token
@@ -236,7 +236,7 @@ var getup = {
 	//查看中奖信息
 	awardsinfo: function() {
 		$.ajax({
-			url: '/mock/queryRaffle.json',
+			url: '/mee/mock/queryRaffle.json',
 			type: 'get',
 			data: {
 			},
