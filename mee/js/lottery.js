@@ -159,10 +159,10 @@ var getup = {
 	// 中奖
 	draw1: function(string) {
 		var than = this;
-		var height = $('.lottery-box ul').height();
-		$('.lottery-box ul').height(height);
-		var height1 = $('.lottery-box li').height();
-		$('.lottery-box li').height(height1);
+		var height = $('.pian ul').height();
+		$('.pian ul').height(height);
+		var height1 = $('.pian li').height();
+		$('.pian li').height(height1);
 		console.log(height,height1);
 		// 内
 		var range_1 = -height*10 + 'px';
