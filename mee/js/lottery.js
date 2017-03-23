@@ -159,20 +159,20 @@ var getup = {
 	// 中奖
 	draw1: function(string) {
 		var than = this;
-		var height = $('.scroll-1').height();
+		var height = $('.lottery-box ul').height();
 		console.log(height);
 		// 内
-		var range_1 = -1532 + '%';
+		var range_1 = -height*10 + 'px';
 		// 外
-		var range_2 = -1609 + '%';
+		var range_2 = -height*11 + 'px';
 		// 小
-		var range_3 = -1686 + '%';
+		var range_3 = -height*12 + 'px';
 		// 蜜
-		var range_4 = -1763 + '%';
+		var range_4 = -height*13 + 'px';
 		// 小蜜LOGO
-		var range_xm1 = -1454 + '%';
-		var range_xm2 = -1454 + '%';
-		var range_xm3 = -1454 + '%';
+		var range_xm1 = -height*14 + 'px';
+		var range_xm2 = -height*14 + 'px';
+		var range_xm3 = -height*14 + 'px';
 		if (string == '内') {
 			than.anim(range_1, range_xm1, range_xm2, range_xm3, string, 0);
 			$('.bl-lottery').attr('data-info','1');

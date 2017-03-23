@@ -409,13 +409,19 @@ div,select,textarea{
 	left:.365rem;
 	top:.99rem;
 }
-.lottery-box ul{
+.lottery-box div{
 	width:4.42rem;
 	height:1.91rem;
 	position: absolute;
 	left:.67rem;
 	top:.21rem;
 	overflow: hidden;
+}
+.lottery-box ul{
+	height:1.48rem;
+	position: absolute;
+	left:0;
+	top:.24rem;
 }
 .lottery-btn{
 	display: block;
@@ -427,11 +433,11 @@ div,select,textarea{
 }
 .lottery-box ul li{
 	width:1.06rem;
-	height:2000%;
+	height:74rem;
 	float:left;
 	margin-right: .06rem;
 	position: absolute;
-	background: url("https://gw.alicdn.com/tps/TB1lFHGPVXXXXciaXXXXXXXXXXX-106-740.png") repeat-y 0 0;
+	background: url("https://gw.alicdn.com/tps/TB12wHRQXXXXXceaXXXXXXXXXXX-106-740.png") repeat-y 0 0;
 	background-size: 100%;
 }
 .lottery-box ul .scroll-1{
