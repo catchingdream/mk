@@ -11,7 +11,7 @@ var getup = {
 		than.submit();
 		than.close();
 		than.lottery();
-		than.token=$('body').attr('data-token');
+		// than.token=$('body').attr('data-token');
 		than.awardsinfo();
 	},
 	// 初始化slide
@@ -159,18 +159,20 @@ var getup = {
 	// 中奖
 	draw1: function(string) {
 		var than = this;
+		var height = $('.scroll-1').height();
+		console.log(height);
 		// 内
-		var range_1 = -((4*740) - 24)/100 + 'rem';
+		var range_1 = -1532 + '%';
 		// 外
-		var range_2 = -((4*740) + 124)/100 + 'rem';
+		var range_2 = -1609 + '%';
 		// 小
-		var range_3 = -((4*740) + 272)/100 + 'rem';
+		var range_3 = -1686 + '%';
 		// 蜜
-		var range_4 = -((4*740) + 420)/100 + 'rem';
+		var range_4 = -1763 + '%';
 		// 小蜜LOGO
-		var range_xm1 = ((5*740) + 172)/100 + 'rem';
-		var range_xm2 = -((6*740) - 172)/100 + 'rem';
-		var range_xm3 = -((4*740) - 172)/100 + 'rem';
+		var range_xm1 = -1454 + '%';
+		var range_xm2 = -1454 + '%';
+		var range_xm3 = -1454 + '%';
 		if (string == '内') {
 			than.anim(range_1, range_xm1, range_xm2, range_xm3, string, 0);
 			$('.bl-lottery').attr('data-info','1');
@@ -223,10 +225,10 @@ var getup = {
 	},
 	// 抽奖动画 中奖信息
 	anim: function(x, y, z, t, string, num) {
-		$(".scroll-1").animate({'background-position-y': x}, 2700, 'swing');
-		$(".scroll-2").animate({'background-position-y': y}, 2900, 'swing');
-		$(".scroll-3").animate({'background-position-y': z}, 3000, 'swing');
-		$(".scroll-4").animate({'background-position-y': t}, 3000, 'swing');
+		$(".scroll-1").animate({'top': x}, 2700, 'swing');
+		$(".scroll-2").animate({'top': y}, 2900, 'swing');
+		$(".scroll-3").animate({'top': z}, 3000, 'swing');
+		$(".scroll-4").animate({'top': t}, 3000, 'swing');
 		setTimeout(function(){
 			$(".meng").show();
 			$(".drawfont h1 em").eq(num).html('“' + string + '”');

@@ -415,6 +415,7 @@ div,select,textarea{
 	position: absolute;
 	left:.67rem;
 	top:.21rem;
+	overflow: hidden;
 }
 .lottery-btn{
 	display: block;
@@ -426,24 +427,36 @@ div,select,textarea{
 }
 .lottery-box ul li{
 	width:1.06rem;
-	height:1.91rem;
+	height:2000%;
 	float:left;
 	margin-right: .06rem;
+	position: absolute;
 	background: url("https://gw.alicdn.com/tps/TB1lFHGPVXXXXciaXXXXXXXXXXX-106-740.png") repeat-y 0 0;
 	background-size: 100%;
 }
 .lottery-box ul .scroll-1{
-	background-position-y:-7.14rem;
+	/*transform:translateY(-7.16rem);*/
+	left:0;
+	top:-7.16rem;
 }
 .lottery-box ul .scroll-2{
-	background-position-y:-5.68rem;
+	/*background-position-y:-5.68rem;*/
+	/*transform:translateY(-5.68rem);*/
+	left:1.12rem;
+	top:-5.68rem;
 }
 .lottery-box ul .scroll-3{
-	background-position-y:-2.72rem;
+	/*background-position-y:-2.72rem;*/
+	/*transform:translateY(-2.72rem);*/
+	left:2.24rem;
+	top:-2.72rem;
 }
 .lottery-box ul .scroll-4{
 	margin:0;
-	background-position-y:-5.68rem;
+	/*background-position-y:-5.68rem;*/
+	/*transform:translateY(-5.68rem);*/
+	left:3.36rem;
+	top:-5.68rem;
 }
 textarea::-webkit-input-placeholder{
 	color: #595959 !important;
