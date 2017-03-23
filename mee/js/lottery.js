@@ -237,7 +237,7 @@ var getup = {
 	//查看中奖信息
 	awardsinfo: function() {
 		$.ajax({
-			url: '/xiaomi/question/queryRaffle.json',
+			url: '/mock/queryRaffle.json',
 			type: 'get',
 			data: {
 			},
