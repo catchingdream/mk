@@ -48,7 +48,6 @@ var getup = {
 					url: '/mock/submit.json',
 					type: 'get',
 					data: {
-						_tb_token_:than.token,
 						questionType: lei,
 						questionDescription: qus,
 						questionAnswer:ans
