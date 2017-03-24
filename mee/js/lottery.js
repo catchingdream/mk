@@ -11,7 +11,7 @@ var getup = {
 		than.submit();
 		than.close();
 		than.lottery();
-		// than.token=$('body').attr('data-token');
+		than.token=$('body').attr('data-token');
 		than.awardsinfo();
 	},
 	// 初始化slide
@@ -45,9 +45,10 @@ var getup = {
 			//提交内容
 			if(!(qus=='')){
 				$.ajax({
-					url: '/mk/mee/mock/submit.json',
-					type: 'get',
+					url: '/xiaomi/question/submit.json',
+					type: 'post',
 					data: {
+						_tb_token_:than.token,
 						questionType: lei,
 						questionDescription: qus,
 						questionAnswer:ans
@@ -56,8 +57,8 @@ var getup = {
 						if(res.success){
 							//提交成功查询提交次数
 							$.ajax({
-								url:'/mk/mee/mock/count.json',
-								type:'get',
+								url:'/xiaomi/question/count.json',
+								type:'post',
 								data:{},
 								success:function(res){
 									//console.log(res.content);
@@ -118,64 +119,59 @@ var getup = {
 	lottery: function() {
 		var than = this;
 		$('.lottery-btn').on('click', function() {
-			than.draw1('外内');
-			// if (than.flag) {
-			// 	$.ajax({
-			// 		url: '/mk/mee/mock/raffle.json',
-			// 		type: 'get',
-			// 		data: {
-			// 			_tb_token_:than.token
-			// 		},
-			// 		success: function(res){
-			// 			if (res.success) {
-			// 				var data = res.content;
-			// 				if (data.success) {
-			// 					var awardWords = '';
-			// 					if (data.content.goodLuck) {
-			// 						awardWords = data.content.awardWords;
-			// 						if (data.content.awardLevel == 4) {
-			// 							$('.pop-onefont h2').html('兑换码：' + data.content.awardCode);
-			// 						} else if (data.content.awardLevel == 1) {
-			// 							awardWords = '内外小蜜';
-			// 						}
-			// 					} else {
-			// 						awardWords = '';
-			// 					}
-			// 					than.draw1(awardWords);
-			// 				} else {
-			// 					alert('您已经抽过奖了');
-			// 				}
-			// 			}
-			// 		},
-			// 		error: function(err){
-			// 		}
-			// 	});
-			// 	than.flag = false;
-			// }else{
-			// 	alert('您已经没有抽奖机会了！');
-			// }
+			than.draw1('小内外');
+			if (than.flag) {
+				$.ajax({
+					url: '/xiaomi/question/raffle.json',
+					type: 'post',
+					data: {
+						_tb_token_:than.token
+					},
+					success: function(res){
+						if (res.success) {
+							var data = res.content;
+							if (data.success) {
+								var awardWords = '';
+								if (data.content.goodLuck) {
+									awardWords = data.content.awardWords;
+									if (data.content.awardLevel == 4) {
+										$('.pop-onefont h2').html('兑换码：' + data.content.awardCode);
+									} else if (data.content.awardLevel == 1) {
+										awardWords = '内外小蜜';
+									}
+								} else {
+									awardWords = '';
+								}
+								than.draw1(awardWords);
+							} else {
+								alert('您已经抽过奖了');
+							}
+						}
+					},
+					error: function(err){
+					}
+				});
+				than.flag = false;
+			}else{
+				alert('您已经没有抽奖机会了！');
+			}
 		});
 	},
 	// 中奖
 	draw1: function(string) {
 		var than = this;
-		var height = $('.pian ul').height();
-		$('.pian ul').height(height);
-		var height1 = $('.pian li').height();
-		$('.pian li').height(height1);
-		console.log(height,height1);
 		// 内
-		var range_1 = -height*10 + 'px';
+		var range_1 = -((4*740) - 24)/100 + 'rem';
 		// 外
-		var range_2 = -height*11 + 'px';
+		var range_2 = -((4*740) + 124)/100 + 'rem';
 		// 小
-		var range_3 = -height*12 + 'px';
+		var range_3 = -((4*740) + 272)/100 + 'rem';
 		// 蜜
-		var range_4 = -height*13 + 'px';
+		var range_4 = -((4*740) + 420)/100 + 'rem';
 		// 小蜜LOGO
-		var range_xm1 = -height*14 + 'px';
-		var range_xm2 = -height*14 + 'px';
-		var range_xm3 = -height*14 + 'px';
+		var range_xm1 = -((6*740) - 172)/100 + 'rem';
+		var range_xm2 = -((6*740) - 172)/100 + 'rem';
+		var range_xm3 = -((4*740) - 172)/100 + 'rem';
 		if (string == '内') {
 			than.anim(range_1, range_xm1, range_xm2, range_xm3, string, 0);
 			$('.bl-lottery').attr('data-info','1');
@@ -228,10 +224,10 @@ var getup = {
 	},
 	// 抽奖动画 中奖信息
 	anim: function(x, y, z, t, string, num) {
-		$(".scroll-1").animate({'top': x}, 2700, 'swing');
-		$(".scroll-2").animate({'top': y}, 2900, 'swing');
-		$(".scroll-3").animate({'top': z}, 3000, 'swing');
-		$(".scroll-4").animate({'top': t}, 3000, 'swing');
+		$(".scroll-1").animate({'transform': 'translateY(' + x + ')'}, 2700, 'swing');
+		$(".scroll-2").animate({'transform': 'translateY(' + y + ')'}, 2900, 'swing');
+		$(".scroll-3").animate({'transform': 'translateY(' + z + ')'}, 3000, 'swing');
+		$(".scroll-4").animate({'transform': 'translateY(' + t + ')'}, 3000, 'swing');
 		setTimeout(function(){
 			$(".meng").show();
 			$(".drawfont h1 em").eq(num).html('“' + string + '”');
@@ -241,26 +237,24 @@ var getup = {
 	//查看中奖信息
 	awardsinfo: function() {
 		$.ajax({
-			url: '/mk/mee/mock/queryRaffle.json',
-			type: 'get',
+			url: '/xiaomi/question/queryRaffle.json',
+			type: 'post',
 			data: {
 			},
 			success: function(res){
-				console.log(res.content);
-				$('.look-awardinfo').show();
+				$('.look-awardinfo').css({'display':'block !important'});
 				$('.look-awardinfo').on('click', function() {
 					var data = res.content;
 					if (data.success) {
-
-						if (data.content.goodLuck) {
-							if (data.content.awardLevel == 4) {
-								$('.pop-onefont h2').html('兑换码：' + data.content.awardCode);
+						if (data.content[0].content.goodLuck) {
+							if (data.content[0].content.awardLevel == 4) {
+								$('.look-awardinfo h2').html('兑换码：' + data.content[0].content.awardCode);
 								showinfo(1);
-							} else if (data.content.awardLevel == 3) {
+							} else if (data.content[0].content.awardLevel == 3) {
 								showinfo(2);
-							} else if (data.content.awardLevel == 2) {
+							} else if (data.content[0].content.awardLevel == 2) {
 								showinfo(3);
-							} else if (data.content.awardLevel == 1) {
+							} else if (data.content[0].content.awardLevel == 1) {
 								showinfo(4);
 							}
 						} else {
