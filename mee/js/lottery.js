@@ -46,7 +46,7 @@ var getup = {
 			if(!(qus=='')){
 				$.ajax({
 					url: '/mk/mee/mock/submit.json',
-					type: 'post',
+					type: 'get',
 					data: {
 						_tb_token_:than.token,
 						questionType: lei,
@@ -58,7 +58,7 @@ var getup = {
 							//提交成功查询提交次数
 							$.ajax({
 								url:'/mk/mee/mock/count.json',
-								type:'post',
+								type:'get',
 								data:{},
 								success:function(res){
 									//console.log(res.content);
@@ -122,7 +122,7 @@ var getup = {
 			if (than.flag) {
 				$.ajax({
 					url: '/mk/mee/mock/raffle.json',
-					type: 'post',
+					type: 'get',
 					data: {
 						_tb_token_:than.token
 					},
@@ -237,7 +237,7 @@ var getup = {
 	awardsinfo: function() {
 		$.ajax({
 			url: '/mk/mee/mock/queryRaffle.json',
-			type: 'post',
+			type: 'get',
 			data: {
 			},
 			success: function(res){
