@@ -359,12 +359,12 @@ div,select,textarea{
 	background:url("//gw.alicdn.com/tps/TB1m5TNPVXXXXb2XXXXXXXXXXXX-88-214.png") no-repeat;
 	background-size:100%;
 	z-index: 100;
-	transform:rotateX(0deg);
+	/*transform:rotateX(0deg);
 	-webkit-transform:rotateX(0deg) ;
 	transform-origin:0 100%;
 	-webkit-transform-origin:0 100%;
 	transition:all .9s ease-in-out;
-	-webkit-transition:all .9s ease-in-out;
+	-webkit-transition:all .9s ease-in-out;*/
 }
 /*.hand.move{*/
 	/*transform:rotateX(360deg);*/

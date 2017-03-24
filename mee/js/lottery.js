@@ -45,7 +45,7 @@ var getup = {
 			//提交内容
 			if(!(qus=='')){
 				$.ajax({
-					url: '/xiaomi/question/submit.json',
+					url: '/mock/submit.json',
 					type: 'post',
 					data: {
 						_tb_token_:than.token,
@@ -57,7 +57,7 @@ var getup = {
 						if(res.success){
 							//提交成功查询提交次数
 							$.ajax({
-								url:'/xiaomi/question/count.json',
+								url:'/mock/count.json',
 								type:'post',
 								data:{},
 								success:function(res){
@@ -119,10 +119,9 @@ var getup = {
 	lottery: function() {
 		var than = this;
 		$('.lottery-btn').on('click', function() {
-			than.draw1('小内外');
 			if (than.flag) {
 				$.ajax({
-					url: '/xiaomi/question/raffle.json',
+					url: '/mock/raffle.json',
 					type: 'post',
 					data: {
 						_tb_token_:than.token
@@ -237,7 +236,7 @@ var getup = {
 	//查看中奖信息
 	awardsinfo: function() {
 		$.ajax({
-			url: '/xiaomi/question/queryRaffle.json',
+			url: '/mock/queryRaffle.json',
 			type: 'post',
 			data: {
 			},
@@ -246,19 +245,23 @@ var getup = {
 				$('.look-awardinfo').on('click', function() {
 					var data = res.content;
 					if (data.success) {
-						if (data.content[0].content.goodLuck) {
-							if (data.content[0].content.awardLevel == 4) {
-								$('.look-awardinfo h2').html('兑换码：' + data.content[0].content.awardCode);
-								showinfo(1);
-							} else if (data.content[0].content.awardLevel == 3) {
-								showinfo(2);
-							} else if (data.content[0].content.awardLevel == 2) {
-								showinfo(3);
-							} else if (data.content[0].content.awardLevel == 1) {
-								showinfo(4);
-							}
+						if (data.content[0] == undefined) {
+							showinfo(5);
 						} else {
-							showinfo(0);
+							if (data.content[0].content.goodLuck) {
+								if (data.content[0].content.awardLevel == 4) {
+									$('.pop-luck1 h2').html('兑换码：' + data.content[0].content.awardCode);
+									showinfo(1);
+								} else if (data.content[0].content.awardLevel == 3) {
+									showinfo(2);
+								} else if (data.content[0].content.awardLevel == 2) {
+									showinfo(3);
+								} else if (data.content[0].content.awardLevel == 1) {
+									showinfo(4);
+								}
+							} else {
+								showinfo(0);
+							}
 						}
 					}
 				});
