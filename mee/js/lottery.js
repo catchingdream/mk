@@ -45,7 +45,7 @@ var getup = {
 			//提交内容
 			if(!(qus=='')){
 				$.ajax({
-					url: '/mock/submit.json',
+					url: '/mk/mee/mock/submit.json',
 					type: 'get',
 					data: {
 						_tb_token_:than.token,
@@ -57,7 +57,7 @@ var getup = {
 						if(res.success){
 							//提交成功查询提交次数
 							$.ajax({
-								url:'/mock/queryRaffle.json',
+								url:'/mk/mee/mock/queryRaffle.json',
 								type:'get',
 								data:{},
 								success:function(res){
@@ -134,7 +134,7 @@ var getup = {
 		$('.lottery-btn').on('click', function() {
 			if (than.flag) {
 				$.ajax({
-					url: '/mock/raffle.json',
+					url: '/mk/mee/mock/raffle.json',
 					type: 'get',
 					data: {
 						_tb_token_:than.token
@@ -249,7 +249,7 @@ var getup = {
 	//查看中奖信息
 	awardsinfo: function() {
 		$.ajax({
-			url: '/mock/queryRaffle.json',
+			url: '/mk/mee/mock/queryRaffle.json',
 			type: 'get',
 			data: {
 			},
