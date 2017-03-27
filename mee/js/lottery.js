@@ -25,13 +25,13 @@ var getup = {
 	onfocus: function() {
 		$('.wen-one').on('click', '.hide', function(e) {
 			var target = $(e.target);
-			target.hide(0.5);
+			target.hide();
 			target.siblings('textarea').focus();
 		});
 		$('.wen-one').on('blur', 'textarea', function(e) {
 			var val = $(e.target).val();
 			if (val == '' || val == null || val == undefined) {
-				$(e.target).siblings('.hide').show(0.5);
+				$(e.target).siblings('.hide').show();
 			}
 		});
 	},
@@ -65,25 +65,25 @@ var getup = {
 									if (data.success) {
 										if (data.content[0] == undefined) {
 											//未抽奖 进入抽奖
-											$('.pop-once').show(0.5);
-											$('.meng').show(0.5);
+											$('.pop-once').show();
+											$('.meng').show();
 											than.close();
 										} else {
 											//抽过奖 不进入抽奖
-											$('.pop-again').show(0.5);
-											$('.meng').show(0.5);
+											$('.pop-again').show();
+											$('.meng').show();
 											than.close();
 										}
 									}
 									//if(resd.content==1){
 									//	//提交为1 进入抽奖
-									//	$('.pop-once').show(0.5);
-									//	$('.meng').show(0.5);
+									//	$('.pop-once').show();
+									//	$('.meng').show();
 									//	than.close();
 									//}else{
 									//	//提交不为1 不进入抽奖
-									//	$('.pop-again').show(0.5);
-									//	$('.meng').show(0.5);
+									//	$('.pop-again').show();
+									//	$('.meng').show();
 									//	than.close();
 									//}
 								},
@@ -105,12 +105,12 @@ var getup = {
 	// 关闭pop 进入抽奖页
 	close: function() {
 		$('.bl-wrap').on('click', '.close', function(e) {
-			$(e.target).parent('.pop').hide(0.5);
-			$('.meng').hide(0.5);
+			$(e.target).parent('.pop').hide();
+			$('.meng').hide();
 		});
 		$('.bl-wrap').on('click', '.goback1', function(e) {
-			$(e.target).parent('.pop').hide(0.5);
-			$('.meng').hide(0.5);
+			$(e.target).parent('.pop').hide();
+			$('.meng').hide();
 		});
 		if ($('.pop-once').css('display') == 'block') {
 			setTimeout(function() {
@@ -121,10 +121,10 @@ var getup = {
 			getlottery();
 		});
 		function getlottery() {
-			$('.pop-once').hide(0.5);
-			$('.meng').hide(0.5);
-			$('.bl-question').hide(0.5);
-			$('.bl-lottery').show(0.5);
+			$('.pop-once').hide();
+			$('.meng').hide();
+			$('.bl-question').hide();
+			$('.bl-lottery').show();
 			$('.swiper-last').css('background-color', '#f85e0b!important');
 		}
 	},
