@@ -11,7 +11,7 @@ var getup = {
 		than.submit();
 		than.close();
 		than.lottery();
-		than.token=$('body').attr('data-token');
+		than.token="0Zmuh4Uq";
 		than.awardsinfo();
 	},
 	// 初始化slide
@@ -45,7 +45,7 @@ var getup = {
 			//提交内容
 			if(!(qus=='')){
 				$.ajax({
-					url: '/mk/mee/mock/submit.json',
+					url: '/mock/submit.json',
 					type: 'get',
 					data: {
 						_tb_token_:than.token,
@@ -57,22 +57,35 @@ var getup = {
 						if(res.success){
 							//提交成功查询提交次数
 							$.ajax({
-								url:'/mk/mee/mock/count.json',
+								url:'/mock/queryRaffle.json',
 								type:'get',
 								data:{},
 								success:function(res){
-									//console.log(res.content);
-									if(res.content==1){
-										//提交为1 进入抽奖
-										$('.pop-once').show(0.5);
-										$('.meng').show(0.5);
-										than.close();
-									}else{
-										//提交不为1 不进入抽奖
-										$('.pop-again').show(0.5);
-										$('.meng').show(0.5);
-										than.close();
+									var data = res.content;
+									if (data.success) {
+										if (data.content[0] == undefined) {
+											//未抽奖 进入抽奖
+											$('.pop-once').show(0.5);
+											$('.meng').show(0.5);
+											than.close();
+										} else {
+											//抽过奖 不进入抽奖
+											$('.pop-again').show(0.5);
+											$('.meng').show(0.5);
+											than.close();
+										}
 									}
+									//if(resd.content==1){
+									//	//提交为1 进入抽奖
+									//	$('.pop-once').show(0.5);
+									//	$('.meng').show(0.5);
+									//	than.close();
+									//}else{
+									//	//提交不为1 不进入抽奖
+									//	$('.pop-again').show(0.5);
+									//	$('.meng').show(0.5);
+									//	than.close();
+									//}
 								},
 								error:function(){
 
@@ -121,7 +134,7 @@ var getup = {
 		$('.lottery-btn').on('click', function() {
 			if (than.flag) {
 				$.ajax({
-					url: '/mk/mee/mock/raffle.json',
+					url: '/mock/raffle.json',
 					type: 'get',
 					data: {
 						_tb_token_:than.token
@@ -162,14 +175,14 @@ var getup = {
 		// 内
 		var range_1 = -((4*740) - 24)/100 + 'rem';
 		// 外
-		var range_2 = -((4*740) + 124)/100 + 'rem';
+		var range_2 = -((6*740) + 124)/100 + 'rem';
 		// 小
 		var range_3 = -((4*740) + 272)/100 + 'rem';
 		// 蜜
-		var range_4 = -((4*740) + 420)/100 + 'rem';
+		var range_4 = -((5*740) + 420)/100 + 'rem';
 		// 小蜜LOGO
 		var range_xm1 = -((6*740) - 172)/100 + 'rem';
-		var range_xm2 = -((6*740) - 172)/100 + 'rem';
+		var range_xm2 = -((5*740) - 172)/100 + 'rem';
 		var range_xm3 = -((4*740) - 172)/100 + 'rem';
 		if (string == '内') {
 			than.anim(range_1, range_xm1, range_xm2, range_xm3, string, 0);
@@ -236,7 +249,7 @@ var getup = {
 	//查看中奖信息
 	awardsinfo: function() {
 		$.ajax({
-			url: '/mk/mee/mock/queryRaffle.json',
+			url: '/mock/queryRaffle.json',
 			type: 'get',
 			data: {
 			},
@@ -245,6 +258,7 @@ var getup = {
 				$('.look-awardinfo').on('click', function() {
 					var data = res.content;
 					if (data.success) {
+						console.log(data.content[0]);
 						if (data.content[0] == undefined) {
 							showinfo(5);
 						} else {

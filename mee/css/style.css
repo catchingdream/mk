@@ -175,9 +175,9 @@ div,select,textarea{
 }
 .pop-onefont{
 	width:5.69rem;
-	height:9.47rem;
+	height:9.77rem;
 	margin-left: -2.84rem;
-	margin-top: -4.73rem;
+	margin-top: -4.88rem;
 }
 .pop-twofont{
 	width:5.68rem;
@@ -291,9 +291,9 @@ div,select,textarea{
 .pop-luck1{
 	display: none;
 	width:5.69rem;
-	height:7.55rem;
+	height:7.75rem;
 	margin-left: -2.84rem;
-	margin-top: -3.77rem;
+	margin-top: -3.87rem;
 }
 .pop-luck2{
 	display: none;
@@ -320,12 +320,11 @@ div,select,textarea{
 	bottom:.3rem;
 }
 .look-awardinfo{
-	display: none!important;
 	width:1.81rem;
 	height:.35rem;
 	position: fixed;
 	right:.22rem;
-	top:.22rem;
+	top:.2rem;
 	z-index:100;
 }
 .pop-info h2{
@@ -359,12 +358,12 @@ div,select,textarea{
 	background:url("//gw.alicdn.com/tps/TB1m5TNPVXXXXb2XXXXXXXXXXXX-88-214.png") no-repeat;
 	background-size:100%;
 	z-index: 100;
-	/*transform:rotateX(0deg);
-	-webkit-transform:rotateX(0deg) ;
-	transform-origin:0 100%;
-	-webkit-transform-origin:0 100%;
-	transition:all .9s ease-in-out;
-	-webkit-transition:all .9s ease-in-out;*/
+	/*transform:rotateX(0deg);*/
+	/*-webkit-transform:rotateX(0deg) ;*/
+	/*transform-origin:0 100%;*/
+	/*-webkit-transform-origin:0 100%;*/
+	/*transition:all .9s ease-in-out;*/
+	/*-webkit-transition:all .9s ease-in-out;*/
 }
 /*.hand.move{*/
 	/*transform:rotateX(360deg);*/
@@ -432,13 +431,13 @@ div,select,textarea{
 	margin-right: .06rem;
 }
 .lottery-box ul .scroll-1{
-	transform: translateY(-7.14rem);
+	transform: translateY(-5.68rem);
 }
 .lottery-box ul .scroll-2{
 	transform: translateY(-5.68rem);
 }
 .lottery-box ul .scroll-3{
-	transform: translateY(-2.72rem);
+	transform: translateY(-5.68rem);
 }
 .lottery-box ul .scroll-4{
 	margin:0;
