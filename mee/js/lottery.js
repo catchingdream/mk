@@ -75,17 +75,6 @@ var getup = {
 											than.close();
 										}
 									}
-									//if(resd.content==1){
-									//	//提交为1 进入抽奖
-									//	$('.pop-once').show();
-									//	$('.meng').show();
-									//	than.close();
-									//}else{
-									//	//提交不为1 不进入抽奖
-									//	$('.pop-again').show();
-									//	$('.meng').show();
-									//	than.close();
-									//}
 								},
 								error:function(){
 
