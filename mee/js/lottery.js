@@ -225,10 +225,10 @@ var getup = {
 	},
 	// 抽奖动画 中奖信息
 	anim: function(x, y, z, t, string, num) {
-		$(".scroll-1").animate({'transform': 'translateY(' + x + ')'}, 2700, 'swing');
-		$(".scroll-2").animate({'transform': 'translateY(' + y + ')'}, 2900, 'swing');
-		$(".scroll-3").animate({'transform': 'translateY(' + z + ')'}, 3000, 'swing');
-		$(".scroll-4").animate({'transform': 'translateY(' + t + ')'}, 3000, 'swing');
+		$(".scroll-1").animate({'transform': 'translateY(' + x + ')', '-webkit-transform': 'translateY(' + x + ')'}, 2700, 'swing');
+		$(".scroll-2").animate({'transform': 'translateY(' + y + ')', '-webkit-transform': 'translateY(' + y + ')'}, 2900, 'swing');
+		$(".scroll-3").animate({'transform': 'translateY(' + z + ')', '-webkit-transform': 'translateY(' + z + ')'}, 3000, 'swing');
+		$(".scroll-4").animate({'transform': 'translateY(' + t + ')', '-webkit-transform': 'translateY(' + t + ')'}, 3000, 'swing');
 		setTimeout(function(){
 			$(".meng").show();
 			$(".drawfont h1 em").eq(num).html('“' + string + '”');
