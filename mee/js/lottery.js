@@ -45,7 +45,7 @@ var getup = {
 			//提交内容
 			if(!(qus=='')){
 				$.ajax({
-					url: '/mock/submit.json',
+					url: '/mk/mee/mock/submit.json',
 					type: 'get',
 					data: {
 						_tb_token_:than.token,
@@ -102,7 +102,7 @@ var getup = {
 		var than = this;
 		$('.lottery-btn').on('click', function() {
 			$.ajax({
-				url:'/mock/queryRaffle.json',
+				url:'/mk/mee/mock/queryRaffle.json',
 				type:'get',
 				data:{},
 				success:function(resa){
@@ -111,7 +111,7 @@ var getup = {
 						if (data0.content[0] == undefined) {
 							if (than.flag) {
 								$.ajax({
-									url: '/mock/raffle.json',
+									url: '/mk/mee/mock/raffle.json',
 									type: 'get',
 									data: {
 										_tb_token_:than.token
@@ -245,7 +245,7 @@ var getup = {
 	awardsinfo: function() {
 		$('.look-awardinfo').on('click', function() {
 			$.ajax({
-				url: '/mock/queryRaffle.json',
+				url: '/mk/mee/mock/queryRaffle.json',
 				type: 'get',
 				data: {
 				},
