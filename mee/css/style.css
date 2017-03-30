@@ -362,7 +362,7 @@ div,select,textarea{
 	top:3.36rem;
 	background:url("//gw.alicdn.com/tps/TB1m5TNPVXXXXb2XXXXXXXXXXXX-88-214.png") no-repeat;
 	background-size:100%;
-	z-index: 100;
+	z-index: 50;
 	/*transform:rotateX(0deg);*/
 	/*-webkit-transform:rotateX(0deg) ;*/
 	/*transform-origin:0 100%;*/
