@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="GB2312">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -21,8 +21,14 @@
             var b=null;
             window.addEventListener("resize",function(){clearTimeout(b),b=setTimeout(a,300)},!1),a()}(window);
     </script>
-    <script src="//g.alicdn.com/ju/h5-libs/1.0.6/zepto.js "></script>
+    <script src="//g.alicdn.com/ju/h5-libs/1.0.6/zepto.js"></script>
     <script type="text/javascript" src="./js/swiper-3.4.1.jquery.min.js"></script>
+    <script type="text/javascript" src="./js/fastclick.js"></script>
+    <script type="text/javascript">
+        $(function() {
+          FastClick.attach(document.body);
+        });
+    </script>
     <link rel="stylesheet" href="./css/swiper-3.4.1.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -45,7 +51,7 @@
                 <img class="down" src="//gw.alicdn.com/tps/TB1MNPOPVXXXXcvXpXXXXXXXXXX-60-64.png" />
             </div>
             <div class="swiper-slide swiper-slide1">
-                <div class="test">
+                <div class="fu">
                     <div class="bl-question">
                         <img src="//gw.alicdn.com/tps/TB1gILjPVXXXXXmapXXXXXXXXXX-750-400.jpg" width="100%" />
                         <img src="//gw.alicdn.com/tps/TB1_rraPVXXXXaUaFXXXXXXXXXX-750-400.jpg" width="100%" />
@@ -214,7 +220,6 @@
                 content: "Hi，我叫内外小蜜，是你在园区工作、生活的智能小助手！",
                 image: 'https://gw.alicdn.com/tfs/TB1Lt9eQpXXXXX9XpXXXXXXXXXX-200-200.jpg',
                 onSuccess: function() {
-
                 },
                 onFail: function(err) {
                 }

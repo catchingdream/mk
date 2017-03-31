@@ -9,10 +9,31 @@ var getup = {
 		than.slide();
 		than.onfocus();
 		than.submit();
-		than.close();
 		than.lottery();
 		than.token=$('body').attr('data-token');
-		than.awardsinfo();
+		$.ajax({
+			url:'/mock/queryRaffle.json',
+			type:'get',
+			data:{},
+			success:function(resa){
+				var data0 = resa.content;
+				if (data0.success) {
+					if (data0.content[0] == undefined) {
+						than.flag=true;
+					} else {
+						//抽过奖
+						than.flag=false;
+					}
+				}
+			},
+			error:function(){
+
+			}
+		});
+		than.close();
+		$('.bl-wrap').on('click','.look-awardinfo', function() {
+			than.awardsinfo();
+		});
 	},
 	// 初始化slide
 	slide: function() {
@@ -45,7 +66,7 @@ var getup = {
 			//提交内容
 			if(!(qus=='')){
 				$.ajax({
-					url: '/mk/mee/mock/submit.json',
+					url: '/mock/submit.json',
 					type: 'get',
 					data: {
 						_tb_token_:than.token,
@@ -70,6 +91,7 @@ var getup = {
 	},
 	// 关闭pop 进入抽奖页
 	close: function() {
+		var than = this;
 		$('.bl-wrap').on('click', '.close', function(e) {
 			$(e.target).parent('.pop').hide();
 			$('.meng').hide();
@@ -79,12 +101,13 @@ var getup = {
 			$('.meng').hide();
 		});
 		if ($('.pop-once').css('display') == 'block') {
-			setTimeout(function() {
+			var timeout = setTimeout(function() {
 				getlottery();
 			}, 3000);
 		}
 		$('.lottery-enter').on('click', function() {
 			getlottery();
+			clearTimeout(timeout);
 		});
 		function getlottery() {
 			$('.pop-once').hide();
@@ -92,76 +115,62 @@ var getup = {
 			$('.swiper-container').hide();
 			$('.bl-lottery').show();
 			$('.swiper-last').css('background-color', '#f85e0b!important');
-			$('html,body').animate({scrollTop: '0px'}, 0,'linear');
-			
-			console.log($('html,body').scrollTop());
 		}
+		
 	},
 	// 抽奖
 	lottery: function() {
 		var than = this;
 		$('.lottery-btn').on('click', function() {
-			$.ajax({
-				url:'/mk/mee/mock/queryRaffle.json',
-				type:'get',
-				data:{},
-				success:function(resa){
-					var data0 = resa.content;
-					if (data0.success) {
-						if (data0.content[0] == undefined) {
-							if (than.flag) {
-								$.ajax({
-									url: '/mk/mee/mock/raffle.json',
-									type: 'get',
-									data: {
-										_tb_token_:than.token
-									},
-									success: function(res){
-										if (res.success) {
-											var data = res.content;
-											if (data.success) {
-												var awardWords = '';
-												if (data.content.goodLuck) {
-													awardWords = data.content.awardWords;
-													if (data.content.awardLevel == 4) {
-														$('.pop-onefont h2').html('兑换码：' + data.content.awardCode);
-													} else if (data.content.awardLevel == 1) {
-														awardWords = '内外小蜜';
-													}
-												} else {
-													awardWords = '';
-												}
-												than.draw1(awardWords);
-												than.flag = false;
-												//than.awardsinfo();
-											} else {
-												if (data.message == '已经抽过奖'){
-													//抽过奖
-													$('.pop-again').show();
-													$('.meng').show();
-												}
-											}
-										}
-									},
-									error: function(err){
+			if (than.flag) {
+				$(".scroll-1").animate({'-webkit-transform': 'translateY(-20.48rem)', 'transform': 'translateY(-20.48rem)'}, 3700, 'swing');
+				$(".scroll-2").animate({'-webkit-transform': 'translateY(-20.48rem)', 'transform': 'translateY(-20.48rem)'}, 3900, 'swing');
+				$(".scroll-3").animate({'-webkit-transform': 'translateY(-20.48rem)', 'transform': 'translateY(-20.48rem)'}, 3500, 'swing');
+				$(".scroll-4").animate({'-webkit-transform': 'translateY(-20.48rem)', 'transform': 'translateY(-20.48rem)'}, 3500, 'swing');
+				$.ajax({
+					url: '/mock/raffle.json',
+					type: 'get',
+					data: {
+						_tb_token_:than.token
+					},
+					success: function(res){
+						if (res.success) {
+							var data = res.content;
+							if (data.success) {
+								var awardWords = '';
+								if (data.content.goodLuck) {
+									awardWords = data.content.awardWords;
+									if (data.content.awardLevel == 4) {
+										$('.pop-onefont h2').html('兑换码：' + data.content.awardCode);
+									} else if (data.content.awardLevel == 1) {
+										awardWords = '内外小蜜';
 									}
-								});
-							}else{
-								//抽过奖
-								$('.pop-again').show();
-								$('.meng').show();
+								} else {
+									awardWords = '';
+								}
+								than.draw1(awardWords);
+								//than.awardsinfo();
+							} else {
+								if (data.message == '已经抽过奖'){
+									//抽过奖
+									$('.pop-again').show();
+									$('.meng').show();
+								} else {
+									alert('接口开小差了');
+								}
 							}
-						} else {
-							//抽过奖
-							$('.pop-again').show();
-							$('.meng').show();
 						}
+						than.flag = false;
+					},
+					error: function(err){
+						alert('接口出错');
 					}
-				},
-				error:function(){
-
-				}
-			});
+				});
+			}else{
+				//抽过奖
+				$('.pop-again').show();
+				$('.meng').show();
+			}
 		});
 	},
 	// 中奖
@@ -243,38 +252,37 @@ var getup = {
 	},
 	//查看中奖信息
 	awardsinfo: function() {
-		$('.look-awardinfo').on('click', function() {
-			$.ajax({
-				url: '/mk/mee/mock/queryRaffle.json',
-				type: 'get',
-				data: {
-				},
-				success: function(res){
-						var data = res.content;
-						if (data.success) {
-							if (data.content[0] == undefined) {
-								showinfo(5);
-							} else {
-								if (data.content[0].content.goodLuck) {
-									if (data.content[0].content.awardLevel == 4) {
-										$('.pop-luck1 h2').html('兑换码：' + data.content[0].content.awardCode);
-										showinfo(1);
-									} else if (data.content[0].content.awardLevel == 3) {
-										showinfo(2);
-									} else if (data.content[0].content.awardLevel == 2) {
-										showinfo(3);
-									} else if (data.content[0].content.awardLevel == 1) {
-										showinfo(4);
-									}
-								} else {
-									showinfo(0);
+		var than = this;
+		$.ajax({
+			url: '/mock/queryRaffle.json',
+			type: 'get',
+			data: {
+			},
+			success: function(res){
+					var data = res.content;
+					if (data.success) {
+						if (data.content[0] == undefined) {
+							showinfo(5);
+						} else {
+							if (data.content[0].content.goodLuck) {
+								if (data.content[0].content.awardLevel == 4) {
+									$('.pop-luck1 h2').html('兑换码：' + data.content[0].content.awardCode);
+									showinfo(1);
+								} else if (data.content[0].content.awardLevel == 3) {
+									showinfo(2);
+								} else if (data.content[0].content.awardLevel == 2) {
+									showinfo(3);
+								} else if (data.content[0].content.awardLevel == 1) {
+									showinfo(4);
 								}
+							} else {
+								showinfo(0);
 							}
 						}
-				},
-				error: function(err){
-				}
-			});
+					}
+			},
+			error: function(err){
+			}
 		});
 		function showinfo(num){
 			$(".meng").show();
