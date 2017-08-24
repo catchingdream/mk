@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+	<title>网商银行-你的专属优惠</title>
+	<style>
+		html,body,div,p,h1,h2,h3,a,img,ul,li,span,em,i{padding:0;margin:0;}
+		html,body{overflow-x:hidden;background-color:#f8f8f8;}
+	    .lm-wrap{
+	    	width:100%;
+	    	height:auto;
+	    	font-size:14px;
+	    	font-family:"Microsoft YaHei",Helvetica,PingFang,Hiragino Sans,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;
+	    	background:#01122c;
+	    	-webkit-font-smoothing: antialiased;
+	    	-moz-osx-font-smoothing: grayscale;
+	    	overflow:hidden;
+	    }
+	    a{
+	    	text-decoration:none;
+	    	background:url(about:blank);
+	    	outline:none;
+	    }
+	    img{
+	    	border:0;
+	    	vertical-align:top;
+	    }
+	    ul,li{
+	    	list-style:none;
+	    }
+	    em,i{
+	    	font-style:normal;
+	    }
+	    .clearfix:after{
+	    	content:'';
+	    	display:block;
+	    	visibility:hidden;
+	    	height:0;
+	    	clear:both;
+	    }
+	    .clearfix{
+	    	*zoom:1;
+	    }
+	    .f-left{
+	    	float:left;
+	    }
+	    .f-right{
+	    	float:right;
+	    }
+	    /*public*/
+		.wsh-main{
+			position:relative;
+			width:990px;
+			min-width:990px;
+			margin:0 auto;
+			font-family:"Microsoft YaHei",Helvetica,PingFang,Hiragino Sans,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;
+		}
+		.wsh-header{
+			width:100%;
+			background:#fff;
+			border-bottom: 2px solid #00a3a3;
+			position: fixed;
+			left:0;
+			top:0;
+			z-index:100;
+		}
+		.wsh-ct{
+			width:990px;
+			margin:0 auto;
+			position:relative;
+		}
+		.wsh-logo{
+			display:block;
+			width:300px;
+			height:68px;
+		}
+		.wsh-timeline{
+			position:absolute;
+			top:0;
+			left:280px;	
+		}
+		.wsh-follow{
+			position:absolute;
+			top:0;
+			right:0;
+			width:168px;
+			height:87px;
+			display:block;
+			background:url("//img.alicdn.com/tps/TB1roT8LXXXXXXPXFXXXXXXXXXX-168-87.png") no-repeat top left;
+			cursor:pointer;
+		}
+		.wsh-count{
+			position:fixed;
+			left:50%;
+			top:100px;
+			width:160px;
+			height:87px;
+			margin-left:334px;
+			background:url("//img.alicdn.com/tps/TB11E2QLXXXXXXUaXXXXXXXXXXX-160-87.png") no-repeat center top;
+			z-index:100;
+		}
+		.counttxt{
+			position:absolute;
+			bottom:5px;
+			left:0;
+			display:block;
+			width:160px;
+			height:24px;
+			line-height:24px;
+			text-align:center;
+			font-size:14px;
+			font-weight:700;
+			color:#fff;
+		}
+		.wsh-erwei{
+			position:fixed;
+			top:280px;
+			right:30px;
+			width:150px;
+			height:185px;
+			background:url("//img.alicdn.com/tps/TB16PDAKpXXXXapXVXXXXXXXXXX-150-185.png") no-repeat center top;
+			z-index:100;
+		}
+		.wsh-ttop{
+			position:absolute;
+			top:177px;
+			left:0;
+			display:none;
+			width:150px;
+			height:41px;			
+		}
+		
+		/*public loading*/
+		.intro{
+		    background-color: #fff;
+		    position: fixed;
+		    left:0;
+		    top:0;
+		    width: 100%;
+		    height: 100%;
+		    min-height: 990px;
+		    min-width: 990px;
+		    z-index: 150;
+		}
+		.intro .slogan_logo {
+		    position: relative;
+		    top: 20%;
+		    left: 50%;
+		    width: 212px;
+		    height: 270px;
+		    margin-left: -106px;
+		}
+		.intro .slogan_logo .logo{
+		    opacity: 0;
+		    margin-left:54px;
+		}
+		.intro .slogan_logo .slogan {
+		    margin-top: 65px;
+		}
+		.intro .slogan_logo .slogan .item-wu {
+		    margin-top: 6px;
+		    padding-left: 5px;
+		}
+		.intro .slogan_logo .slogan .slogan-list-item {
+		    opacity: 0;
+		    float: left;
+		    width: 60px;
+		}
+		.intro .slogan_logo .slogan .item-bu {
+		    margin-top: 8px;
+		    width: 50px;
+		}
+		.intro .slogan_logo .slogan .item-zhi {text-align:right;margin-top:5px;width:32px;}		
+
+	    /*public-foot*/
+		.foot-wrap {	  
+		  background-color: #f8f8f8;
+		  min-width: 990px;
+		  font-family:STHeitiSC-Light;
+		  z-index:99;
+		}
+		.foot-content {
+		  width: 990px;
+		  margin: 0 auto;
+		  padding: 30px 5px;
+		  font-size: 14px;
+		  line-height: 1.5;
+		  *zoom: 1;
+		  font-size: 12px;
+		  line-height: 12px;
+		  background-color: #f8f8f8;
+		  background: url(//os.alipayobjects.com/rmsportal/AfFplHSMsIUAFHH.png) right -1px no-repeat;
+		}
+		.foot-content a{
+		  color: #333;
+		  margin: 0 10px;
+		  font-size: 12px;
+		  text-decoration: none;
+		  display:inline;
+		}
+		.foot-content a:hover{
+		  color: #00C2C2;
+		  line-height: 12px;
+		  text-decoration: none;
+		}
+		.foot-content:before,
+		.foot-content:after {
+		  display: table;
+		  content: "";
+		}
+		.foot-content:after {
+		  clear: both;
+		}
+		.foot-left {
+		  float: left;
+		  display: inline;
+		}
+		.foot-left img{
+		  height: 26px;
+		}
+		.foot-right {
+		  float: right;
+		  display: inline;
+		  text-align: right;
+		}
+		.foot-logo {
+		  width: 209px;
+		  height: 26px;
+		  display: block;
+		}
+		.foot-intro {
+		  padding-top: 14px;
+		  position: relative;
+		  right: -10px;
+		  color: #D6D6D6;
+		}
+		.foot-copyright {
+		  padding-top: 20px;
+		  line-height: 12px;
+		  color: #333;
+		}
+		.foot-link {
+		  position: relative;
+		  left: -10px;
+		  color: #D6D6D6;
+		  padding-top: 18px;
+		  line-height: 12px;
+		}
+		.copyright{
+		  margin-right: 15px;
+		}
+	  	/*响应设计 小于1200px 显示 990px宽度头 */
+	  	@media (max-width: 1200px) {
+		    .foot-content{
+		      width: 990px;
+		    }
+	  	}
+	  	/*pageMain*/
+	  	.wsh-cut{
+	  		width:100%;
+	  		height:70px;
+	  	}
+	  	.wsh-con{
+	  		width:100%;
+	  		height:auto;
+	  		background:#01122c url("https://img.alicdn.com/tps/TB1qUm9MVXXXXceapXXXXXXXXXX-1920-776.jpg") no-repeat top center;
+	  	}
+	  	.wsh-nosale{
+	  		background:#00112c url("https://img.alicdn.com/tps/TB10_bvMVXXXXaZapXXXXXXXXXX-1920-712.jpg") no-repeat top center;
+	  	}
+	  	.wsh-QRcode{
+	  		position:fixed;
+	  		top:200px;
+	  		left:50%;
+	  		width:100px;
+	  		padding:5px 8px;
+	  		margin-left:534px;
+	  		background:#00c2c2;
+	  		text-align:center;
+	  		white-space:nowrap;
+	  		color:#fff;
+	  		font-weight:400;
+	  		font-size:12px;
+	  	}
+	  	.wsh_qr_tit{
+	  		font-size:14px;
+	  		font-weight:700;	  			  		
+	  	}
+	  	.wsh_qr_p{
+	  		line-height:18px;
+	  	}
+	  	.wsh_qr_g{	  		
+	  		color:#007a80;
+	  		line-height:18px;
+	  	}
+	  	.wsh-free{
+	  		position:fixed;
+	  		top:200px;
+	  		left:50%;
+	  		display:block;
+	  		width:100px;
+	  		height:36px;
+	  		line-height:18px;
+	  		padding:8px;
+	  		margin-left:-650px;
+	  		background:url("https://img.alicdn.com/tps/TB1duLGMVXXXXX7XXXXXXXXXXXX-116-52.png") no-repeat top center;
+	  		color:#fff;
+	  		font-size:16px;
+	  		font-weight:700;
+	  	}
+	  	.wsh_fr_s{
+	  		float:right;
+	  		font-size:12px;
+	  	}
+	  	.wsh-desc{
+	  		position:absolute;
+	  		top:455px;
+	  		left:0;
+	  		color:#fff;
+	  		font-size:18px;
+	  		padding-bottom:28px;
+	  	}
+	  	.wsh_ds_h{
+	  		font-size:20px;
+			padding-bottom:30px;
+	  	}
+	  	.wsh_ds_p{
+			font-size:18px;
+	  	}
+	  	.wsh-reserve{
+	  		position:absolute;
+	  		top:516px;
+	  		left:50%;
+	  		width:286px;
+	  		margin-left:-143px;
+	  		color:#fff;
+	  		text-align:center;
+	  		font-size:20px;
+	  	}
+	  	.wsh_rs_s{
+	  		line-height:20px;
+	  	}
+	  	.wsh-ad{
+	  		position:absolute;
+	  		bottom:25px;
+	  		right:0;
+	  		color:#fff;
+	  		font-size:16px;
+	  	}
+	  	/*倒计时*/
+	  	.wsh-cd-wrap{
+	  		position:absolute;
+	  		top:637px;
+	  		left:50%;
+	  		width:588px;
+	  		margin-left:-294px;
+	  	}
+	  	.wsh-endtime{
+	  		position:absolute;
+	  		top:0;
+	  		left:0;
+	  		display:block;
+	  		width:215px;
+	  		color:#fff;
+	  		font-size:26px;
+	  		font-weight:700;
+	  	}
+	  	.wsh-cd{
+	  		position:absolute;
+	  		top:3px;
+	  		left:215px;
+	  		width:348px;
+	  		height:30px;
+	  		background:url("https://img.alicdn.com/tps/TB1Y0ruMVXXXXblXVXXXXXXXXXX-348-30.png");
+	  		color:#d04825;
+	  		font-size:30px;
+	  		font-weight:700;
+	  		overflow:hidden;
+	  	}
+	  	.ct,.cs{
+	  		position:absolute;
+	  		top:5px;
+	  		display:inline-block;
+	  		width:26px;
+	  		height:30px;
+	  		line-height:30px;
+	  		margin-right:3px;
+	  	}
+	  	.ct{
+			left:0;
+	  	}
+	  	.cs{
+			left:30px;
+	  	}
+	  	.prevt{
+	  		position:absolute;
+	  		top:-30px;
+	  	}
+	  	.prevs{
+	  		position:absolute;
+	  		top:-30px;
+	  	}
+	  	.currt{
+	  		position:absolute;
+	  		top:0;
+	  	}
+	  	.currs{
+	  		position:absolute;
+	  		top:0;
+	  	}
+	  	.wsh_day{
+	  		position:absolute;
+	  		top:-5px;
+	  		left:3px;
+	  	}
+	  	.wsh_hour{
+	  		position:absolute;
+	  		top:-5px;
+	  		left:92px;
+	  		
+	  	}
+	  	.wsh_minute{
+	  		position:absolute;
+	  		top:-5px;
+	  		left:181px;	  		
+	  	}
+	  	.wsh_second{
+	  		position:absolute;
+	  		top:-5px;
+	  		left:270px;
+	  	}
+	  	.wsh-tips{
+	  		position:absolute;
+	  		top:665px;
+	  		left:50%;
+	  		margin-left:-334px;
+	  		width:668px;
+	  		height:60px;
+	  		line-height:60px;
+	  		text-align:center;
+	  		color:#fff;
+	  		font-size:20px;
+	  		font-weight:700;
+	  		background:url("https://img.alicdn.com/tps/TB1MfnQMVXXXXa3XXXXXXXXXXXX-668-60.png") no-repeat top center;
+	  	}
+	  	.i_products .wsh-cd-wrap{
+			top:600px;
+	  	}
+	  	.wsh-products{
+	  		width:756px;
+	  		padding-bottom:90px;
+	  		margin:0 auto;
+	  	}
+	  	.wsh-pr{
+	  		float:left;
+	  		width:294px;
+	  		height:225px;
+	  		margin:0 42px;
+	  		background:url("https://img.alicdn.com/tps/TB1OBYQMVXXXXajXpXXXXXXXXXX-294-225.png") no-repeat top center;
+	  	}
+	  	.debj_12{
+	  		background:url("https://img.alicdn.com/tps/TB1iAYBMVXXXXcFXFXXXXXXXXXX-294-225.png") no-repeat top center;
+	  	}
+	  	.wsh_pr_con{
+	  		width:252px;
+	  		height:104px;
+	  		padding:98px 21px 92px;
+	  		text-align:center;
+	  		color:#fff;
+	  		font-size:16px;
+	  	}
+	  	.wsh_pr_del{
+	  		height:40px;
+	  		line-height:40px;
+	  		font-weight:700;
+	  	}
+	  	.d-wrap{
+	  		display:inline-block;
+    		height:40px;
+    		line-height:40px;
+	  	}
+	  	.d-line{
+	  		position:relative;
+		    top:-45px;
+		    display:inline-block;
+		    width:100%;
+		    height:0;
+		    padding:0 5px 0 0;	    
+	  		border-top:2px solid #d04825;
+	  	}
+	  	.wsh_pr_sale{
+	  		font-size:20px;
+	  		font-weight:700;
+	  		height:60px;
+	  		line-height:60px;
+	  		color:#fff;
+	  	}
+	  	.wsh_pr_lh{
+	  		color:#ffcc6e;
+	  	}
+	  	.wsh_pr_big{
+	  		position:relative;
+	  		top:4px;
+	  		font-size:38px;
+	  	}
+	  	/*准入无优惠和不准入*/
+	  	.wsh-prod{
+	  		position:absolute;
+	  		top:240px;
+	  		left:50%;
+	  		width:990px;
+	  		margin-left:-495px;
+	  		text-align:center;
+	  		color:#fff;
+	  		font-size:18px;
+	  	}
+	  	.wsh-remind{
+	  		position:absolute;
+	  		top:411px;
+	  		left:24px;
+	  		width:944px;
+	  		height:149px;
+	  		padding:18px 0 10px;
+	  		font-size:24px;
+	  		font-weight:700;
+	  		color:#ffc54a;
+	  		text-align:center;
+	  	}
+		.wsh_re_p{
+			height:36px;
+			line-height:36px;
+		}
+	  	.wsh-tbbtn{
+	  		display:block;
+	  		width:227px;
+	  		height:53px;
+	  		margin:16px auto 0;
+	  		background:url(https://img.alicdn.com/tps/TB1EzrVMVXXXXcXXFXXXXXXXXXX-227-107.png) no-repeat top center;
+	  		background-position:0 0;
+	  	}
+	  	.wsh-tbbtn:hover{
+	  		background-position:0 -54px;
+	  	}
+	  	/*rules*/
+	  	.wsh-rule{
+	  		position:absolute;
+	  		top:700px;
+	  		left:0;
+	  		width:100%;
+	  		text-align:center;
+	  		color:#ffc54a;
+	  		font-size:18px;
+	  		font-weight:700;
+	  	}
+	  	.i_products .wsh-rule{
+		    top: 748px; 
+	  	}
+	  	.wsh-remind .wsh-rule{
+	  		top:222px;
+	  	}
+	  	.wsh-popshow{
+	  		cursor:pointer;
+	  	}
+	  	.pop-mask{
+            position:fixed;
+            top: 0;
+            left: 0;
+            bottom:0;
+            display: none;
+            width:100%;
+            height:100%;
+            background-color:#000;           
+            opacity:.8;
+            filter:alpha(opacity=80);
+            z-index:98;
+        }
+        .pop-close{
+        	position:absolute;
+            top:0;
+            right:2px;
+            width: 16px;
+            height:16px;
+            cursor:pointer;        
+        }
+		.rule-pop{
+			position: absolute;
+            left: 50%;
+            top: 123px;
+			display: none;
+            width: 990px;
+            min-height: 50px;
+            margin-left:-495px;
+            color: #fff;
+            z-index: 99;
+        }
+        .rule-pop .pop-close{
+            position: absolute;
+            top: -13px;
+            right: -3px;
+        }
+        .rule-tit{
+            width: 990px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .rule-list{
+            padding-top: 25px;
+            font-size: 14px;
+        }
+        .detail{
+            padding-bottom: 25px;
+        }
+        .detail-tit{
+            font-size: 16px;font-weight: bold;
+        }
+        .detail-list li{
+            width: 879px;
+        }
+        .detail-list li span{
+            display: block;
+            float: left;
+        }
+        .detail-list li em{
+            width: 855px;
+            display: block;
+            float: left;
+            text-align: justify;
+        }
+	</style>
+</head>
+<body>
+	<div class="lm-wrap">
+		<!--loading start-->
+	    <div class="intro">
+	        <div class="slogan_logo">
+	            <div class="logo">
+	                <img src="//t.alipayobjects.com/images/rmsweb/T1hW4gXhdXXXXXXXXX.png" width="120" />
+	            </div>
+	            <div class="slogan">
+	                <ul class="slogan-list fn-clear">
+	                    <li class="slogan-list-item item-wu">
+	                        <img src="//t.alipayobjects.com/images/rmsweb/T1GY8gXe0oXXXXXXXX.png" width="48" />
+	                    </li>
+	                    <li class="slogan-list-item item-two">
+	                        <img src="//t.alipayobjects.com/images/rmsweb/T1ccFgXaVgXXXXXXXX.png" width="51" />
+	                    </li>
+	                    <li class="slogan-list-item item-bu">
+	                        <img src="//t.alipayobjects.com/images/rmsweb/T1VrNgXhxvXXXXXXXX.png" width="34" />
+	                    </li>
+	                    <li class="slogan-list-item item-zhi">
+	                        <img src="//t.alipayobjects.com/images/rmsweb/T1fr4gXcpqXXXXXXXX.png" width="25" />
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+	    <!--loading end-->
+	    <!--nav start-->
+	    <div class="wsh-header">
+	        <div class="wsh-ct">
+	            <a class="wsh-logo" href="#" title="网商银行" seed="">
+	            	<img src="https://img.alicdn.com/tps/TB1gjHlMVXXXXa4XVXXXXXXXXXX-280-68.png" width="280" height="68" alt="logo"/>
+	            </a>
+	            <img class="wsh-timeline" src="https://img.alicdn.com/tps/TB1lP16MVXXXXbSapXXXXXXXXXX-710-68.png" width="710" height="68" alt="时间轴"/>
+	            <a class="wsh-follow" id="addFavorite" rel="sidebar"></a>
+	        </div>
+	    </div>
+	    <!--nav end-->
+	    <!--page start-->
+	    <div class="wsh-cut"></div>
+	    <div class="wsh-con">
+	    	<div class="wsh-main">
+	    		<!--poster 海报 start-->
+		    	<div class="J_poster" data-time="1">
+			    	<img src="https://img.alicdn.com/tps/TB15j6QMVXXXXcrapXXXXXXXXXX-990-207.jpg" width="990" height="207"/>
+			    	<img src="https://img.alicdn.com/tps/TB1Jnv2MVXXXXb3XVXXXXXXXXXX-990-206.jpg" width="990" height="206"/>
+			    	<img src="https://img.alicdn.com/tps/TB15bbOMVXXXXbBapXXXXXXXXXX-990-207.jpg" width="990" height="207"/>
+			    </div>
+			    <div class="J_poster" data-time="2" style="display:none;">
+			    	<img src="https://img.alicdn.com/tps/TB1ieTSMVXXXXa3apXXXXXXXXXX-990-207.jpg" width="990" height="207"/>
+			    	<img src="https://img.alicdn.com/tps/TB1FbEjMVXXXXcjXXXXXXXXXXXX-990-206.jpg" width="990" height="206"/>
+			    	<img src="https://img.alicdn.com/tps/TB1GTrUMVXXXXX4apXXXXXXXXXX-990-207.jpg" width="990" height="207"/>
+			    </div>
+			    <div class="J_poster" data-time="3" style="display:none;">
+			    	<img src="https://img.alicdn.com/tps/TB1CH.fMVXXXXaaXpXXXXXXXXXX-990-207.jpg" width="990" height="207"/>
+			    	<img src="https://img.alicdn.com/tps/TB17uweMVXXXXaDXpXXXXXXXXXX-990-206.jpg" width="990" height="206"/>
+			    	<img src="https://img.alicdn.com/tps/TB1gy7kMVXXXXciXXXXXXXXXXXX-990-207.jpg" width="990" height="207"/>
+			    </div>
+			    <div class="J_poster" data-time="4" style="display:none;">
+			    	<img src="https://img.alicdn.com/tps/TB1gYMcMVXXXXbdXpXXXXXXXXXX-990-207.jpg" width="990" height="207"/>
+			    	<img src="https://img.alicdn.com/tps/TB1Q9jPMVXXXXcXaFXXXXXXXXXX-990-206.jpg" width="990" height="206"/>
+			    	<img src="https://img.alicdn.com/tps/TB1bZMpMVXXXXXUXXXXXXXXXXXX-990-207.jpg" width="990" height="207"/>
+			    </div>
+			    <!--poster 海报 end-->
+			    <!--固定 start-->
+		    	<img src="https://img.alicdn.com/tps/TB1W7HwMVXXXXbRXXXXXXXXXXXX-990-156.jpg" width="990" height="156"/>
+		    	<div class="wsh-desc">
+		    		<h2 class="wsh_ds_h">双11为淘宝天猫卖家包场</h2>
+		    		<p class="wsh_ds_p">出品方：网商银行</p>
+					<p class="wsh_ds_p">投资方：蚂蚁金服、复星、万向...</p>
+		    	</div>
+				<!--固定 end-->
+				<!--没有产品 start-->
+				<div class="change-item" data-tips="没有产品的" >
+					<div class="wsh-reserve">
+			    	    <a href="" target="_blank" seed="qiangzuo"><img src="https://img.alicdn.com/tps/TB1M6PCMVXXXXc1XXXXXXXXXXXX-286-68.png" width="286" height="68"></a>
+			    		<span class="wsh_rs_s">提前抢座价更低</span>
+			    	</div>
+			    	<!--countdown start-->
+			    	<div class="wsh-cd-wrap">
+			    		<span class="wsh-endtime">距9.21预签仅剩：</span>
+			    		<div class="wsh-cd j_cd" data-endTime="2016/09/20 23:59:59" data-day="1">
+			    			<span class="wsh_day j_day"></span>
+			    			<span class="wsh_hour j_hour"></span>
+			    			<span class="wsh_minute j_minute"></span>
+			    			<span class="wsh_second j_second"></span>
+			    		</div>
+			    	</div>
+		    		<!--countdown end-->
+		    		<div class="wsh-rule"><span class="wsh-popshow J_popshow">活动规则&nbsp;&gt;</span></div>
+		    	</div>
+		    	<!--没有产品 end-->
+		    	<!--有产品 start-->
+		    	<div class="change-item i_products" data-tips="有产品的" style="display:none;">
+		    		<!--countdown start-->
+			    	<div class="wsh-cd-wrap">
+			    		<span class="wsh-endtime">距9.21预签仅剩：</span>
+			    		<div class="wsh-cd j_cd" data-endTime="2016/09/20 23:59:59" data-day="1">
+			    			<span class="wsh_day j_day"></span>
+			    			<span class="wsh_hour j_hour"></span>
+			    			<span class="wsh_minute j_minute"></span>
+			    			<span class="wsh_second j_second"></span>
+			    		</div>
+			    	</div>
+		    		<!--countdown end-->
+			    	<!--tips start-->
+			    	<div class="wsh-tips">9月21日预签抢座，享以下优惠 ／ 请关注各渠道提醒，或关注本页面</div>
+			    	<!--tips end-->
+			    	<div class="wsh-rule"><span class="wsh-popshow J_popshow">活动规则&nbsp;&gt;</span></div>
+					<div class="wsh-products clearfix">
+						<div class="wsh-pr">
+							<div class="wsh_pr_con">
+								<p class="wsh_pr_del"><span class="d-wrap">9.22正式票价，首2期免息<em class="d-line"></em></span></p>
+								<p class="wsh_pr_sale"><em class="wsh_pr_lh">9.21特惠：</em>首2期<em class="wsh_pr_big">3.8折</em></p>
+							</div>
+						</div>
+						<div class="wsh-pr debj_12">
+							<div class="wsh_pr_con">
+								<p class="wsh_pr_del"><span class="d-wrap">9.22正式票价，首2期免息<em class="d-line"></em></span></p>
+								<p class="wsh_pr_sale"><em class="wsh_pr_lh">9.21特惠：</em>首2期<em class="wsh_pr_big">3.8折</em></p>
+							</div>
+						</div>
+					</div>
+		    	</div>
+		    	<!--有产品 end-->
+		    	<span class="wsh-ad">广告</span>
+		    	<!--freeBtn start-->
+		    	<a class="wsh-free" href="">
+		    		<span>新手免费特权</span>
+		    		<span class="wsh_fr_s">我要领取&gt;</span>
+		    	</a>
+		    	<!--freeBtn end-->
+		    	<!--QRcode start-->
+		    	<div class="wsh-QRcode">
+		    		<p class="wsh_qr_tit">淘宝客户</p>
+		    		<p class="wsh_qr_p">下载网商银行App</p>
+		    		<p class="wsh_qr_p">可享活动折上折</p>
+		    		<img src="https://img.alicdn.com/tps/TB16hDcMVXXXXbYapXXXXXXXXXX-100-100.png" width="100" height="100"/>
+		    		<p class="wsh_qr_g">[ 用支付宝扫码 ]</p>
+		    	</div>
+		    	<!--QRcode end-->
+		    </div>	
+	    </div>
+	    <!--准入无优惠和不准入 start-->
+	    <div class="wsh-con wsh-nosale">
+	    	<div class="wsh-main">
+		    	<img src="https://img.alicdn.com/tps/TB1eHPZMVXXXXb9aXXXXXXXXXXX-990-206.jpg" width="990" height="206"/>
+		    	<img src="https://img.alicdn.com/tps/TB1lL_UMVXXXXcoXFXXXXXXXXXX-990-206.jpg" width="990" height="206"/>
+		    	<img src="https://img.alicdn.com/tps/TB1CMHAMVXXXXXrapXXXXXXXXXX-990-177.jpg" width="990" height="177"/>
+		    	<img src="https://img.alicdn.com/tps/TB1TCvOMVXXXXaHXVXXXXXXXXXX-990-123.jpg" width="990" height="123"/>
+		    	<p class="wsh-prod">出品方：网商银行&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投资方：蚂蚁金服、复星、万向... </p>
+		    	<div class="wsh-remind" style="display:none;"><!--不准入-->
+		    		<p class="wsh_re_p">亲爱的掌柜：</p>
+		    		<p class="wsh_re_p">你目前无法参与本次活动，去淘宝贷款看看，会有其他发现哦！</p>
+		    		<a class="wsh-tbbtn" href="" target="_blank" seed="go_taobao"></a>
+		    	</div>
+		    	<div class="wsh-remind"><!--准入无优惠-->
+		    		<p class="wsh_re_p">亲爱的掌柜：</p>
+		    		<p class="wsh_re_p">抱歉，你没有本次活动的优惠呢，去淘宝贷款看看，会有其他发现哦</p>
+		    		<a class="wsh-tbbtn" href="" target="_blank" seed="nosalego_taobao"></a>
+		    		<div class="wsh-rule"><span class="wsh-popshow J_popshow">活动规则&nbsp;&gt;</span></div>
+		    	</div>
+		    </div>	
+	    </div>
+	    <!--准入无优惠和不准入 end-->
+		<!--活动规则 start-->
+        <div class="pop-mask"></div>   	
+        <div class="rule-pop J_pop">
+            <div class="rule-text"> 
+                <div class="pop-close J_popClose">
+                	<img src="https://img.alicdn.com/tps/TB1vnsnMVXXXXbbXXXXXXXXXXXX-16-16.png" width="16" height="16"/>
+                </div>
+                <div class="rule-tit">活动规则</div>
+                <ul class="rule-list">
+                    <li class="detail"><span class="detail-tit">预热活动时间：</span>2016年9月14日（0:00:00）-9月20日（23:59:59）</li>
+                    <li class="detail"><span class="detail-tit">“抢座”活动时间：</span>2016年9月21日（9:00:00）-9月21日（23:59:59）</li>
+                    <li class="detail"><span class="detail-tit">“抢座”活动：</span>即提前填写并提交贷款申请表，抢占2016年9月22日正式活动的贷款额度。</li>
+                    <li class="detail"><span class="detail-tit">活动对象：</span>具有淘宝/天猫贷款信用类贷款产品（等额本金（12个月）、组合贷）申请资格的部分淘宝网与部分天猫卖家。</li>
+                    <li class="detail"><span class="detail-tit">贷款类型：</span>参与“抢座”活动的贷款类型为淘宝/天猫贷款等额本金12个月和组合贷。</li>
+                    <li class="detail"><span class="detail-tit">参与流程：</span>
+                        <ul class="detail-list">
+                            <li class="clearfix"><span>1、</span><em>预热活动期间，卖家通过点击活动页面“预约抢座提醒”，可查看9月21日“抢座”活动当天的特别优惠信息，并且在9月21日当天可以收到相关的活动提醒，如旺浮、短信。</em></li>
+                            <li class="clearfix"><span>2、</span><em>“抢座”活动期间，卖家通过点击活动页面“立即抢座”，选择需要支用的贷款产品，在贷款申请表“我的优惠”中选择本活动对应的优惠，填写并提交贷款申请表完成“抢座”，完成“抢座”的卖家可享受该笔贷款获贷后的特别优惠。</em></li>
+                            <li class="clearfix"><span>3、</span><em>“抢座”活动的特别优惠，仅限于9月22日正式活动当天卖家完成贷款合同签署并获得贷款后方可生效，但若完成“抢座”后24小时内没有正式签署贷款合同，合同将失效，请卖家务必在9月22日活动期间内且“抢座”完成后24小时内完成贷款合同签署。合同失效的卖家，可在9月22日参加非提前“抢座”类型的利率优惠活动。</em></li>
+                            <li class="clearfix"><span>4、</span><em>“抢座”成功的卖家需在9月22日正式活动期间仍具备贷款准入资格，否则将无法签署贷款合同。</em></li>
+                        </ul>
+                    </li>
+                    <li class="detail"><span class="detail-tit">其他规则：</span>
+                        <ul class="detail-list">
+                            <li class="clearfix"><span>1、</span><em>淘宝网和天猫卖家成功获贷的金额以贷款实际发放的金额为准。</em></li>
+                            <li class="clearfix"><span>2、</span><em>淘宝网和天猫卖家所享受的优惠内容以贷款实际签订合同时的内容为准。</em></li>
+                            <li class="clearfix"><span>3、</span><em>本活动优惠与其他折扣优惠不能同时使用。</em></li>
+                            <li class="clearfix"><span>4、</span><em>活动过程中如发现有碍于其他卖家公平参与本活动或违反本活动目的之行为，网商银行&蚂蚁小贷有权取消有此行为的卖家参加本活动的资格或因参加活动所获的优惠。</em></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    	<!--活动规则 end-->
+	    <!--page end-->
+		<!--foot start-->
+		<div class="foot-wrap">
+	      <div class="foot-content">
+	        <div class="foot-left">
+	          <img src="https://os.alipayobjects.com/rmsportal/rsIfqqRrbmvgxyw.png" class="mybank-foot-logo">
+	          <div class="foot-link">
+	            <a href="http://www.antgroup.com/page/alipay.htm" target="_blank" title="支付宝">支付宝</a> |
+	            <a href="http://www.antgroup.com/page/zmxy.htm" target="_blank" title="芝麻信用">芝麻信用</a> |
+	            <a href="http://www.antgroup.com/page/xiaodai.htm" target="_blank" title="蚂蚁小贷">蚂蚁小贷</a> |
+	            <a href="http://www.antgroup.com/page/jinrongyun.htm" target="_blank" title="蚂蚁金融云">蚂蚁金融云</a> |
+	            <a href="http://www.antgroup.com/page/yuebao.htm" target="_blank" title="余额宝">余额宝</a> |
+	            <a href="http://www.antgroup.com/page/zhaocaibao.htm" target="_blank" title="招财宝">招财宝</a> |
+	            <a href="https://www.antsdaq.com/" target="_blank" title="蚂蚁达客">蚂蚁达客</a>
+	          </div>
+	        </div>
+	        <div class="foot-right">
+	          <div class="foot-intro">
+	            <a href="https://www.mybank.cn/about.htm" target="_blank" title="关于我们">关于我们</a> |
+	            <a href="https://job.alibaba.com/zhaopin/index.htm" target="_blank" title="诚招英才">诚招英才</a>
+	          </div>
+	          <p class="foot-copyright"><span class="copyright">浙ICP备15020822号</span>Copyright © 2015-2016 浙江网商银行</p>
+	        </div>
+	      </div>
+	    </div>
+	    <!--foot end-->
+	</div>
+	<script>
+    window._to = {
+      st: Date.now(),
+      role_id: '',
+    };
+	</script>
+	<script src="//as.alipayobjects.com/g/animajs/mtracker/2.1.2/??seed.js,mtracker.js"></script>
+	<script src="//a.alipayobjects.com/jquery/jquery/1.7.2/jquery.js"></script>
+	<script>
+		(function(jQuery){
+			//收藏
+	        var follow = function(){
+	            var url=location.href;
+	            jQuery("#addFavorite").attr("href",url);
+	            document.getElementById("addFavorite").onclick=function(){
+	                bookmark();
+	                return false;
+	            };
+
+	            function bookmark(){
+		            var title = document.title;
+		            var url = location.href;
+		            var bro=jQuery.browser;
+		            console.log(title);
+		            console.log(url);
+		            if(window.sidebar){
+		                window.sidebar.addPanel(title,url,"");
+		            }
+		            else if(bro.msie){
+		                window.external.AddFavorite(url,title);	               
+		            }else {
+		                alert("您的浏览器不支持此功能，windows系统请按ctrl+D，Mac系统请按Cmd+D来加入收藏夹！");
+		            }
+		        } 	
+	        }();
+		    //loading
+		    var loading = function(){
+			    var time = setTimeout(function(){
+			        jQuery(".logo").animate({"opacity":"1"},0);
+			        jQuery(".item-wu").animate({"opacity":"1"},400);
+			    },200);
+			    var time1 = setTimeout(function(){
+			        jQuery(".item-two").animate({"opacity":"1"},400);
+			    },400);
+			    var time2 = setTimeout(function(){
+			        jQuery(".item-bu").animate({"opacity":"1"},400);
+			    },600);
+			    var time3 = setTimeout(function(){
+			        jQuery(".item-zhi").animate({"opacity":"1"},400);
+			    },800);
+			    var time4 = setTimeout(function(){
+			        jQuery(".intro").animate({"opacity":"0"},200);
+			        jQuery(".intro").hide(300);
+			    },1500);
+			}();
+			//pop
+			var pop = function(){
+				var _pop = jQuery('.rule-pop');
+				var _mask = jQuery('.pop-mask');
+				//弹窗打开
+	            jQuery('.J_popshow').each(function(i,e){
+	            	jQuery(e).on('click',function(){
+		                _pop.show();
+		                _mask.show();
+		            });
+	            });
+	            //关闭弹窗
+	            jQuery('.J_popClose').on('click',function(){
+	                _pop.hide();
+	                _mask.hide();
+	            });
+	            _mask.on('click',function(){
+	                _pop.hide();
+	                _mask.hide();
+	            });
+			}();
+			//测试用，后期删掉
+			var test = function(){
+				var _imgNum = getQueryString('imgNum');
+
+				var _img = jQuery('.J_poster');
+
+		        //imgNum
+		        if(_imgNum == '1'){
+		        	_img.eq(0).show().siblings('.J_poster').hide();
+		        }else if(_imgNum == '2'){
+		        	_img.eq(1).show().siblings('.J_poster').hide();
+		        }else if(_imgNum == '3'){
+		        	_img.eq(2).show().siblings('.J_poster').hide();
+		        }else if(_imgNum == '4'){
+		        	_img.eq(3).show().siblings('.J_poster').hide();
+		        }else if(_imgNum == '5'){
+		        	jQuery('.change-item').eq(1).show().siblings('.change-item').hide();
+		        }
+
+		        function getQueryString(name) {
+		          var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+		          var r = window.location.search.substr(1).match(reg);
+		          if (r != null) return unescape(r[2]);
+		          return null;
+		        }
+			}();
+
+			//倒计时
+			var countDown ={
+				config:{
+					timer:0
+				},
+				init:function(){
+					var _this = this;
+					_this.config.timer;
+					_this.nowTime();				
+				},
+				nowTime:function(){
+					//获取当前时间
+					var _this = this;
+
+					var _nowTime = new Date();
+		                   
+		           	timer = setInterval(function(){_this.getTime(_nowTime)},1000);
+	
+				},
+				getTime:function(nowTime){
+					var _this = this;
+					//倒计时节点最外层加上j_cd,加上data-endTime里写上结束时间,举个栗子:2016/09/20 23:59:59
+					jQuery('.j_cd').each(function (i,e){
+						var _endTime = jQuery(e).attr('data-endTime');
+						var nowTime = new Date();
+						var endTime = new Date(_endTime);
+						var timeDiff = endTime - nowTime;
+						var odf = timeDiff + 1000;
+
+						var _d,_h,_m,_s;//当前的时间
+						var _od =0 ,_oh = 0 ,_om = 0 ,_os = 0;//上一秒的时间
+
+						if(timeDiff <= 0){
+							timeDiff = 0;
+							odf = 0
+							_d = 0;
+							_h = 0;
+							_m = 0;
+							_s = 0;
+							clearInterval(timer);
+						}else{
+							_d = Math.floor(timeDiff / 1000 / 60 / 60 / 24);
+				        	_h = Math.floor(timeDiff / 1000 / 60 / 60 % 24);
+				        	_m = Math.floor(timeDiff / 1000 / 60 % 60);
+				        	_s = Math.floor(timeDiff / 1000 % 60);
+
+				        	_od = Math.floor(odf / 1000 / 60 / 60 / 24);
+				        	_oh = Math.floor(odf / 1000 / 60 / 60 % 24);
+				        	_om = Math.floor(odf / 1000 / 60 % 60);
+				        	_os = Math.floor(odf / 1000 % 60);
+						}
+			        	
+			        	var _isDay = jQuery(e).attr('data-day');
+			        	//没有天的情况下,data-day设置为0，有天，设置为1,没有天的情况下,小时不超过99==
+						if(_isDay == 1){
+							//天:时:分:秒
+							_this.effect(_d,_od,jQuery(e).find('.j_day'));
+				        	_this.effect(_h,_oh,jQuery(e).find('.j_hour'));
+				        	_this.effect(_m,_om,jQuery(e).find('.j_minute'));
+				        	_this.effect(_s,_os,jQuery(e).find('.j_second'));
+						}else if(_isDay == 0){
+							//时:分:秒
+							_h = Math.floor(timeDiff / 1000 / 60 / 60);
+							_oh = Math.floor(odf / 1000 / 60 / 60);
+							_this.effect(_h,_oh,jQuery(e).find('.j_hour'));
+				        	_this.effect(_m,_om,jQuery(e).find('.j_minute'));
+				        	_this.effect(_s,_os,jQuery(e).find('.j_second'));
+						}		 
+					});
+				},
+				effect:function(ele,oele,node){					
+					var _this = this;
+
+					var ten,single;
+					var oten,osingle;
+
+					if(ele >= 10){
+						ten = Math.floor(ele / 10);
+						single = Math.floor(ele % 10);
+					}else{
+						ten = 0;
+						single = ele;
+					}
+					if(oele >= 10){
+						oten = Math.floor(oele / 10);
+						osingle = Math.floor(oele % 10);
+					}else{
+						oten = 0;
+						osingle = oele;
+					}
+
+					var timeHtml =  '<span class="ct"><em class="dig prevt"></em><em class="dig currt"></em></span><span class="cs"><em class="dig prevs"></em><em class="dig currs"></em></span>';
+					node.html(timeHtml);
+
+					node.find('.prevt').html(ten);
+					node.find('.currt').html(oten);
+					node.find('.prevs').html(single);
+					node.find('.currs').html(osingle);
+					
+					if(ten == oten){
+						node.find('.currt').parent('.ct').removeClass('slide-wrap');
+					}else{
+						node.find('.currt').parent('.ct').addClass('slide-wrap');
+
+						node.css({'height': 35+'px'});
+						node.find('.slide-wrap').css('top',5 +'px').animate({top: 35+'px'},500);
+					}
+					if(single == osingle){
+						node.find('.currs').parent('.cs').removeClass('slide-wrap');
+					}else{
+						node.find('.currs').parent('.cs').addClass('slide-wrap');
+
+						node.css({'height': 35+'px'});
+						node.find('.slide-wrap').css('top',5 +'px').animate({top: 35+'px'},500);
+					}					
+
+				}
+			}
+			countDown.init();
+
+		})(jQuery);
+	</script>
+</body>
+</html>
