@@ -357,7 +357,7 @@ body {
 	width: 100%;
 	height: 42px;
 	position: absolute;
-	top: 106px;
+	top: 80px;
 	text-align: center;
 	display: none;
 }
@@ -454,91 +454,91 @@ body {
 	display: block;
 }
 
+*{
+	margin:0;
+	padding: 0;
+	font-family:STHeitiSC-Light;
+}
+
 .foot-wrap {
-	background-color: #f8f8f8;
-	min-width: 990px;
+  background-color: #f8f8f8;
+  min-width: 990px;
 }
 
 .foot-content {
-	width: 1190px;
-	margin: 0 auto;
-	padding: 30px 5px;
-	font-size: 14px;
-	line-height: 1.5;
-	*zoom: 1;
-	font-size: 12px;
-	line-height: 12px;
-	background-color: #f8f8f8;
-	background: url(https://os.alipayobjects.com/rmsportal/AfFplHSMsIUAFHH.png) right -1px no-repeat;
+  width: 990px;
+  margin: 0 auto;
+  padding: 30px 5px;
+  font-size: 14px;
+  line-height: 1.5;
+  *zoom: 1;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: #f8f8f8;
+  background: url(https://os.alipayobjects.com/rmsportal/AfFplHSMsIUAFHH.png) right -1px no-repeat;
 }
-
-.foot-content a {
-	color: #333;
-	margin: 0 10px;
-	font-size: 12px;
-	text-decoration: none;
+.foot-content a{
+  color: #333;
+  margin: 0 10px;
+  font-size: 12px;
+  text-decoration: none;
 }
-
-.foot-content a:hover {
-	color: #00C2C2;
-	line-height: 12px;
-	text-decoration: none;
+.foot-content a:hover{
+  color: #00C2C2;
+  line-height: 12px;
+  text-decoration: none;
 }
-
 .foot-content:before,
 .foot-content:after {
-	display: table;
-	content: "";
+  display: table;
+  content: "";
 }
-
 .foot-content:after {
-	clear: both;
+  clear: both;
 }
-
 .foot-left {
-	float: left;
-	display: inline;
+  float: left;
+  display: inline;
 }
-
-.foot-left img {
+.foot-left img{
 	height: 26px;
 }
-
 .foot-right {
-	float: right;
-	display: inline;
-	text-align: right;
+  float: right;
+  display: inline;
+  text-align: right;
 }
-
 .foot-logo {
-	width: 209px;
-	height: 26px;
-	display: block;
+  width: 209px;
+  height: 26px;
+  display: block;
 }
-
 .foot-intro {
-	padding-top: 14px;
-	position: relative;
-	right: -10px;
-	color: #D6D6D6;
+  padding-top: 14px;
+  position: relative;
+  right: -10px;
+  color: #D6D6D6;
 }
-
 .foot-copyright {
-	padding-top: 20px;
-	line-height: 12px;
-	color: #333;
+  padding-top: 20px;
+  line-height: 12px;
+  color: #333;
 }
-
 .foot-link {
-	position: relative;
-	left: -10px;
-	color: #D6D6D6;
-	padding-top: 18px;
-	line-height: 12px;
+  position: relative;
+  left: -10px;
+  color: #D6D6D6;
+  padding-top: 18px;
+  line-height: 12px;
+}
+.copyright{
+	margin-right: 15px;
 }
 
-.copyright {
-	margin-right: 15px;
+@media (min-width: 1200px) {
+	.foot-content{
+		width: 1190px;
+	}
 }
 
 /*响应设计 小于1200px 显示 990px宽度头 */
@@ -1452,99 +1452,6 @@ body{background-color: #fff;}
 <body ondragstart="return false">
 <!-- 通用页头 -->
 <header class="nav-wrap">
-	<!--页面抬头warp-->
-	<div class="nav-header-wrap">
-		<div class="nav-header">
-			<div class="nav-header-left">
-				<a href="https://www.mybank.cn" title="返回首页">返回首页</a>
-			</div>
-
-			<ul class="nav-header-right">
-				<li class="nav-header-right-item">你好，镜曦</li>
-				<li class="nav-header-right-item" id="J_nav">
-					<span class="sitemap" href="#nogo" title="">网站导航</span>
-				</li>
-				<!--<li class="nav-header-right-item"><a href="#nogo" title="消息中心">消息中心</a></li>
-                <li class="nav-header-right-item"><a href="#nogo" title="服务大厅">服务大厅</a></li>
-                <li class="nav-header-right-item service-tel">95188-3</li>-->
-			</ul>
-
-			<div class="sitemap-wrap">
-				<div class="map-area-loan">
-					<span class="map-area-title">借钱</span>
-					<ul class="map-area-items">
-						<li class="map-area-item">
-							<span class="map-area-item-title"><i>·</i>网商贷</span>
-							<ul class="map-area-item-links">
-								<li><a href="#nogo">淘宝用户专享</a></li>
-								<li><a href="#nogo">天猫用户专享</a></li>
-								<li><a href="#nogo">阿里巴巴用户专享</a></li>
-								<li><a href="#nogo">支付宝用户专享</a></li>
-								<li><a href="#nogo">CNZZ用户专享</a></li>
-								<li><a href="#nogo">口碑用户专享</a></li>
-							</ul>
-						</li>
-						<li class="map-area-item">
-							<span class="map-area-item-title"><i>·</i>旺农贷</span>
-
-						</li>
-						<li class="map-area-item">
-							<span class="map-area-item-title"><i>·</i>信任付</span>
-							<ul class="map-area-item-links">
-								<li><a href="#nogo">阿里云市场</a></li>
-								<li><a href="#nogo">1688市场</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-				<div class="map-area-mix">
-					<div class="map-area-prd">
-						<div class="map-area-prd-left">
-							<span class="map-area-title">理财</span>
-							<ul class="map-area-items">
-								<li class="map-area-item">
-									<span class="map-area-item-title"><i>·</i>余利宝</span>
-									<ul class="map-area-item-links">
-										<li><a href="#nogo">资金转入</a></li>
-										<li><a href="#nogo">资金转出</a></li>
-										<li><a href="#nogo">自动转入</a></li>
-										<li><a href="#nogo">余额收益</a></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-						<div class="map-area-prd-right">
-							<span class="map-area-title">企业网银</span>
-							<ul class="map-area-items">
-								<li class="map-area-item">
-									<!--<span class="map-area-item-title"><i>·</i>网商贷</span>-->
-									<ul class="map-area-item-links">
-										<li><a href="#nogo">账户查询</a></li>
-										<li><a href="#nogo">电子对账</a></li>
-										<li><a href="#nogo">转账汇款</a></li>
-										<li><a href="#nogo">批量代发</a></li>
-										<li><a href="#nogo">余额收益</a></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="map-area-search">
-						<span class="map-area-title">服务大厅</span>
-						<div class="map-area-search-wrap">
-							<input class="map-area-search-item" type="text" value="" placeholder="请输入问题的关键词，如：余利宝">
-							<span class="map-area-search-buttom"></span>
-						</div>
-						<a href="#nogo" class="map-area-item-linker">常见问题</a>
-					</div>
-				</div>
-				<div class="map-area-app">
-					<span class="map-area-title">网商银行App</span>
-					<img class="map-area-app-scancode" src="https://zos.alipayobjects.com/rmsportal/frBGlxsSpkXJfuThDnje.png"/>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!--页面导航-->
 	<div class="nav-content-wrap">
@@ -1686,7 +1593,7 @@ body{background-color: #fff;}
 				</dt>
 				<dd>
 					<span>A</span>
-					<p>赊购宝目前仅针对部分天猫商家开放，可登录“天猫商家中心”，打开“淘宝贷款”，<i><br></i>找到“赊购宝”或<a href="">点此链接</a>查看是否具备条件，产品正在逐步开放中，感谢您的关注，敬请期待！</p>
+					<p>赊购宝目前仅针对部分天猫商家开放，可登录“天猫商家中心”，打开“淘宝贷款”，<i><br></i>找到“赊购宝”或<a href="" seed="clickthis">点此链接</a>查看是否具备条件，产品正在逐步开放中，感谢您的关注，敬请期待！</p>
 				</dd>
 			</dl>
 			<dl>
@@ -1736,7 +1643,7 @@ body{background-color: #fff;}
 					</li>
 					<li class="other">
 						<span>赊购宝客服专线</span>
-						<a target="_blank" href="javascript:void(0);">
+						<a target="_blank" href="tel: 95188转3">
 							<img src="https://img.alicdn.com/tfs/TB1xibhnaagSKJjy0FcXXcZeVXa-24-34.png" alt="">95188转3</a>
 					</li>
 				</ul>
@@ -1745,29 +1652,26 @@ body{background-color: #fff;}
 	</div>
 </div>
 <!-- 通用页尾 -->
-<footer class="foot-wrap">
-	<div class="foot-content">
-		<div class="foot-left">
-			<img src="https://os.alipayobjects.com/rmsportal/aNPiaiJyQlFmoCj.png" class="mybank-foot-logo">
-			<div class="foot-link">
-				<a href="http://www.antgroup.com/page/alipay.htm" target="_blank" title="支付宝">支付宝</a> |
-				<a href="http://www.antgroup.com/page/zmxy.htm" target="_blank" title="芝麻信用">芝麻信用</a> |
-				<a href="http://www.antgroup.com/page/xiaodai.htm" target="_blank" title="蚂蚁小贷">蚂蚁小贷</a> |
-				<a href="http://www.antgroup.com/page/jinrongyun.htm" target="_blank" title="蚂蚁金融云">蚂蚁金融云</a> |
-				<a href="http://www.antgroup.com/page/yuebao.htm" target="_blank" title="余额宝">余额宝</a> |
-				<a href="http://www.antgroup.com/page/zhaocaibao.htm" target="_blank" title="招财宝">招财宝</a> |
-				<a href="https://www.antsdaq.com/" target="_blank" title="蚂蚁达客">蚂蚁达客</a>
-			</div>
-		</div>
-		<div class="foot-right">
-			<div class="foot-intro">
-				<a href="https://www.mybank.cn/about.htm" target="_blank" title="关于我们">关于我们</a> |
-				<a href="https://job.alibaba.com/zhaopin/index.htm" target="_blank" title="诚招英才">诚招英才</a>
-			</div>
-			<p class="foot-copyright"><span class="copyright">浙ICP备15020822号</span>Copyright © 2015-2016 浙江网商银行</p>
-		</div>
-	</div>
-</footer>
+<div class="foot-wrap">
+  <div class="foot-content">
+    <div class="foot-left">
+      <img src="https://os.alipayobjects.com/rmsportal/rsIfqqRrbmvgxyw.png" class="mybank-foot-logo">
+      <div class="foot-link">
+        <a href="http://www.antgroup.com/page/alipay.htm" target="_blank" title="支付宝">支付宝</a> |
+        <a href="http://www.antgroup.com/page/zmxy.htm" target="_blank" title="芝麻信用">芝麻信用</a> |
+        <a href="http://www.antgroup.com/page/jinrongyun.htm" target="_blank" title="蚂蚁金融云">蚂蚁金融云</a> |
+        <a href="http://www.antgroup.com/page/yuebao.htm" target="_blank" title="余额宝">余额宝</a> 
+      </div>
+    </div>
+    <div class="foot-right">
+      <div class="foot-intro">
+        <a href="https://www.mybank.cn/about.htm" target="_blank" title="关于我们">关于我们</a> |
+        <a href="https://job.alibaba.com/zhaopin/index.htm" target="_blank" title="诚招英才">诚招英才</a>
+      </div>
+      <p class="foot-copyright"><span class="copyright">浙ICP备15020822号</span>Copyright © 2015-2017 浙江网商银行</p>
+    </div>
+  </div>
+</div>
 </body>
 </html>
 <script src="https://as.alipayobjects.com/g/animajs/mtracker/2.1.2/??seed.js,mtracker.js"></script>
@@ -1779,7 +1683,6 @@ body{background-color: #fff;}
 	  role_id: '',
 	};
 	var screenwidth = document.body.clientWidth;
-	console.log(screenwidth);
 	if (screenwidth <= 989) {
     !function(){
         function a(){document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+"px"
@@ -1789,7 +1692,7 @@ body{background-color: #fff;}
 	}
 	window.onresize = function() {
 		var screenwidth = document.body.clientWidth;
-		console.log(screenwidth);
+		// console.log(screenwidth);
 		if (screenwidth <= 989) {
 	    !function(){
 	        function a(){document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+"px"
@@ -1809,7 +1712,7 @@ body{background-color: #fff;}
 	    this.classList.add('tap');
 	}
 	oBtn.ontouchend = function(){
-	    this.classList.add('learnbtn');
+	    this.classList.remove('learnbtn');
 	}
 
 	!function () {
@@ -1819,7 +1722,7 @@ body{background-color: #fff;}
 		var subnavlis = subwrap.querySelectorAll('.sub-nav li');
 		var borrow = nav.querySelector('.borrow');
 		var manage = nav.querySelector('.manage');
-		var sitenav = document.getElementById("J_nav");
+		//var sitenav = document.getElementById("J_nav");
 		var sitewrap = document.querySelector(".sitemap-wrap");
 		var navNotice = document.querySelector('.nav-notice');
 		var noticeMore = navNotice.querySelector(".nav-notice-more");
@@ -1851,30 +1754,30 @@ body{background-color: #fff;}
 		})
 
 		//网站导航
-		sitenav.onmouseover = function () {
-			clearTimeout(time_s)
-			time_s = setTimeout(function () {
-				sitewrap.style.display = "block";
-			}, 200)
+		// sitenav.onmouseover = function () {
+		// 	clearTimeout(time_s)
+		// 	time_s = setTimeout(function () {
+		// 		sitewrap.style.display = "block";
+		// 	}, 200)
 
-		}
-		sitenav.onmouseout = function () {
-			clearTimeout(time_s)
-			time_s = setTimeout(function () {
-				sitewrap.style.display = "none";
-			}, 200)
-		}
+		// }
+		// sitenav.onmouseout = function () {
+		// 	clearTimeout(time_s)
+		// 	time_s = setTimeout(function () {
+		// 		sitewrap.style.display = "none";
+		// 	}, 200)
+		// }
 
-		sitewrap.onmouseover = function () {
-			clearTimeout(time_s);
-			sitewrap.style.display = "block";
-		}
-		sitewrap.onmouseout = function () {
-			clearTimeout(time_s)
-			time_s = setTimeout(function () {
-				sitewrap.style.display = "none";
-			}, 200)
-		}
+		// sitewrap.onmouseover = function () {
+		// 	clearTimeout(time_s);
+		// 	sitewrap.style.display = "block";
+		// }
+		// sitewrap.onmouseout = function () {
+		// 	clearTimeout(time_s)
+		// 	time_s = setTimeout(function () {
+		// 		sitewrap.style.display = "none";
+		// 	}, 200)
+		// }
 
 
 		subwrap.onmouseover = function () {
