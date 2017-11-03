@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <title>码商狂欢节</title>
+    <script type="text/javascript">
+        !function(){
+            function a(){document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5+"px"
+            }
+            var b=null;
+            window.addEventListener("resize",function(){clearTimeout(b),b = setTimeout(a, 300)},!1),a()}(window);
+    </script>
+    <style>
+        /*通用头尾样式--end*/
+        body,div,h1,h2,h3,h4,h5,ul,ol,li,p,img,dl,dt,dd,input,textarea,a,span,i,em,b,form,table{margin:0px; padding:0px;}
+        body{
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-touch-callout:none;
+            -webkit-user-select:none;
+            -khtml-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+            -webkit-overflow-scrolling: touch;
+            background:url("https://gw.alicdn.com/tfs/TB1WtfaasrI8KJjy0FhXXbfnpXa-750-11.jpg_q50.jpg") repeat center top;
+            background-size: 100%;
+        }
+        img{border:0 none; vertical-align:top;display: block;}
+        a{text-decoration:none;outline: none;background: url("about:_blank");}
+        a:active,a:visited,a:link,a:hover{outline: none;}
+        i,b,em{font-style:normal;}
+        ul,ol{list-style:none;}
+        .clearfix{*zoom:1;}
+        .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+        body{background-color: #fff;}
+        .m-wrap{
+            width:100%;
+            font-family: "PingFang SC","Helvetica Neue", Helvetica, STHeiTi, "Microsoft YaHei", Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            position: relative;
+        }
+        .clearfix{*zoom:1;}
+        .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+        .m-banner{
+            width:100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .m-banner .maintxt{
+            width:5.8rem;
+            height:1.7rem;
+            position: absolute;
+            left:.85rem;
+            top:1.58rem;
+            z-index: 10;
+        }
+        /*楼层*/
+        .m-main{
+            width:100%;
+            background: url("https://gw.alicdn.com/tfs/TB1vF_Xax6I8KJjy0FgXXXXzVXa-750-787.jpg_q50.jpg") no-repeat center top;
+            background-size:100% 100%;
+        }
+        .m-common{
+            width:100%;
+        }
+        .m-common .title{
+            width:92%;
+            margin:0 auto;
+            height:1.43rem;
+            background: url(https://gw.alicdn.com/tfs/TB1.o2sXZLJ8KJjy0FnXXcFDpXa-690-97.png) no-repeat center bottom;
+            background-size:100%;
+        }
+        .m-common .down{
+            width:5.48rem;
+            height:.83rem;
+            padding-top:.07rem;
+            margin:0 auto;
+            border-radius: .45rem;
+            background-image:-webkit-linear-gradient(90deg, #db4d14, #e33546);
+            background-image:linear-gradient(90deg,#db4d14,#e33546);
+            position: relative;
+        }
+        .m-common .up{
+            width:5.48rem;
+            height:.9rem;
+            margin:0 auto;
+            border-radius: .45rem;
+            background-image:-webkit-linear-gradient(-90deg, #ff5579, #ff7a3e);
+            background-image:linear-gradient(-90deg,#ff5579,#ff7a3e);
+        }
+        .m-common h1{
+            color:#fff;
+            font-size: .3rem;
+            line-height: .9rem;
+            width:5.48rem;
+            text-align: center;
+        }
+        .m-container{
+            width:92%;
+            margin:0 auto;
+            border-radius: 0 0 .04rem .04rem;
+            background:url("https://gw.alicdn.com/tfs/TB1iJPOX3nD8KJjy1XdXXaZsVXa-690-625.jpg_q50.jpg") no-repeat center top;
+            background-size:cover;
+            position: relative;
+        }
+        .headline{
+            text-align: center;
+            height:.94rem;
+            line-height: .94rem;
+            color:#fff;
+            font-size: .38rem;
+            font-weight: 900;
+        }
+        .headline span{
+            position: relative;
+        }
+        .headline span:before{
+            content:'';
+            width:.38rem;
+            height:.19rem;
+            background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAATCAMAAADLVI+CAAAAxlBMVEUAAACX/NSX/NT316OX/NT8scD25pX5xLD+nND0+oT6vrb8pcn18Yv9oc309oj+mdOX/NTz/YKX/NT8qsX+mdP7t7v165D24JqX/NTz/YL+ndCX/NT+mdPz/YKX/NT8scD15pX9oc330qX40qX32Z/32J+X/NSX/NT0+oXz+oWX/NT7t7v40qX32aD34Jr9q8X8sMD17JD9pcn6vbX5xLD+oM35y6r09oj5y6v25pX08Yv+nNH15pX0+oX7vrb18Yz6xLD5xbCyFInUAAAAKnRSTlMA2m8H+fn27uXYxsC8sq2bkoyJiX9/fnp5b2JFQTIuHRkM7OXDwauqU1NhRZz3AAAAzUlEQVQoz33MVw6DMBAE0Amk995775UQICSQ+18qZpGQjTBvx9Z+jBZyw2al0hwiXj/7Jtk+5GalZ6A0g4RauHMKKqI1LoIGmEG9PoBgkroKUhNgvWc24LUOIS1096QLTv7xfVDYI3kk/FoCnIymuWw8PxZXyyDp15Lg6IbOYhiGt9AaeW1xDJlD8WsKOKtTyBKoeq0qeJ1zSAfAWFHGEEzTpm2atk0/m/QUkdo3QRsSRYs4luM4VhEyavkVKKuQ2+U+JLdFvFGvVuuNQP4y7DjpN9z+aAAAAABJRU5ErkJggg==") no-repeat center top;
+            background-size: 100% 100%;
+            position: absolute;
+            left:-.58rem;
+            top:50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        .headline span:after{
+            content:'';
+            width:.38rem;
+            height:.19rem;
+            background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAATCAMAAADLVI+CAAAA5FBMVEUAAACd/MPu/YX9qsCG/c/0z6jS/Zmi/by2/a1p/eTu/Yb3wbGZ/cN2/dtv/eDp/Ynr9Y5l/ef9qMFl/eeP/cna/ZTJ/aDz/YJp/eTv/YXp/Yll/efz/YL+oMaH/c/S/Zpv/eDp/Yrw3Z7w3J6//ae//afi/Y/i/Y5+/dZ+/dXt6pbt6pWP/cmY/cOi/by2/a7A/afJ/aCG/dDa/ZR2/dvS/Zlv/eCs/bTp/Yms/bXi/Y5+/dZ9/dX6s7r0z6jt6pXv/YXw3J79qMH3wLHh/Y5q/eRp/eTS/Zr3wbHq9Y/r9Y7x3Z4WVKFoAAAALHRSTlMAA4tv+fn27unl2NfGwLKtq5uSf39+em9iU0VBMi4dGQwJ3NzDwby8iYh5eQLTrfgAAADbSURBVCjPfczXssIwDATQdULvvdfbCx1CCKFDQvv//0H4gXE8mCOtRk8LjlWz6XS2yvAKK4Udx3UdN1xiUGolpg+JlrIrPhHEVX2/tm0vCB167B881fCNPHwNeFQ0rQIg15HkIGCp8+VyTjHEupIYBH9r7h/BniQIwfv2uiVvMC3LMk0KHZM/EPhXnB+hviQEQfS039NG8TmQfECgLzkdhaGkAFFmRzJAM2AYR4NyXxJowqOu63WQ/Ngjj+fY12F+nznPN4NCOzl7SLahVo5suEgZr9WKmlasQekGSEo9qqtbT10AAAAASUVORK5CYII=") no-repeat center top;
+            background-size: 100% 100%;
+            position: absolute;
+            right:-.58rem;
+            top:50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        /*口碑贷*/
+        .m-koubei .title{
+            position: absolute;
+            left:50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            bottom: 0;
+            z-index: 10;
+        } 
+        .m-koubei ul{
+            width:6.2rem;
+            margin:0 auto;
+            padding-bottom: .25rem;
+        }
+        .m-koubei li{
+            width:5.96rem;
+            height:2.04rem;
+            background:url("https://gw.alicdn.com/tfs/TB1j3EiX3nD8KJjy1XdXXaZsVXa-620-250.jpg_q50.jpg") no-repeat center top;
+            background-size:100%;
+            margin-bottom: .2rem;
+            padding:.46rem 0 0 .23rem;
+            box-shadow: 0 .1rem .2rem #da6b38;
+            border-radius: .08rem;
+            overflow: hidden;
+            position: relative;
+        }
+        .m-koubei .tips{
+            height:.46rem;
+            color:#fff;
+            font-size: .3rem;
+            font-weight: 900;
+            line-height: .46rem;
+            padding:0 .12rem;
+            border-radius: 0 0 .12rem .12rem;
+            background-image:-webkit-linear-gradient(180deg, #f3c894, #ca9556);
+            background-image:linear-gradient(180deg,#f3c894, #ca9556);
+            position: absolute;
+            left:.1rem;
+            top:0;
+        }
+        .tips:after{
+            content:'';
+            width:.22rem;
+            height:.25rem;
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAZCAMAAAACPC7cAAAAgVBMVEUAAADrv4nqvojtwozkuIDxyJPpvYftw4zwxZDtwozuw43qv4novYbzyJPvxY/itX7kuIHtw43htXzyyJLwx5HmuoLnu4XhtHzzyJPjt3/gs3vfsnrvxY/yyJPyyJLvxI7zyZPxx5HwxpDswovuw43rwIrovYbqv4jnu4TmuoLjt396N02ZAAAAHnRSTlMABAf08d7TpIJxKAHa0ce9l4iBe2JeUVFFRTw8IRBZ8AqNAAAAhklEQVQoz23I1w6DMABDUbNX9550hITQ///ApkoFCfhI9sPFc1DbzfPTHbUv2Zb4ebmSXQDrPYgKE/8evcUN8HLTmMtCOBpLrCu4hJXDJ6SQUmYYaaWRhpNsRCXGlGpVAZLVLMCEVvoAknVakdx1e7AchzSvwHzOYOIAzBLUBtQR1AXUFcwXAqESVstZC+4AAAAASUVORK5CYII=") no-repeat center top;
+            background-size: 100% 100%;
+            position: absolute;
+            top:0;
+            right:-.22rem;
+        }
+        .import-box{
+            display: table-cell;
+            vertical-align: middle;
+            height: 1.54rem;
+            width: 3.88rem;
+
+        }
+        .import-box span{
+            display:block;
+            width:100%;
+            color:#fff;
+            font-size: .28rem;
+            line-height: .46rem;
+        }
+        .import-box .spetical{
+            line-height: .28rem;
+        }
+        .import-box h2{
+            width:100%;
+            color:#fff;
+            font-size: .48rem;
+            line-height: .64rem;
+            letter-spacing: .04rem;
+        }
+        .import-box h2 span{
+            float:left;
+            width:auto;
+            color:#fff;
+            font-size: .48rem;
+            line-height: .64rem;
+            letter-spacing: .04rem;
+        }
+        .import-box img{
+            width:3.21rem;
+            height:.7rem;
+            margin-top: .14rem;
+        }
+        .import-box h2 img{
+            width:.19rem;
+            height:.45rem;
+            margin:.08rem .1rem 0;
+            float:left;
+            font-size: 0;
+            vertical-align: middle;
+        }
+        .m-koubei p{
+            background-color:rgba(255,255,255,.2);
+            color:#e1f3ff;
+            height:.5rem;
+            line-height: .5rem;
+            text-indent:.24rem;
+            font-size: .24rem;
+            width:100%;
+            position: absolute;
+            left:0;
+            bottom:0;
+        }
+        .m-mark{
+            display: inline-block;
+            background-color: #e5eeff;
+            color:#7fabfd;
+            font-size: .18rem;
+            width:.3rem;
+            height:.3rem;
+            line-height:.3rem;
+            text-align: center;
+            font-weight: 900;
+            border-radius: 50%;
+            margin-left: .1rem;
+            text-indent: 0;
+            vertical-align: middle;
+        }
+        .m-koubei .other-tips .m-mark{
+            color:#e4b880;
+            background-color: #fff;
+            font-size: .14rem;
+            width:.25rem;
+            height:.25rem;
+            line-height:.25rem;
+            margin-top: -.04rem;
+        }
+        .txt-dot,.m-introduce span{
+            display: inline-block;
+            width:.06rem;
+            height:.06rem;
+            border-radius: 50%;
+            background-color: #e1f3ff;
+            vertical-align: middle;
+            margin:0 .06rem;
+        }
+        .m-koubei .other-tips .txt-dot{
+            background-color: #fff;
+            border-radius: 0;
+        }
+        .decorate-lt{
+            width:.88rem;
+            height:.99rem;
+            position: absolute;
+            left:-.3rem;
+            top:-.2rem;
+            z-index: 20;
+        }
+        .decorate-rt{
+            width:1.5rem;
+            height:1.22rem;
+            position: absolute;
+            right:-.07rem;
+            bottom:-.05rem;
+            z-index: 20;
+        }
+        .btn-box{
+            width:1.58rem;
+            height:1.58rem;
+            position: absolute;
+            right:.3rem;
+            top:.3rem;
+        }
+        .btn-box div{
+            width:1.58rem;
+            height:1.58rem;
+            position: absolute;
+            right:0;
+            top:0;
+            opacity: 1;
+        }
+        .btn-box div:after{
+            content:'';
+            display: block;
+            width:1.58rem;
+            height:1.58rem;
+            border-radius: 50%;
+            background-color:rgba(255,255,255,.2);
+            position: absolute;
+            right:0;
+            top:0;
+            -webkit-animation:bround 3s ease-out infinite;
+            animation:bround 3s ease-out infinite;
+        }
+        @-webkit-keyframes bround{
+            0%{
+                -webkit-transform: scale(.6);
+                opacity: 1;
+            }
+            80%{
+                -webkit-transform: scale(1.1);
+                opacity: .8;
+            }
+            100%{
+                -webkit-transform: scale(1.1);
+                opacity: 0;
+            }
+        }
+        @keyframes bround{
+            0%{
+                transform: scale(.6);
+                opacity: 1;
+            }
+            80%{
+                transform: scale(1.1);
+                opacity: .8;
+            }
+            100%{
+                transform: scale(1.1);
+                opacity: 0;
+            }
+        }
+        .btn-box div:before{
+            content:'';
+            display: block;
+            width:1.36rem;
+            height:1.36rem;
+            border-radius: 50%;
+            background-color:rgba(255,255,255,.4);
+            position: absolute;
+            left:.11rem;
+            top:.11rem;
+            -webkit-animation:sround 3s ease-out infinite;
+            animation:sround 3s ease-out infinite;
+        }
+        @-webkit-keyframes sround{
+            0%,5%{
+                -webkit-transform: scale(.6);
+                opacity: 1;
+            }
+            90%{
+                -webkit-transform: scale(1.1);
+                opacity: .8;
+            }
+            100%{
+                -webkit-transform: scale(1.1);
+                opacity: 0;
+            }
+        }
+        @keyframes sround{
+            0%,5%{
+                transform: scale(.6);
+                opacity: 1;
+            }
+            90%{
+                transform: scale(1.1);
+                opacity: .8;
+            }
+            100%{
+                transform: scale(1.1);
+                opacity: 0;
+            }
+        }
+        .gonow-btn{
+            display: block;
+            width:1.2rem;
+            height:.92rem;
+            padding-top: .28rem;
+            border-radius: 50%;
+            font-size: .27rem;
+            line-height: .32rem;
+            color:#6b88fd;
+            font-weight: 900;
+            text-align:center;
+            background-color:#fff;
+            position: absolute;
+            left:.18rem;
+            top:.18rem;
+            z-index:1;
+        }
+        .m-koubei .m-prehead{
+            background: #e65a21 url("about:blank");
+            width:6.2rem;
+            height:1.75rem;
+            padding:0;
+            box-shadow: none;
+        }
+        .activity-tips{
+            width:6.2rem;
+            height:1.75rem;
+            color:#fff;
+            font-size: .28rem;
+            line-height: .5rem;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .rule{
+            color:#993300;
+            font-size: .26rem;
+            height:1.26rem;
+            line-height: 1.26rem;
+            text-align: center;
+        }
+        .rule em{
+            position: relative;
+        }
+        .rule em:after{   
+            content: '';
+            width:0;   
+            height:0;   
+            border-top:.12rem solid transparent;   
+            border-bottom: .12rem solid transparent;   
+            border-left: .12rem solid #993300;
+            position: absolute;
+            right:-.2rem;
+            top:50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        /*蒙层*/
+        .m-shade{
+            width:100%;
+            height:100%;
+            background-color: rgba(0,0,0,.8);
+            position: fixed;
+            left:0;
+            top:0;
+            z-index:30;
+            display: none;
+        }
+        .m-pop{
+            z-index:40;
+            display: none;
+        }
+        .m-pop1{
+            width:5.4rem;
+            height:7.32rem;
+            position: fixed;
+            left:50%;
+            top:50%;
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+        .m-pop1 .mainpop{
+            background-color: #f6f5e1;
+            width:5.4rem;
+            height:5.66rem;
+            padding-top: .54rem;
+            border-radius: .12rem;
+        }
+        .m-pop1 img{
+            width: 2.77rem;
+            height:3.45rem;
+            margin:0 auto;
+        }
+        .m-start img{
+            width: 3.06rem;
+            height:3.61rem;
+            margin:0 auto;
+        }
+        .m-pop1 span{
+            display: block;
+            color:#383838;
+            font-size: .3rem;
+            line-height: .48rem;
+            text-align:center;
+            margin-top: .47rem;
+        }
+        .close{
+            display: block;
+            width:.7rem;
+            height:.7rem;
+            background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAMAAABG8BK2AAAAeFBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////GqOSsAAAAJ3RSTlMAGjID76bYePji0gXcD+usqWNXSCISxSzzvIZ+X9WvlHNrZ1MHlk8br+FvAAACSElEQVRYw5zSCY6jMBCF4WcI4I01QAJkT2be/W84EurpVluAge8Av6tKxoLTpc+1zaTMrM77ywnbpWWR0ZEVZYotjoUkqaKhCurGmKYOqiFSJGVxxEphpUl2rxqO+tWR1FW4apKYVInAJJEoMvZPJHLSlgazTGnJXGDR+8Dzw2CReZx5eGPe507eBLzEjbx/MCNtKZ9Y5SnZpjNvaKoAKwWKWkxWLK8Cq4krrZjYSLNtsEHTUqdwfFpeG2zSXNm6d75TCWwkFO/Of6EMsFkg+f7VPfCJHZ48CPzIecMuN+b4duRZYBdx5hFfwpgP7PRgHAKjitZgJ2NZASPNEruV1P8vo9xhwj8BJokodcdRX9cpmMDxl4fJjog5wJGwAIBUUsCVjJ2JShTCISjTcbkOmOv4K0DHctzphfmOv4LXuFXGGvMdfwU1M+BEBXg6TsWleMKFETwdTwURL+g5wNPxVDCwR84Kno6ngoo5NAN4Op4KAmpY1vB0PBXUtMjYwNOxyxU0zCBpsKgnuxBLDOW/WswYhWEgBoImnSvHbi6G9Pr/D1MOxAwq9q51MeBbJO2uY1Aa3RXjP4XS6O4/5U+M0nDsiRHcKRscFfyoq6N0nKsOhkEpcHwYGE2nwPHRHLU3lJaz12BtGcU5rC2WaEOBI0v0rLuhNJy7Tg6MUpzDgZFz9/pA+eN8n5/edny3YTM9Njm+uRWYaUxymzTPtOUWcrKhze11bvYXRI88COWxLA+J6yJrHqDzOJ+XC3nVkRcveQ20vJTKK7IfMGxFwrF5QZUAAAAASUVORK5CYII=") no-repeat center top;
+            background-size: 100%;
+        }
+        .m-pop1 .close{
+            margin:.42rem auto 0;
+        }
+        .m-rulepop{
+            width:100%;
+            height:100%;
+            position: fixed;
+            left:0;
+            top:0;
+            overflow-x:hidden;
+            overflow-y:scroll;
+        }
+        .m-rulepop div{
+            padding-top: 2.6rem;
+            width:6.2rem;
+            margin:0 auto;
+            color:#fff;
+        }
+        .closeBtn{
+            position: fixed;
+            top:.9rem;
+            right:.5rem;
+            z-index: 40;
+            display: none;
+        }
+        .anim-wrap{
+            position: absolute;
+            width: 100%;
+            height: 13rem;
+            background: url("https://gw.alicdn.com/tfs/TB1.tcwavDH8KJjy1XcXXcpdXXa-15000-650.png") no-repeat;
+            background-size: 4000% 100%;
+            left: 0;
+            top: -1.28rem;
+            z-index: 5;
+            animation:ani 7s steps(39) infinite;
+            -webkit-animation:ani 7s steps(39) infinite;
+            background-position:  0 0;
+        }
+        @-webkit-keyframes ani {
+            0%{
+                background-position: 0 0;
+            }
+            45%{
+                background-position: 100% 0;
+            }
+            100%{
+                background-position: 100% 0;
+            }
+        }
+        @keyframes ani {
+            0%{
+                background-position: 0 0;
+            }
+            45%{
+                background-position: 100% 0;
+            }
+            100%{
+                background-position: 100% 0;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="m-wrap">
+        <div class="m-banner">
+            <img src="https://gw.alicdn.com/tfs/TB1XMqFaMnD8KJjy1XdXXaZsVXa-750-129.jpg_q50.jpg" width="100%" alt="" />
+            <img src="https://gw.alicdn.com/tfs/TB1tTm6atfJ8KJjy0FeXXXKEXXa-750-277.jpg_q50.jpg" width="100%" alt="" />
+            <img src="https://gw.alicdn.com/tfs/TB1Rm2kawDD8KJjy0FdXXcjvXXa-750-143.jpg_q50.jpg" width="100%" alt="">
+            <img class="maintxt" src="https://gw.alicdn.com/tfs/TB1q79.ax6I8KJjy0FgXXXXzVXa-580-170.png" alt="" />
+            <div class="m-common m-koubei">
+                <div class="title">
+                    <div class="down">
+                        <div class="up">
+                            <h1>活动时间：11.20－12.12</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="anim-wrap"></div>
+        </div>
+        <div class="m-main">
+            <!-- 网商贷 start-->
+            <div class="m-common m-koubei">
+                <div class="m-container">
+                    <div class="headline"><span>网商贷</span></div>
+                    <ul>
+                        <li>
+                            <span class="tips">提额</span>
+                            <div class="import-box">
+                                <span class="spetical">你的口碑贷临时额度可提升</span>
+                                <img src="https://gw.alicdn.com/tfs/TB1cdWBannI8KJjy0FfXXcdoVXa-321-70.png" alt="">
+                            </div>
+                            <p><span class="txt-dot"></span>最高额度可提升10万</p>
+                            <div class="btn-box">
+                                <div></div>
+                                <a href="" class="gonow-btn" seed="rightnow">立即<br>提额</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tips">贷款折扣</span>
+                            <div class="import-box">
+                                <span>支用可以享受优惠</span>
+                                <h2 class="clearfix"><span>首期</span><img src="https://gw.alicdn.com/tfs/TB1AtrwaRfH8KJjy1XbXXbLdXXa-19-45.png" alt=""><span>折</span></h2>
+                            </div>
+                            <div class="btn-box">
+                                <div></div>
+                                <a href="" class="gonow-btn" seed="gonow">马上<br>去用</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <img class="decorate-lt" src="https://gw.alicdn.com/tfs/TB16l6WXZjI8KJjSsppXXXbyVXa-88-99.png" alt="" />
+                    <img class="decorate-rt" src="https://gw.alicdn.com/tfs/TB1jd2SX_TI8KJjSsphXXcFppXa-150-122.png" alt="" />
+                </div>
+            </div>
+            <!-- 网商贷 end-->
+            <div class="rule"><em>活动规则</em></div>
+        </div>
+        <div class="m-shade"></div>
+        <!-- 不准入 start -->
+        <div class="m-pop m-pop1 no-in">
+            <div class="mainpop">
+                <img src="https://gw.alicdn.com/tfs/TB1SzSBavDH8KJjy1XcXXcpdXXa-277-345.jpg_q50.jpg" alt="">
+                <span>抱歉，你暂时不能参入活动！</span>
+            </div>
+            <a href="javascript:void(0);" class="close"></a>
+        </div>
+        <!-- 不准入 end -->
+        <!-- 活动未开始 start -->
+        <div class="m-pop m-pop1 no-start">
+            <div class="mainpop">
+                <img src="https://gw.alicdn.com/tfs/TB1KgLbaRHH8KJjy0FbXXcqlpXa-306-361.jpg_q50.jpg" alt="">
+                <span>12月24日活动开始，敬请期待！</span>
+            </div>
+            <a href="javascript:void(0);" class="close"></a>
+        </div>
+        <!-- 活动未开始 end -->
+        <!-- 活动规则 start    -->
+        <div class="m-pop m-rulepop">
+            <div>
+                活动规则坑
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="close closeBtn"></a>
+        <!-- 活动规则 end    -->
+    </div>
+</body>
+<script src="https://a.alipayobjects.com/anima-yocto/1.1.8/index.js"></script>
+<script>
+    Yocto('.close').on('tap',function(){
+        Yocto('.m-shade').hide();
+        Yocto('.m-pop').hide();
+        Yocto('.closeBtn').hide();
+        Yocto('html').css({'height': 'auto', 'overflow': 'visible'});
+        Yocto('body').css({'height': 'auto', 'overflow': 'visible'});
+    });
+    var rulePop = function() {
+        var _pop = Yocto('.m-rulepop');
+        var rulebtn = Yocto('.rule');
+        rulebtn.on('tap', function() {
+            _pop.show();
+            Yocto('.m-shade').show();
+            Yocto('.closeBtn').show();
+            Yocto('html').css({'height': '100%', 'overflow': 'hidden'});
+            Yocto('body').css({'height': '100%', 'overflow': 'hidden'});
+        });
+    }();
+</script>
+</html>
